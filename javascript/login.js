@@ -13,7 +13,7 @@ loginBtn.addEventListener("click", async (e) => {
         "Content-type": "application/json",
       },
       method: "post",
-      url: "/api/auth/signin",
+      url: "https://helpinghands-server.herokuapp.com/api/auth/signin",
       data: body,
       withCredentials: true,
     })

@@ -58,7 +58,7 @@ function register() {
       "Content-type": "application/json",
     },
     method: "post",
-    url: "/api/auth/signup",
+    url: "https://helpinghands-server.herokuapp.com/api/auth/signup",
     data: body,
   })
     .then((res) => {
