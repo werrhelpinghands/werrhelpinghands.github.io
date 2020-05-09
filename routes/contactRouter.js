@@ -1,4 +1,3 @@
-const functions = require("firebase-functions");
 var express = require('express');
 var contactRouter = express.Router();
 var nodemailer = require('nodemailer');
