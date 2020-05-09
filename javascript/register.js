@@ -7,7 +7,7 @@ document.getElementById("registerSubmit").addEventListener("click", () => {
   var password = document.getElementById("password").value;
   var regx = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+).([a-z]{2,20})$/;
   var regxm = /^[1-9][0-9]{9}$/;
-  var regxp =/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,8}$/;
+  var regxp =/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{4,30}$/;
   if (
     firstname.trim() != "" &&
     lastname.trim() != "" &&
