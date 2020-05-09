@@ -270,9 +270,13 @@
                         'email': authResult.user.email
                     }
                     let exist = false
-                    await axios.get(`https://helpinghands-server.herokuapp.com/api/auth/isOldUser/${body.email}`).then(res => {
-                        exist = res.data.exist
+                    await axios({
+                        method: "GET",
+                        url: `https://helpinghands-server.herokuapp.com/api/auth/isOldUser/${body.email}`
                     })
+                        .then(res => {
+                            exist = res.data.exist
+                        })
 
                     if (exist) {
                         // If User already exist
@@ -282,7 +286,7 @@
                                 "Content-type": "application/json",
                             },
                             method: "post",
-                            url: "/api/auth/OAuth",
+                            url: "https://helpinghands-server.herokuapp.com/api/auth/OAuth",
                             data: body,
                             withCredentials: true,
                         })
