@@ -1,15 +1,12 @@
 {
-  "name": "functions",
-  "description": "Cloud Functions for Firebase",
+  "name": "server",
+  "description": "Helping Hands web server",
   "scripts": {
-    "serve": "firebase emulators:start --only functions",
-    "shell": "firebase functions:shell",
-    "start": "npm run shell",
-    "deploy": "firebase deploy --only functions",
-    "logs": "firebase functions:log"
+    "start": "node app.js"
   },
   "engines": {
-    "node": "8"
+    "node": "12.x",
+    "npm": "6.x"
   },
   "dependencies": {
     "cookie-parser": "^1.4.5",
@@ -22,9 +19,6 @@
     "multer": "^1.4.2",
     "nodemailer": "^6.4.6",
     "uuid": "^8.0.0"
-  },
-  "devDependencies": {
-    "firebase-functions-test": "^0.2.0"
   },
   "private": true
 }
