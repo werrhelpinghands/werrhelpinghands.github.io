@@ -63,6 +63,9 @@ span {
   background:rgba(232, 232, 232, 1);
   border-radius: 5px;
   padding: 5px;
+  height: 110px;
+  overflow: hidden;
+  overflow-y: scroll;
   
 }
 .imagebtn {

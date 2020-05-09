@@ -23,7 +23,7 @@ document.getElementById("registerSubmit").addEventListener("click", () => {
             register();
           }
         } else {
-          alert("Password must be at least 4 characters, no more than 8 characters, and must include at least one upper case letter, one lower case letter, and one numeric digit.");
+          alert("Password must include at least one upper case letter, one lower case letter, and one numeric digit.");
           document.getElementById("password").style.border = "2px solid red";
           return false;
         }

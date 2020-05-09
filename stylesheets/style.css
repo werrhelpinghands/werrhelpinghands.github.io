@@ -20,7 +20,7 @@ body {
   position: fixed;
   left: 0;
   width: 250px;
-  z-index: 1; /* Stay on top */
+  z-index: 2; /* Stay on top */
   top: 0; /* Stay at the top */
   transition: 0.5s;
   transform: translateX(-250px);
