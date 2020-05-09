@@ -1,246 +1,372 @@
 <!doctype html>
 <html class="no-js" lang="">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script|Bangers">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script|Bangers">
 
-    <link rel="stylesheet" href="../stylesheets/style.css" />
-    <link rel="stylesheet" href="../stylesheets/defaultStyle.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+<link rel="stylesheet" href="../stylesheets/style.css" />
+<link rel="stylesheet" href="../stylesheets/defaultStyle.css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
 
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-  
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
 <!-- Mirrored from affixtheme.com/html/xmee/demo/register-7.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 04 May 2020 08:25:10 GMT -->
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Register with US</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="#">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="./stylesheets/bootstrap.min.css">
-    <!-- Fontawesome CSS -->
-    <link rel="stylesheet" href="./stylesheets/fontawesome-all.min.css">
-    <!-- Flaticon CSS -->
-    <link rel="stylesheet" href="font/flaticon.css">
-    <!-- Google Web Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="./stylesheets/stylel.css">
-    <!-- Axios -->
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Register with US</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/x-icon" href="#">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="./stylesheets/bootstrap.min.css">
+  <!-- Fontawesome CSS -->
+  <link rel="stylesheet" href="./stylesheets/fontawesome-all.min.css">
+  <!-- Flaticon CSS -->
+  <link rel="stylesheet" href="font/flaticon.css">
+  <!-- Google Web Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./stylesheets/stylel.css">
+  <!-- Axios -->
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <!-- Firebase UI -->
+  <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+
 </head>
 
 <body>
-    <nav class="navbar2">
-        <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu" />
-        <label for="openSidebarMenu" class="sidebarIconToggle">
-         
-          <img id="gear" src="../images/gc11.png" class="rotating" alt="menu" />
-        </label>
-    
-        <div id="sidebarMenu">
-          <ul class="sidebarMenuInner">
-            <a href="./index.html" ><li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Home </i></li></a>
-            <a href="./index.html#about"><li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;About us </i></li></a>
-            <a href="./surveys.html"><li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Surveys </i></li></a>
-            <a href="./projects.html"><li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Projects </i></li></a>
-            <a href="./jobs.html"><li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Jobs</i></li></a>
-            <a href="./team.html"><li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Our Team </i></li></a>
-            <a href="./career.html"><li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Career </i></li></a>
-            <a href="./index.html#contact-us-us"><li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Contact us </i></li></a>
-            <a href="./register.html">
-              <li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Account </i></li>
-            </a>
-          </ul>
-        </div>
-      </nav>
-    <!--[if lt IE 8]>
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyDFNILGe3gLnCKL--o2_aKiaeGXAPShX6c",
+      authDomain: "website-833a3.firebaseapp.com",
+      databaseURL: "https://website-833a3.firebaseio.com",
+      projectId: "website-833a3",
+      storageBucket: "website-833a3.appspot.com",
+      messagingSenderId: "509175153188",
+      appId: "1:509175153188:web:4925cb3d62a502583bceb1",
+      measurementId: "G-52R17M2EY6"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+  <nav class="navbar2">
+    <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu" />
+    <label for="openSidebarMenu" class="sidebarIconToggle">
+
+      <img id="gear" src="../images/gc11.png" class="rotating" alt="menu" />
+    </label>
+
+    <div id="sidebarMenu">
+      <ul class="sidebarMenuInner">
+        <a href="./index.html">
+          <li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Home </i></li>
+        </a>
+        <a href="./index.html#about">
+          <li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;About us </i></li>
+        </a>
+        <a href="./surveys.html">
+          <li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Surveys </i></li>
+        </a>
+        <a href="./projects.html">
+          <li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Projects </i></li>
+        </a>
+        <a href="./jobs.html">
+          <li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Jobs</i></li>
+        </a>
+        <a href="./team.html">
+          <li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Our Team </i></li>
+        </a>
+        <a href="./career.html">
+          <li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Career </i></li>
+        </a>
+        <a href="./index.html#contact-us-us">
+          <li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Contact us </i></li>
+        </a>
+        <a href="./register.html">
+          <li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Account </i></li>
+        </a>
+      </ul>
+    </div>
+  </nav>
+  <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-    <section class="fxt-template-animation fxt-template-layout7" data-bg-image="./images/backregimg.jpg">
-        <div class="container">
-            <div class="row align-items-center justify-content-center">
-                <div class="col-xl-6 col-lg-7 col-sm-12 col-12 fxt-bg-color">
-                    <div class="fxt-content">
-                        <div class="fxt-header">
-                            <a href="login-7.html" class="fxt-logo"><img src="img/logo-7.png" alt="Logo"></a>
-                            <p>Register with US</p>
-                        </div>
-                        <div class="fxt-form">
-                            <formsa>
-                                <p id="success" class="form-group" style="color: green;"></p>
-                                <p id="error" class="form-group" style="color: red;"></p>
-                                <div class="form-group">
-                                    <div class="fxt-transformY-50 fxt-transition-delay-1">
-                                        <input type="text" id="firstname" class="form-control" name="firstname"
-                                            placeholder="First Name" required="required">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="fxt-transformY-50 fxt-transition-delay-1">
-                                        <input type="text" id="lastname" class="form-control" name="lastname"
-                                            placeholder="Last Name" required="required">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="fxt-transformY-50 fxt-transition-delay-1">
-                                        <input type="email" id="email" class="form-control" name="email"
-                                            placeholder="Email" required="required">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="fxt-transformY-50 fxt-transition-delay-1">
-                                        <input id="password" type="password" class="form-control" name="password"
-                                            placeholder="********"  required>
-                                        <i toggle="#password" class="fa fa-fw fa-eye toggle-password field-icon"></i>
-                                    </div>
-
-                                </div>
-                                <div class="form-group">
-                                    <div class="fxt-transformY-50 fxt-transition-delay-1">
-                                        <input type="tel" id="mob" maxlength="10" class="form-control" name="mob"
-                                            placeholder="Mobile Number" required="required">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="fxt-transformY-50 fxt-transition-delay-2">
-                                        <input id="dob" placeholder="Date of Birth" onfocus="(this.type='date')"
-                                            onblur="(this.type='text')"
-                                            style="color: #a1a1a1;font-size: 15px;font-weight: 300;" id="dob"
-                                            class="form-control" name="dob" placeholder="Date" required="required">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <div class="fxt-transformY-50 fxt-transition-delay-4">
-                                        <button id="registerSubmit" class="fxt-btn-fill">Register</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-
-                        <div class="fxt-footer">
-                            <div class="fxt-transformY-50 fxt-transition-delay-9">
-                                <p>Already have an account?<a href="login.html" class="switcher-text2">Log In</a></p>
-                            </div>
-                        </div>
-                    </div>
+  <section class="fxt-template-animation fxt-template-layout7" data-bg-image="./images/backregimg.jpg">
+    <div class="container">
+      <div class="row align-items-center justify-content-center">
+        <div class="col-xl-6 col-lg-7 col-sm-12 col-12 fxt-bg-color">
+          <div class="fxt-content">
+            <div class="fxt-header">
+              <a href="login-7.html" class="fxt-logo"><img src="img/logo-7.png" alt="Logo"></a>
+              <p>Register with US</p>
+            </div>
+            <div class="fxt-form">
+              <formsa>
+                <p id="success" class="form-group" style="color: green;"></p>
+                <p id="error" class="form-group" style="color: red;"></p>
+                <div class="form-group">
+                  <div class="fxt-transformY-50 fxt-transition-delay-1">
+                    <input type="text" id="firstname" class="form-control" name="firstname" placeholder="First Name"
+                      required="required">
+                  </div>
                 </div>
+                <div class="form-group">
+                  <div class="fxt-transformY-50 fxt-transition-delay-1">
+                    <input type="text" id="lastname" class="form-control" name="lastname" placeholder="Last Name"
+                      required="required">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="fxt-transformY-50 fxt-transition-delay-1">
+                    <input type="email" id="email" class="form-control" name="email" placeholder="Email"
+                      required="required">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="fxt-transformY-50 fxt-transition-delay-1">
+                    <input id="password" type="password" class="form-control" name="password" placeholder="********"
+                      required>
+                    <i toggle="#password" class="fa fa-fw fa-eye toggle-password field-icon"></i>
+                  </div>
+
+                </div>
+                <div class="form-group">
+                  <div class="fxt-transformY-50 fxt-transition-delay-1">
+                    <input type="tel" id="mob" maxlength="10" class="form-control" name="mob"
+                      placeholder="Mobile Number" required="required">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="fxt-transformY-50 fxt-transition-delay-2">
+                    <input id="dob" placeholder="Date of Birth" onfocus="(this.type='date')" onblur="(this.type='text')"
+                      style="color: #a1a1a1;font-size: 15px;font-weight: 300;" id="dob" class="form-control" name="dob"
+                      placeholder="Date" required="required">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="fxt-transformY-50 fxt-transition-delay-4">
+                    <button id="registerSubmit" class="fxt-btn-fill">Register</button>
+                  </div>
+                </div>
+                </form>
             </div>
-        </div>
-    </section>
-    <footer class="full-footer" style="border-top-color:black;width:100%;  border:solid">
-        <div class="container topFooter p-md-3 p-4">
-          <div class="row">
-            <div class="col-md-3">
-              <h5 style="color: white">HELPING HANDS</h5>
-    
-              <p>
-                Helping Hands is a Research based Platform / Blog / Medium for
-                anyone,anytime and anywhere.
-              </p>
-              <br />
-              <a class="p-2" href="https://www.facebook.com/helpinghands4world/">
-                <img src="../images/facebook.png" class="logo-icon-smalll" alt="facebook"></a>
-              <a class="p-2" href="https://www.instagram.com/we_r_helping_hands">
-                <img src="../images/instagram.png" class="logo-icon-smalll" alt="icon-instagram"></a>
-              <a class="p-2" href="https://www.linkedin.com/company/we-r-helping-hands">
-                <img src="../images/linkedin.png" class="logo-icon-smalll" alt="icon-linkedin"></a>
-              <a class="p-2" href="https://twitter.com/werhelpinghands">
-                <img src="../images/twitter.png" class="logo-icon-smalll" alt="icon-twitter"></i></a>
-              <a class="p-2" href="tel:+917906980871">
-                <img src="../images/whatsapp.png" class="logo-icon-smalll" alt="icon-whatsapp"></i></a>
-              <br>
-              <br>
+            <div class="fxt-style-line">
+              <div class="fxt-transformY-50 fxt-transition-delay-5">
+                <h3>Or Continue With</h3>
+              </div>
             </div>
-            &#32;
-    
-    
-            <div class="col-md-3">
-              <h5 style="color:white;">Important Links</h5>
-              <a class="p-1" href="./login.html">Accounts</a><br />
-              <a class="p-1" href="./blogs.html">Blog Articles</a><br />
-              <a class="p-1" href="./social-contact.html">Social Media</a><br />
-              <br>
-    
-            </div>
-    
-    
-            <div class="col-md-3">
-              <h5 style="color: white;">Our Services</h5>
-    
-              <a class="p-1" href="./projects.html">Projects</a><br />
-              <a class="p-1" href="./surveys.html">Surveys</a><br />
-              <br />
-              <h5 style="color: white">Available in:</h5>
-              <a class="p-1" href="#"><img src="../images/android.png" class="logo-icon" alt="icon-android"></a>
-              <a class="p-1" href="#"><img src="../images/apple.png" class="logo-icon" alt="icon-apple"></a>
-              <br>
-              <br>
-            </div>
-            <div class="col-md-3">
-              <h5 style="color:white;">Contact Us</h5>
-              <a href="tel:+917906980871">
-                <img src="../images/call.png" class="logo-icon-small" alt="icon-call"> +(91) 7906980871</a>
-              <br />
-              <a href="mailto:werrhelpinghands@gmail.com">
-                <img src="../images/gmail.png" class="logo-icon-small" alt="icon-gmail">
-                werrhelpinghands@gmail.com</a><br />
-              <br>
-              <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448181.16374162206!2d76.81306442366603!3d28.647279935570428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!5e0!3m2!1sen!2sin!4v1561834027057!5m2!1sen!2sin"
-                  frameborder="10px" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <div id="firebaseui-auth-container"></div>
+
+            <div class="fxt-footer">
+              <div class="fxt-transformY-50 fxt-transition-delay-9">
+                <p>Already have an account?<a href="login.html" class="switcher-text2">Log In</a></p>
               </div>
             </div>
           </div>
         </div>
-        <div class="visitor">
-          <!-- hitwebcounter Code START -->
-          <h6>VISITOR NO. :<a href="#">
-              <img
-                src="https://hitwebcounter.com/counter/counter.php?page=7230855&style=0006&nbdigits=5&type=ip&initCount=0"
-                title="User Stats" Alt="PHP Hits Count" style="width: 90px;height: 30px;" border="0">
-            </a></h6>
+      </div>
+    </div>
+  </section>
+  <footer class="full-footer" style="border-top-color:black;width:100%;  border:solid">
+    <div class="container topFooter p-md-3 p-4">
+      <div class="row">
+        <div class="col-md-3">
+          <h5 style="color: white">HELPING HANDS</h5>
+
+          <p>
+            Helping Hands is a Research based Platform / Blog / Medium for
+            anyone,anytime and anywhere.
+          </p>
+          <br />
+          <a class="p-2" href="https://www.facebook.com/helpinghands4world/">
+            <img src="../images/facebook.png" class="logo-icon-smalll" alt="facebook"></a>
+          <a class="p-2" href="https://www.instagram.com/we_r_helping_hands">
+            <img src="../images/instagram.png" class="logo-icon-smalll" alt="icon-instagram"></a>
+          <a class="p-2" href="https://www.linkedin.com/company/we-r-helping-hands">
+            <img src="../images/linkedin.png" class="logo-icon-smalll" alt="icon-linkedin"></a>
+          <a class="p-2" href="https://twitter.com/werhelpinghands">
+            <img src="../images/twitter.png" class="logo-icon-smalll" alt="icon-twitter"></i></a>
+          <a class="p-2" href="tel:+917906980871">
+            <img src="../images/whatsapp.png" class="logo-icon-smalll" alt="icon-whatsapp"></i></a>
+          <br>
+          <br>
         </div>
-    
-        <div class="container-fluid bottomFooter" style="background-color: grey;">
-          <div class="row">
-            <div class="col-12 text-center pt-2">
-              <p class="foot" style="font-size: 12px; font-weight: 600px; color: white;">
-                Copyrights @ Helping Hands 2020 - All Rights Reserved
-              </p>
-            </div>
+        &#32;
+
+
+        <div class="col-md-3">
+          <h5 style="color:white;">Important Links</h5>
+          <a class="p-1" href="./login.html">Accounts</a><br />
+          <a class="p-1" href="./blogs.html">Blog Articles</a><br />
+          <a class="p-1" href="./social-contact.html">Social Media</a><br />
+          <br>
+
+        </div>
+
+
+        <div class="col-md-3">
+          <h5 style="color: white;">Our Services</h5>
+
+          <a class="p-1" href="./projects.html">Projects</a><br />
+          <a class="p-1" href="./surveys.html">Surveys</a><br />
+          <br />
+          <h5 style="color: white">Available in:</h5>
+          <a class="p-1" href="#"><img src="../images/android.png" class="logo-icon" alt="icon-android"></a>
+          <a class="p-1" href="#"><img src="../images/apple.png" class="logo-icon" alt="icon-apple"></a>
+          <br>
+          <br>
+        </div>
+        <div class="col-md-3">
+          <h5 style="color:white;">Contact Us</h5>
+          <a href="tel:+917906980871">
+            <img src="../images/call.png" class="logo-icon-small" alt="icon-call"> +(91) 7906980871</a>
+          <br />
+          <a href="mailto:werrhelpinghands@gmail.com">
+            <img src="../images/gmail.png" class="logo-icon-small" alt="icon-gmail">
+            werrhelpinghands@gmail.com</a><br />
+          <br>
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448181.16374162206!2d76.81306442366603!3d28.647279935570428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!5e0!3m2!1sen!2sin!4v1561834027057!5m2!1sen!2sin"
+              frameborder="10px" frameborder="0" style="border:0" allowfullscreen></iframe>
           </div>
         </div>
-      </footer>
-    <!-- jquery-->
-    <script src="./javascript/jquery-3.5.0.min.js"></script>
-    <!-- Popper js -->
-    <script src="./javascript/popper.min.js"></script>
-    <!-- Bootstrap js -->
-    <script src="./javascript/bootstrap.min.js"></script>
-    <!-- Imagesloaded js -->
-    <script src="./javascript/imagesloaded.pkgd.min.js"></script>
-    <!-- Validator js -->
-    <script src="./javascript/validator.min.js"></script>
-    <!-- Custom Js -->
-    <script src="./javascript/main.js"></script>
-    <script src="./javascript/register.js"></script>
-<!--------------------------------------------------------------------------------------------------------------------------------------->
-<script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://kit.fontawesome.com/159a527170.js"
-      crossorigin="anonymous"
-    ></script>
+      </div>
+    </div>
+    <div class="visitor">
+      <!-- hitwebcounter Code START -->
+      <h6>VISITOR NO. :<a href="#">
+          <img
+            src="https://hitwebcounter.com/counter/counter.php?page=7230855&style=0006&nbdigits=5&type=ip&initCount=0"
+            title="User Stats" Alt="PHP Hits Count" style="width: 90px;height: 30px;" border="0">
+        </a></h6>
+    </div>
+
+    <div class="container-fluid bottomFooter" style="background-color: grey;">
+      <div class="row">
+        <div class="col-12 text-center pt-2">
+          <p class="foot" style="font-size: 12px; font-weight: 600px; color: white;">
+            Copyrights @ Helping Hands 2020 - All Rights Reserved
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- jquery-->
+  <script src="./javascript/jquery-3.5.0.min.js"></script>
+  <!-- Popper js -->
+  <script src="./javascript/popper.min.js"></script>
+  <!-- Bootstrap js -->
+  <script src="./javascript/bootstrap.min.js"></script>
+  <!-- Imagesloaded js -->
+  <script src="./javascript/imagesloaded.pkgd.min.js"></script>
+  <!-- Validator js -->
+  <script src="./javascript/validator.min.js"></script>
+  <!-- Custom Js -->
+  <script src="./javascript/main.js"></script>
+  <script src="./javascript/register.js"></script>
+  <!-- Firebase UI -->
+  <script>
+    // Initialize the FirebaseUI Widget using Firebase.
+    var ui = new firebaseui.auth.AuthUI(firebase.auth());
+    var uiConfig = {
+      callbacks: {
+        signInSuccessWithAuthResult: async function (authResult, redirectUrl) {
+
+          let body = {
+            'firstName': authResult.user.displayName,
+            'email': authResult.user.email
+          }
+          let exist = false
+          await axios.get(`https://helpinghands-server.herokuapp.com/api/auth/isOldUser/${body.email}`).then(res => {
+            exist = res.data.exist
+          })
+
+          if (exist) {
+            // If User already exist
+            // Login
+            await axios({
+              headers: {
+                "Content-type": "application/json",
+              },
+              method: "post",
+              url: "/api/auth/OAuth",
+              data: body,
+              withCredentials: true,
+            })
+              .then((res) => {
+                document.getElementById("error").innerHTML = "";
+                document.getElementById("success").innerHTML = "Login Successful";
+                localStorage.setItem('admin', res.data.user.admin)
+              })
+              .catch((err) => {
+                console.log(err);
+              });
+          } else {
+            // If User don't exist
+            // Register
+            await axios({
+              headers: {
+                "Content-type": "application/json",
+              },
+              method: "post",
+              url: "https://helpinghands-server.herokuapp.com/api/auth/signup",
+              data: body,
+            })
+              .then((res) => {
+                // Login
+                axios({
+                  headers: {
+                    "Content-type": "application/json",
+                  },
+                  method: "post",
+                  url: "https://helpinghands-server.herokuapp.com/api/auth/OAuth",
+                  data: body,
+                  withCredentials: true,
+                })
+                  .then((res) => {
+                    document.getElementById("error").innerHTML = "";
+                    document.getElementById("success").innerHTML = "Login Successful";
+                    localStorage.setItem('admin', res.data.user.admin)
+                  })
+                  .catch((err) => {
+                    console.log(err);
+                  });
+
+              })
+              .catch((err) => {
+                console.log(err);
+              });
+          }
+        },
+      },
+      signInFlow: 'popup',
+      signInOptions: [
+        firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+      ],
+      // Terms of service url.
+      tosUrl: '<your-tos-url>',
+      // Privacy policy url.
+      privacyPolicyUrl: '<your-privacy-policy-url>'
+    };
+    // The start method will wait until the DOM is loaded.
+    ui.start('#firebaseui-auth-container', uiConfig);
+  </script>
+  <!--------------------------------------------------------------------------------------------------------------------------------------->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/159a527170.js" crossorigin="anonymous"></script>
 </body>
 
 
