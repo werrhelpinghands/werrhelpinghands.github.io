@@ -26,7 +26,7 @@ body {
   transform: translateX(-250px);
   transition: transform 250ms ease-in-out;
   background-color: black;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 #sidebarMenu ul {
   z-index: 1;
@@ -82,6 +82,7 @@ body {
 input[type="checkbox"]:checked ~ #sidebarMenu {
   transform: translateX(0);
 }
+
 #carouselExampleIndicators {
   z-index: 0;
 }

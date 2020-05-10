@@ -1,3 +1,12 @@
+
+var a = document.querySelectorAll('#linkmenu');
+var cbox = document.querySelector('#openSidebarMenu');
+for (i = 0; i < a.length; i++) {
+a[i].addEventListener('click',function(){
+  cbox.checked = false;
+
+})};
+
 function submitForm() {
   // Get the first form with the name
   // Usually the form name is not repeated
