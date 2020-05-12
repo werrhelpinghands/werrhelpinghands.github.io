@@ -2,13 +2,12 @@
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 
-<!-- Mirrored from www.vasterad.com/themes/workscout_2019/browse-jobs.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 May 2020 07:16:07 GMT -->
+<!-- Mirrored from www.vasterad.com/themes/workscout_2019/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 May 2020 07:13:36 GMT -->
 <head>
-
-<!-- Basic Page Needs
+	<!-- Basic Page Needs
 ================================================== -->
 <meta charset="utf-8">
-<title>Work Scout</title>
+<title>Helping Hands</title>
 
 <!-- Mobile Specific Metas
 ================================================== -->
@@ -17,6 +16,7 @@
 <!-- CSS
 ================================================== -->
 <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/stylee.css">
 <link rel="stylesheet" href="css/colors.css">
 
 
@@ -29,22 +29,22 @@
 
 <!-- Header
 ================================================== -->
-<header class="sticky-header">
+<header class="transparent sticky-header">
 <div class="container">
 	<div class="sixteen columns">
-
+	
 		<!-- Logo -->
 		<div id="logo">
-			<h1><a href="index.html"><img src="images/logo.png" alt="Work Scout" /></a></h1>
+			<h1><a href="index.html"><img class="main-logo" src="images/lgwhite.png" alt="Work Scout" /></a></h1>
 		</div>
 
 		<!-- Menu -->
 		<nav id="navigation" class="menu">
 			<ul id="responsive">
 
-				<li><a href="index.html">Home</a>
+				<li><a id="current" href="index.html">Home</a>
 					<ul>
-						<li><a href="index.html">Home #1</a></li>
+						<li><a href="./index_job.html">Home #1</a></li>
 						<li><a href="index-2.html">Home #2</a></li>
 						<li><a href="index-3.html">Home #3</a></li>
 						<li><a href="index-4.html">Home #4</a></li>
@@ -65,7 +65,7 @@
 					</ul>
 				</li>
 
-				<li><a id="current" href="#">Browse Listings</a>
+				<li><a href="#">Browse Listings</a>
 					<ul>
 						<li><a href="browse-jobs.html">Browse Jobs</a></li>
 						<li><a href="browse-resumes.html">Browse Resumes</a></li>
@@ -89,16 +89,16 @@
 			</ul>
 
 
-			<ul class="responsive float-right">
-				<li><a href="my-account.html#tab2"><i class="fa fa-user"></i> Sign Up</a></li>
-				<li><a href=""><i class="fa fa-lock"></i> Log In</a></li>
+			<ul class="float-right">
+				<li><a href="./register.html"><i class="fa fa-user"></i> Sign Up</a></li>
+				<li><a href="./login.html"><i class="fa fa-lock"></i> Log In</a></li>
 			</ul>
 
 		</nav>
 
 		<!-- Navigation -->
 		<div id="mobile-navigation">
-			<a href="#menu" class="menu-trigger"><i class="fa fa-reorder"></i> Menu</a>
+			<a href="#menu" class="menu-trigger"><i class="fa fa-reorder"></i></a>
 		</div>
 
 	</div>
@@ -107,9 +107,39 @@
 <div class="clearfix"></div>
 
 
+<!-- Banner
+================================================== -->
+<div id="banner" class="with-transparent-header parallax background" style="background-image: url(images/banner-home-02.jpg)" data-img-width="2000" data-img-height="1330" data-diff="300">
+	<div class="container">
+		<div class="sixteen columns">
+			
+			<div class="search-container">
+
+				<!-- Form -->
+				<h2>Find Job</h2>
+				<input type="text" class="ico-01" placeholder="job title, keywords or company name" value=""/>
+				<button><i class="fa fa-search"></i></button>
+
+				
+				
+				<!-- Announce -->
+<!-- 				<div class="announce">
+					We’ve over <strong>15 000</strong> job offers for you!
+				</div> -->
+
+			</div>
+
+		</div>
+	</div>
+</div>
+
 
 <!-- Content
 ================================================== -->
+
+
+
+
 <div class="container">
 	<!-- Widgets -->
 	<div class="five columns">
@@ -180,7 +210,6 @@
 
 
 			</select>
-
 		</div>
 
 		<!-- Location -->
@@ -201,15 +230,19 @@
 			<ul class="checkboxes">
 				<li>
 					<input id="check-1" type="checkbox" name="check" value="check-1" checked>
-					<label for="check-1">ANY TYPE</label>
+					<label for="check-1">Any Type</label>
+				</li>
+				<li>
+					<input id="check-2" type="checkbox" name="check" value="check-2">
+					<label for="check-2">Full-Time <span>(312)</span></label>
 				</li>
 				<li>
 					<input id="check-3" type="checkbox" name="check" value="check-3">
-					<label for="check-3">JOBS <span>(269)</span></label>
+					<label for="check-3">Part-Time <span>(269)</span></label>
 				</li>
 				<li>
 					<input id="check-4" type="checkbox" name="check" value="check-4">
-					<label for="check-4">INTERNSHIPs<span>(46)</span></label>
+					<label for="check-4">Internship <span>(46)</span></label>
 				</li>
 				
 			</ul>
@@ -369,77 +402,155 @@
 
 
 </div>
+<!--------
+<section class="fullwidth-testimonial margin-top-15">
+
+	<div class="container">
+		<div class="sixteen columns">
+			<h3 class="headline centered">
+				What Our Users Say 😍
+				<span class="margin-top-25">We collect reviews from our users so you can get an honest opinion of what an experience with our website are really like!</span>
+			</h3>
+		</div>
+	</div>
+=	<div class="fullwidth-carousel-container margin-top-20">
+		<div class="testimonial-carousel testimonials">
+			
+=			<div class="fw-carousel-review">
+				<div class="testimonial-box">
+					<div class="testimonial">Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close.</div>
+				</div>
+				<div class="testimonial-author">
+					<img src="images/resumes-list-avatar-03.png" alt="">
+					<h4>Tom Baker <span>HR Specialist</span></h4>
+				</div>
+			</div>
+
+=			<div class="fw-carousel-review">
+				<div class="testimonial-box">
+					<div class="testimonial">Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation is on the runway heading towards a streamlined cloud content.</div>
+				</div>
+				<div class="testimonial-author">
+					<img src="images/resumes-list-avatar-02.png" alt="">
+					<h4>Jennie Smith <span>Jobseeker</span></h4>
+				</div>
+			</div>
+
+=			<div class="fw-carousel-review">
+				<div class="testimonial-box">
+					<div class="testimonial">Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view.</div>
+				</div>
+				<div class="testimonial-author">
+					<img src="images/resumes-list-avatar-01.png" alt="">
+					<h4>Jack Paden <span>Jobseeker</span></h4>
+				</div>
+			</div>
+
+		</div>
+	</div>
+=
+</section>
+-------->
+<!-- Flip banner -->
+<a href="browse-jobs.html" class="flip-banner margin-bottom-0" data-background="images/all-categories-photo.jpg" data-color="#fa7d19" data-color-opacity="0.93">
+	<div class="flip-banner-content">
+		<h2 class="flip-visible">Step inside and see for yourself!</h2>
+		<h2 class="flip-hidden">Get Started <i class="fa fa-angle-right"></i></h2>
+	</div>
+</a>
+<!-- Flip banner / End -->
+
+
+
 
 
 <!-- Footer
 ================================================== -->
-<div class="margin-top-25"></div>
+<div class="margin-top-15"></div>
 
-<div id="footer">
-	<!-- Main -->
-	<div class="container">
+<footer class="full-footer" >
+    <div class="container topFooter p-md-3 p-4">
+      <div class="row">
+        <div class="col-md-3" >
+          <h5 style="color: white">HELPING HANDS</h5>
 
-		<div class="seven columns">
-			<h4>About</h4>
-			<p>Morbi convallis bibendum urna ut viverra. Maecenas quis consequat libero, a feugiat eros. Nunc ut lacinia tortor morbi ultricies laoreet ullamcorper phasellus semper.</p>
-			<a href="#" class="button">Get Started</a>
-		</div>
+          <p>
+            Helping Hands is a Research based Platform / Blog / Medium for
+            anyone,anytime and anywhere.
+          </p>
+		  <br />
+		  <div class="footan">
+          <a class="p-2" href="https://www.facebook.com/helpinghands4world/">
+            <img src="./images/facebook.png" class="logo-icon-smalll" alt="facebook"></a>
+          <a class="p-2" href="https://www.instagram.com/we_r_helping_hands">
+            <img src="./images/instagram.png" class="logo-icon-smalll" alt="icon-instagram"></a>
+          <a class="p-2" href="https://www.linkedin.com/company/we-r-helping-hands">
+            <img src="./images/linkedin.png" class="logo-icon-smalll" alt="icon-linkedin"></a>
+          <a class="p-2" href="https://twitter.com/werhelpinghands">
+            <img src="./images/twitter.png" class="logo-icon-smalll" alt="icon-twitter"></i></a>
+          <a class="p-2" href="tel:+917906980871">
+            <img src="./images/whatsapp.png" class="logo-icon-smalll" alt="icon-whatsapp"></i></a></div>
+          <br>
+          <br>
+        </div>
+        &#32;
 
-		<div class="three columns">
-			<h4>Company</h4>
-			<ul class="footer-links">
-				<li><a href="#">About Us</a></li>
-				<li><a href="#">Careers</a></li>
-				<li><a href="#">Our Blog</a></li>
-				<li><a href="#">Terms of Service</a></li>
-				<li><a href="#">Privacy Policy</a></li>
-				<li><a href="#">Hiring Hub</a></li>
-			</ul>
-		</div>
-		
-		<div class="three columns">
-			<h4>Press</h4>
-			<ul class="footer-links">
-				<li><a href="#">In the News</a></li>
-				<li><a href="#">Press Releases</a></li>
-				<li><a href="#">Awards</a></li>
-				<li><a href="#">Testimonials</a></li>
-				<li><a href="#">Timeline</a></li>
-			</ul>
-		</div>		
 
-		<div class="three columns">
-			<h4>Browse</h4>
-			<ul class="footer-links">
-				<li><a href="#">Freelancers by Category</a></li>
-				<li><a href="#">Freelancers in USA</a></li>
-				<li><a href="#">Freelancers in UK</a></li>
-				<li><a href="#">Freelancers in Canada</a></li>
-				<li><a href="#">Freelancers in Australia</a></li>
-				<li><a href="#">Find Jobs</a></li>
+        <div class="col-md-3">
+          <h5 style="color:white;">Important Links</h5>
+          <a class="p-1" href="./login.html">Accounts</a><br />
+          <a class="p-1" href="./blogs.html">Blog Articles</a><br />
+          <a class="p-1" href="./social-contact.html">Social Media</a><br />
+          <br>
 
-			</ul>
-		</div>
+        </div>
 
+
+        <div class="col-md-3">
+          <h5 style="color: white;">Our Services</h5>
+
+          <a class="p-1" href="./projects.html">Projects</a><br />
+          <a class="p-1" href="./surveys.html">Surveys</a><br />
+          <br />
+		  <h5 style="color: white">Available in:</h5>
+		  <div class="footan">
+          <a class="p-1" href="#"><img src="./images/android.png" class="logo-icon-smalll" alt="icon-android"></a>
+          <a class="p-1" href="#"><img src="./images/apple.png" class="logo-icon-smalll" alt="icon-apple"></a></div>
+          <br>
+          <br>
+        </div>
+        <div class="col-md-3">
+
+		  <h5 style="color:white;">Contact Us</h5>
+		  
+          <a href="tel:+917906980871" class="footan">
+            <img src="./images/call.png" class="logo-icon-smalll" alt="icon-call"> +(91) 7906980871</a>
+          <br />
+          <a class="footan"  href="mailto:werrhelpinghands@gmail.com">
+            <img src="./images/gmail.png" class="logo-icon-smalll" alt="icon-gmail">
+            werrhelpinghands@gmail.com</a><br />
+          <br>
+          <div style="width: 100;height: 90; overflow: hidden;">
+            <iframe class="embed-responsive-item"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448181.16374162206!2d76.81306442366603!3d28.647279935570428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!5e0!3m2!1sen!2sin!4v1561834027057!5m2!1sen!2sin"
+              frameborder="10px" frameborder="0" style="border:0" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="visitor">
+      <!-- hitwebcounter Code START -->
+	  <h6 style="color: white !important;">VISITOR NO. :</h6>
+	  <div style="width: 90px;height: 30px;  position: relative;display: flex;justify-content: center;align-items: center;">
+	  <img src="https://hitwebcounter.com/counter/counter.php?page=7230855&style=0006&nbdigits=5&type=ip&initCount=0"
+            title="User Stats" Alt="PHP Hits Count"  border="0"/></div>
+        
+    </div> 
+    <div class="bootfoot">
+	<p style="font-size: 12px;">Copyrights @ Helping Hands 2020 - All Rights Reserved
+	</p>	
 	</div>
-
-	<!-- Bottom -->
-	<div class="container">
-		<div class="footer-bottom">
-			<div class="sixteen columns">
-				<h4>Follow Us</h4>
-				<ul class="social-icons">
-					<li><a class="facebook" href="#"><i class="icon-facebook"></i></a></li>
-					<li><a class="twitter" href="#"><i class="icon-twitter"></i></a></li>
-					<li><a class="gplus" href="#"><i class="icon-gplus"></i></a></li>
-					<li><a class="linkedin" href="#"><i class="icon-linkedin"></i></a></li>
-				</ul>
-				<div class="copyrights">©  Copyright 2018 by <a href="#">Work Scout</a>. All Rights Reserved.</div>
-			</div>
-		</div>
-	</div>
-
-</div>
+  </footer>
 
 <!-- Back To Top Button -->
 <div id="backtotop"><a href="#"></a></div>
@@ -466,12 +577,12 @@
 <script src="scripts/stacktable.js"></script>
 <script src="scripts/slick.min.js"></script>
 <script src="scripts/headroom.min.js"></script>
-
+<!------------------------------------------------->
 
 
 
 
 </body>
 
-<!-- Mirrored from www.vasterad.com/themes/workscout_2019/browse-jobs.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 May 2020 07:16:07 GMT -->
+<!-- Mirrored from www.vasterad.com/themes/workscout_2019/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 May 2020 07:14:19 GMT -->
 </html>

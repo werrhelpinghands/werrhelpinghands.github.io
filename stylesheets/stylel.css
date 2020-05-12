@@ -337,7 +337,7 @@ ul {
 4. Demo Layout One
 =========================================================================*/
 .fxt-template-layout1 .fxt-bg-color {
-  background-color: #ffffff;
+  background-color: #fff;
   min-height: 100vh;
   width: 100%;
   background-repeat: no-repeat;
@@ -490,34 +490,34 @@ ul {
 .fxt-template-layout1 .fxt-form .form-group [class*=" flaticon-"]:after {
   margin-left: 0;
   font-size: 17px;
-  color: #a1a1a1;
+  color: #fff;
 }
 .fxt-template-layout1 .fxt-form .form-control {
   min-height: 40px;
   -webkit-box-shadow: none;
   box-shadow: none;
   border: 0;
-  border-bottom: 1px solid #e7e7e7;
+  border-bottom: 1px solid #fff;
   padding: 10px 30px 10px 0;
   color: #111111;
 }
 .fxt-template-layout1 .fxt-form input::-webkit-input-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout1 .fxt-form input::-moz-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout1 .fxt-form input:-moz-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout1 .fxt-form input:-ms-input-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
@@ -765,42 +765,42 @@ ul {
   color: #111111;
 }
 .fxt-template-layout2 .fxt-form input::-webkit-input-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout2 .fxt-form input::-moz-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout2 .fxt-form input:-moz-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout2 .fxt-form input:-ms-input-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout2 .fxt-form input[type="date"]:-ms-input-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout2 .fxt-form input[type="date"]::-moz-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout2 .fxt-form input[type="date"]::-moz-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout2 .fxt-form input[type="date"]::-webkit-input-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
@@ -857,7 +857,7 @@ ul {
   font-weight: 300;
   margin-bottom: 30px;
   font-size: 20px;
-  color: #a4a4a4;
+  color: white;
   display: inline-block;
   position: relative;
   padding: 0 25px;
@@ -1007,7 +1007,7 @@ ul {
 }
 .fxt-template-layout2 .checkbox label {
   padding-left: 20px;
-  color: #a4a4a4;
+  color: white;
   margin-bottom: 0;
   font-size: 15px;
   position: relative;
@@ -1141,13 +1141,13 @@ ul {
   max-width: 40vw;
 }
 .fxt-template-layout3 .fxt-header h1 {
-  color: #fff;
+  color: white;
   font-size: 36px;
   font-weight: 500;
   margin-bottom: 10px;
 }
 .fxt-template-layout3 .fxt-header p {
-  color: #fff;
+  color: white;
 }
 .fxt-template-layout3 .fxt-form h2 {
   text-align: center;
@@ -1164,7 +1164,7 @@ ul {
   margin-top: 40px;
 }
 .fxt-template-layout3 .fxt-form form .input-label {
-  color: #979696;
+  color: #fff;
 }
 .fxt-template-layout3 .fxt-form .form-group {
   position: relative;
@@ -1191,22 +1191,22 @@ ul {
   color: #111111;
 }
 .fxt-template-layout3 .fxt-form input::-webkit-input-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout3 .fxt-form input::-moz-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout3 .fxt-form input:-moz-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout3 .fxt-form input:-ms-input-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
@@ -1263,7 +1263,7 @@ ul {
   font-weight: 300;
   margin-bottom: 30px;
   font-size: 20px;
-  color: #a4a4a4;
+  color: white;
   display: inline-block;
   position: relative;
   padding: 0 25px;
@@ -1396,7 +1396,7 @@ ul {
 }
 .fxt-template-layout3 .checkbox label {
   padding-left: 20px;
-  color: #a4a4a4;
+  color: white;
   margin-bottom: 0;
   font-size: 15px;
   position: relative;
@@ -1621,7 +1621,7 @@ ul {
   }
 }
 .fxt-template-layout4 .fxt-header p {
-  color: #fff;
+  color: white;
 }
 .fxt-template-layout4 .fxt-content {
   padding: 30px;
@@ -1670,22 +1670,22 @@ ul {
   color: #111;
 }
 .fxt-template-layout4 .fxt-form input::-webkit-input-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout4 .fxt-form input::-moz-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout4 .fxt-form input:-moz-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout4 .fxt-form input:-ms-input-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
@@ -1821,7 +1821,7 @@ ul {
 }
 .fxt-template-layout4 .checkbox label {
   padding-left: 20px;
-  color: #a4a4a4;
+  color: white;
   margin-bottom: 0;
   font-size: 15px;
   position: relative;
@@ -2014,7 +2014,7 @@ ul {
 .fxt-template-layout5 .fxt-form .form-group [class*=" flaticon-"]:after {
   margin-left: 0;
   font-size: 17px;
-  color: #a1a1a1;
+  color: black;
 }
 .fxt-template-layout5 .fxt-form .form-control {
   min-height: 40px;
@@ -2026,22 +2026,22 @@ ul {
   color: #111111;
 }
 .fxt-template-layout5 .fxt-form input::-webkit-input-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout5 .fxt-form input::-moz-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout5 .fxt-form input:-moz-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout5 .fxt-form input:-ms-input-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
@@ -2271,7 +2271,7 @@ ul {
 }
 .fxt-template-layout5 .checkbox label {
   padding-left: 20px;
-  color: #a4a4a4;
+  color: white;
   margin-bottom: 0;
   font-size: 15px;
   position: relative;
@@ -2422,7 +2422,7 @@ ul {
 .fxt-template-layout6 .fxt-form .form-group [class*=" flaticon-"]:after {
   margin-left: 0;
   font-size: 17px;
-  color: #a1a1a1;
+  color: black;
 }
 .fxt-template-layout6 .fxt-form .form-control {
   background-color: #f6f6f6;
@@ -2434,22 +2434,22 @@ ul {
   color: #111111;
 }
 .fxt-template-layout6 .fxt-form input::-webkit-input-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout6 .fxt-form input::-moz-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout6 .fxt-form input:-moz-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout6 .fxt-form input:-ms-input-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
@@ -2617,7 +2617,7 @@ ul {
   justify-content: space-between;
 }
 .fxt-template-layout6 .fxt-footer p {
-  color: #747474;
+  color: white;
 }
 /*========================================================================
 10. Demo Layout Seven
@@ -2695,7 +2695,7 @@ ul {
   margin-bottom: 10px;
 }
 .fxt-template-layout7 .fxt-header p {
-  color: #999898;
+  color: white;
 }
 .fxt-template-layout7 .fxt-form h2 {
   text-align: center;
@@ -2721,7 +2721,7 @@ ul {
   right: 19px;
   bottom: 18px;
   font-size: 14px;
-  color: #a1a1a1;
+  color: black;
 }
 .fxt-template-layout7 .fxt-form .form-group .field-icon:before {
   padding: 17px 10px;
@@ -2735,22 +2735,22 @@ ul {
   color: #111;
 }
 .fxt-template-layout7 .fxt-form input::-webkit-input-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout7 .fxt-form input::-moz-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout7 .fxt-form input:-moz-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout7 .fxt-form input:-ms-input-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
@@ -2800,7 +2800,7 @@ ul {
   color: #666;
 }
 .fxt-template-layout7 .switcher-text2 {
-  color: #353535;
+  color: rgb(206, 206, 206);
   font-size: 15px;
   margin-top: 5px;
   margin-left: 2px;
@@ -2827,7 +2827,7 @@ ul {
   font-weight: 300;
   margin-bottom: 30px;
   font-size: 20px;
-  color: #a4a4a4;
+  color: white;
   display: inline-block;
   position: relative;
   padding: 0 25px;
@@ -2977,7 +2977,7 @@ ul {
 }
 .fxt-template-layout7 .checkbox label {
   padding-left: 20px;
-  color: #a4a4a4;
+  color: white;
   margin-bottom: 0;
   font-size: 15px;
   position: relative;
@@ -3024,7 +3024,7 @@ ul {
   text-align: center;
 }
 .fxt-template-layout7 .fxt-footer p {
-  color: #999898;
+  color: white;
 }
 /*========================================================================
 11. Demo Layout Eight
@@ -3183,7 +3183,7 @@ ul {
   outline: none;
 }
 .fxt-template-layout8 .switcher-text {
-  color: #b6b6b6;
+  color: white;
   font-size: 15px;
   margin-top: 5px;
   display: block;
@@ -3222,7 +3222,7 @@ ul {
   font-weight: 300;
   margin-bottom: 30px;
   font-size: 20px;
-  color: #a4a4a4;
+  color: white;
   display: inline-block;
   position: relative;
   padding: 0 25px;
@@ -3233,7 +3233,7 @@ ul {
   content: "";
   height: 1px;
   width: 100%;
-  background-color: #a4a4a4;
+  background-color: white;
   left: 100%;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -3247,7 +3247,7 @@ ul {
   content: "";
   height: 1px;
   width: 100%;
-  background-color: #a4a4a4;
+  background-color: white;
   right: 100%;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -3420,7 +3420,7 @@ ul {
   text-align: center;
 }
 .fxt-template-layout8 .fxt-footer p {
-  color: #b6b6b6;
+  color: white;
 }
 /*========================================================================
 12. Demo Layout Nine
@@ -3575,7 +3575,7 @@ ul {
   outline: none;
 }
 .fxt-template-layout9 .switcher-text {
-  color: #b6b6b6;
+  color: white;
   font-size: 15px;
   margin-top: 5px;
   display: block;
@@ -3658,7 +3658,7 @@ ul {
   text-align: center;
 }
 .fxt-template-layout9 .fxt-footer p {
-  color: #b6b6b6;
+  color: white;
 }
 /*========================================================================
 13. Demo Layout Ten
@@ -3740,10 +3740,10 @@ ul {
   max-width: 40vw;
 }
 .fxt-template-layout10 .fxt-header h1 {
-  color: #fff;
+  color: white;
 }
 .fxt-template-layout10 .fxt-header p {
-  color: #fff;
+  color: white;
 }
 .fxt-template-layout10 .fxt-form {
   -webkit-box-flex: 1;
@@ -4140,7 +4140,7 @@ ul {
   margin-bottom: 10px;
 }
 .fxt-template-layout11 .fxt-header p {
-  color: #999898;
+  color: white;
 }
 .fxt-template-layout11 .fxt-form h2 {
   text-align: center;
@@ -4166,7 +4166,7 @@ ul {
   right: 19px;
   bottom: 18px;
   font-size: 14px;
-  color: #a1a1a1;
+  color: black;
 }
 .fxt-template-layout11 .fxt-form .form-group .field-icon:before {
   padding: 17px 10px;
@@ -4180,22 +4180,22 @@ ul {
   color: #111;
 }
 .fxt-template-layout11 .fxt-form input::-webkit-input-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout11 .fxt-form input::-moz-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout11 .fxt-form input:-moz-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout11 .fxt-form input:-ms-input-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
@@ -4272,7 +4272,7 @@ ul {
   font-weight: 300;
   margin-bottom: 30px;
   font-size: 20px;
-  color: #a4a4a4;
+  color: white;
   display: inline-block;
   position: relative;
   padding: 0 25px;
@@ -4422,7 +4422,7 @@ ul {
 }
 .fxt-template-layout11 .checkbox label {
   padding-left: 20px;
-  color: #a4a4a4;
+  color: white;
   margin-bottom: 0;
   font-size: 15px;
   position: relative;
@@ -4469,7 +4469,7 @@ ul {
   text-align: center;
 }
 .fxt-template-layout11 .fxt-footer p {
-  color: #999898;
+  color: white;
 }
 /*========================================================================
 15. Demo Layout Twelve
@@ -4547,7 +4547,7 @@ ul {
   margin-bottom: 10px;
 }
 .fxt-template-layout12 .fxt-header p {
-  color: #999898;
+  color: white;
 }
 .fxt-template-layout12 .fxt-form h2 {
   text-align: center;
@@ -4573,7 +4573,7 @@ ul {
   right: 19px;
   bottom: 18px;
   font-size: 14px;
-  color: #a1a1a1;
+  color: black;
 }
 .fxt-template-layout12 .fxt-form .form-group .field-icon:before {
   padding: 17px 10px;
@@ -4587,22 +4587,22 @@ ul {
   color: #111;
 }
 .fxt-template-layout12 .fxt-form input::-webkit-input-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout12 .fxt-form input::-moz-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout12 .fxt-form input:-moz-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout12 .fxt-form input:-ms-input-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
@@ -4679,7 +4679,7 @@ ul {
   font-weight: 300;
   margin-bottom: 30px;
   font-size: 20px;
-  color: #a4a4a4;
+  color: white;
   display: inline-block;
   position: relative;
   padding: 0 25px;
@@ -4829,7 +4829,7 @@ ul {
 }
 .fxt-template-layout12 .checkbox label {
   padding-left: 20px;
-  color: #a4a4a4;
+  color: white;
   margin-bottom: 0;
   font-size: 15px;
   position: relative;
@@ -4876,7 +4876,7 @@ ul {
   text-align: center;
 }
 .fxt-template-layout12 .fxt-footer p {
-  color: #999898;
+  color: white;
 }
 /*========================================================================
 16. Demo Layout Thirteen
@@ -5102,22 +5102,22 @@ ul {
   color: #111;
 }
 .fxt-template-layout13 .fxt-form input::-webkit-input-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout13 .fxt-form input::-moz-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout13 .fxt-form input:-moz-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout13 .fxt-form input:-ms-input-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
@@ -5253,7 +5253,7 @@ ul {
 }
 .fxt-template-layout13 .checkbox label {
   padding-left: 20px;
-  color: #a4a4a4;
+  color: white;
   margin-bottom: 0;
   font-size: 15px;
   position: relative;
@@ -5391,7 +5391,7 @@ ul {
   margin-bottom: 10px;
 }
 .fxt-template-layout14 .fxt-header p {
-  color: #999898;
+  color: white;
 }
 .fxt-template-layout14 .fxt-form h2 {
   text-align: center;
@@ -5417,7 +5417,7 @@ ul {
   right: 19px;
   bottom: 18px;
   font-size: 14px;
-  color: #a1a1a1;
+  color: black;
 }
 .fxt-template-layout14 .fxt-form .form-group .field-icon:before {
   padding: 17px 10px;
@@ -5431,22 +5431,22 @@ ul {
   color: #111;
 }
 .fxt-template-layout14 .fxt-form input::-webkit-input-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout14 .fxt-form input::-moz-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout14 .fxt-form input:-moz-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout14 .fxt-form input:-ms-input-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
@@ -5523,7 +5523,7 @@ ul {
   font-weight: 300;
   margin-bottom: 30px;
   font-size: 20px;
-  color: #a4a4a4;
+  color: white;
   display: inline-block;
   position: relative;
   padding: 0 25px;
@@ -5673,7 +5673,7 @@ ul {
 }
 .fxt-template-layout14 .checkbox label {
   padding-left: 20px;
-  color: #a4a4a4;
+  color: white;
   margin-bottom: 0;
   font-size: 15px;
   position: relative;
@@ -5720,7 +5720,7 @@ ul {
   text-align: center;
 }
 .fxt-template-layout14 .fxt-footer p {
-  color: #999898;
+  color: white;
 }
 /*========================================================================
 18. Demo Layout Fifteen
@@ -5897,7 +5897,7 @@ ul {
 .fxt-template-layout15 .fxt-form .form-group [class*=" flaticon-"]:after {
   margin-left: 0;
   font-size: 17px;
-  color: #a1a1a1;
+  color: black;
 }
 .fxt-template-layout15 .fxt-form .form-control {
   min-height: 40px;
@@ -5909,22 +5909,22 @@ ul {
   color: #111111;
 }
 .fxt-template-layout15 .fxt-form input::-webkit-input-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout15 .fxt-form input::-moz-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout15 .fxt-form input:-moz-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout15 .fxt-form input:-ms-input-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
@@ -6140,7 +6140,7 @@ ul {
   margin-bottom: 10px;
 }
 .fxt-template-layout16 .fxt-header p {
-  color: #999898;
+  color: white;
 }
 .fxt-template-layout16 .fxt-form h2 {
   text-align: center;
@@ -6166,7 +6166,7 @@ ul {
   right: 19px;
   bottom: 18px;
   font-size: 14px;
-  color: #a1a1a1;
+  color: black;
 }
 .fxt-template-layout16 .fxt-form .form-group .field-icon:before {
   padding: 17px 10px;
@@ -6180,22 +6180,22 @@ ul {
   color: #111;
 }
 .fxt-template-layout16 .fxt-form input::-webkit-input-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout16 .fxt-form input::-moz-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout16 .fxt-form input:-moz-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout16 .fxt-form input:-ms-input-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
@@ -6272,7 +6272,7 @@ ul {
   font-weight: 300;
   margin-bottom: 30px;
   font-size: 20px;
-  color: #a4a4a4;
+  color: white;
   display: inline-block;
   position: relative;
   padding: 0 25px;
@@ -6422,7 +6422,7 @@ ul {
 }
 .fxt-template-layout16 .checkbox label {
   padding-left: 20px;
-  color: #a4a4a4;
+  color: white;
   margin-bottom: 0;
   font-size: 15px;
   position: relative;
@@ -6469,7 +6469,7 @@ ul {
   text-align: center;
 }
 .fxt-template-layout16 .fxt-footer p {
-  color: #999898;
+  color: white;
 }
 /*========================================================================
 20. Demo Layout Seventeen
@@ -6568,22 +6568,22 @@ ul {
   color: #111111;
 }
 .fxt-template-layout17 .fxt-form input::-webkit-input-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout17 .fxt-form input::-moz-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout17 .fxt-form input:-moz-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout17 .fxt-form input:-ms-input-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
@@ -6640,7 +6640,7 @@ ul {
   font-weight: 300;
   margin-bottom: 30px;
   font-size: 20px;
-  color: #a4a4a4;
+  color: white;
   display: inline-block;
   position: relative;
   padding: 0 25px;
@@ -6790,7 +6790,7 @@ ul {
 }
 .fxt-template-layout17 .checkbox label {
   padding-left: 20px;
-  color: #a4a4a4;
+  color: white;
   margin-bottom: 0;
   font-size: 15px;
   position: relative;
@@ -7010,7 +7010,7 @@ ul {
   outline: none;
 }
 .fxt-template-layout18 .switcher-text {
-  color: #b6b6b6;
+  color: white;
   font-size: 15px;
   margin-top: 5px;
   display: block;
@@ -7049,7 +7049,7 @@ ul {
   font-weight: 300;
   margin-bottom: 30px;
   font-size: 20px;
-  color: #a4a4a4;
+  color: white;
   display: inline-block;
   position: relative;
   padding: 0 25px;
@@ -7060,7 +7060,7 @@ ul {
   content: "";
   height: 1px;
   width: 100%;
-  background-color: #a4a4a4;
+  background-color: white;
   left: 100%;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -7074,7 +7074,7 @@ ul {
   content: "";
   height: 1px;
   width: 100%;
-  background-color: #a4a4a4;
+  background-color: white;
   right: 100%;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -7247,7 +7247,7 @@ ul {
   text-align: center;
 }
 .fxt-template-layout18 .fxt-footer p {
-  color: #b6b6b6;
+  color: white;
 }
 /*========================================================================
 22. Demo Layout Nineteen
@@ -7778,22 +7778,22 @@ ul {
   color: #111111;
 }
 .fxt-template-layout20 .fxt-form input::-webkit-input-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout20 .fxt-form input::-moz-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout20 .fxt-form input:-moz-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout20 .fxt-form input:-ms-input-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
@@ -7850,7 +7850,7 @@ ul {
   font-weight: 300;
   margin-bottom: 30px;
   font-size: 20px;
-  color: #a4a4a4;
+  color: white;
   display: inline-block;
   position: relative;
   padding: 0 25px;
@@ -8000,7 +8000,7 @@ ul {
 }
 .fxt-template-layout20 .checkbox label {
   padding-left: 20px;
-  color: #a4a4a4;
+  color: white;
   margin-bottom: 0;
   font-size: 15px;
   position: relative;
@@ -8128,7 +8128,7 @@ ul {
   margin-bottom: 10px;
 }
 .fxt-template-layout21 .fxt-header p {
-  color: #999898;
+  color: white;
 }
 .fxt-template-layout21 .fxt-form h2 {
   text-align: center;
@@ -8154,7 +8154,7 @@ ul {
   right: 19px;
   bottom: 18px;
   font-size: 14px;
-  color: #a1a1a1;
+  color: black;
 }
 .fxt-template-layout21 .fxt-form .form-group .field-icon:before {
   padding: 17px 10px;
@@ -8168,22 +8168,22 @@ ul {
   color: #111;
 }
 .fxt-template-layout21 .fxt-form input::-webkit-input-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout21 .fxt-form input::-moz-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout21 .fxt-form input:-moz-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout21 .fxt-form input:-ms-input-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
@@ -8260,7 +8260,7 @@ ul {
   font-weight: 300;
   margin-bottom: 30px;
   font-size: 20px;
-  color: #a4a4a4;
+  color: white;
   display: inline-block;
   position: relative;
   padding: 0 25px;
@@ -8410,7 +8410,7 @@ ul {
 }
 .fxt-template-layout21 .checkbox label {
   padding-left: 20px;
-  color: #a4a4a4;
+  color: white;
   margin-bottom: 0;
   font-size: 15px;
   position: relative;
@@ -8457,7 +8457,7 @@ ul {
   text-align: center;
 }
 .fxt-template-layout21 .fxt-footer p {
-  color: #999898;
+  color: white;
 }
 /*========================================================================
 25. Demo Layout Twenty Two
@@ -8597,22 +8597,22 @@ ul {
   color: #111111;
 }
 .fxt-template-layout22 .fxt-form input::-webkit-input-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout22 .fxt-form input::-moz-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout22 .fxt-form input:-moz-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
 .fxt-template-layout22 .fxt-form input:-ms-input-placeholder {
-  color: #a1a1a1;
+  color: black;
   font-size: 15px;
   font-weight: 300;
 }
@@ -8669,7 +8669,7 @@ ul {
   font-weight: 300;
   margin-bottom: 30px;
   font-size: 20px;
-  color: #a4a4a4;
+  color: white;
   display: inline-block;
   position: relative;
   padding: 0 25px;
@@ -8802,7 +8802,7 @@ ul {
 }
 .fxt-template-layout22 .checkbox label {
   padding-left: 20px;
-  color: #a4a4a4;
+  color: white;
   margin-bottom: 0;
   font-size: 15px;
   position: relative;
@@ -8995,7 +8995,7 @@ ul {
   outline: none;
 }
 .fxt-template-layout23 .switcher-text {
-  color: #b6b6b6;
+  color: white;
   font-size: 15px;
   margin-top: 5px;
   display: block;
@@ -9034,7 +9034,7 @@ ul {
   font-weight: 300;
   margin-bottom: 30px;
   font-size: 20px;
-  color: #a4a4a4;
+  color: white;
   display: inline-block;
   position: relative;
   padding: 0 25px;
@@ -9045,7 +9045,7 @@ ul {
   content: "";
   height: 1px;
   width: 100%;
-  background-color: #a4a4a4;
+  background-color: white;
   left: 100%;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -9059,7 +9059,7 @@ ul {
   content: "";
   height: 1px;
   width: 100%;
-  background-color: #a4a4a4;
+  background-color: white;
   right: 100%;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -9246,7 +9246,7 @@ ul {
   text-align: center;
 }
 .fxt-template-layout23 .fxt-footer p {
-  color: #b6b6b6;
+  color: white;
 }
 /*========================================================================
 27. Demo Layout Twenty Four
@@ -9414,7 +9414,7 @@ ul {
   outline: none;
 }
 .fxt-template-layout24 .switcher-text {
-  color: #b6b6b6;
+  color: white;
   font-size: 15px;
   margin-top: 5px;
   display: block;
@@ -9497,7 +9497,7 @@ ul {
   text-align: center;
 }
 .fxt-template-layout24 .fxt-footer p {
-  color: #b6b6b6;
+  color: white;
 }
 .fxt-logo img{
   width:130px;
