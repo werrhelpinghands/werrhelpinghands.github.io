@@ -2,7 +2,7 @@
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 
-<!-- Mirrored from www.vasterad.com/themes/workscout_2019/dashboard-add-job.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 May 2020 07:16:09 GMT -->
+<!-- Mirrored from www.vasterad.com/themes/workscout_2019/dashboard-add-Job.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 May 2020 07:16:09 GMT -->
 <head>
 
 <!-- Basic Page Needs
@@ -16,7 +16,7 @@
 
 <!-- CSS
 ================================================== -->
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/stylew2.css">
 <link rel="stylesheet" href="css/styleE.css">
 <link rel="stylesheet" href="dashboard-2.html">
 <link rel="stylesheet" href="css/colors.css">
@@ -57,8 +57,8 @@
 
 				<li><a href="#">Pages</a>
 					<ul>
-						<li><a href="job-page.html">Job Page</a></li>
-						<li><a href="job-page-alt.html">Job Page Alternative</a></li>
+						<li><a href="Job-page.html">Job Page</a></li>
+						<li><a href="Job-page-alt.html">Job Page Alternative</a></li>
 						<li><a href="resume-page.html">Resume Page</a></li>
 						<li><a href="shortcodes.html">Shortcodes</a></li>
 						<li><a href="icons.html">Icons</a></li>
@@ -70,7 +70,7 @@
 
 				<li><a href="#">Browse Listings</a>
 					<ul>
-						<li><a href="browse-jobs.html">Browse Jobs</a></li>
+						<li><a href="browse-Jobs.html">Browse Jobs</a></li>
 						<li><a href="browse-categories.html">Browse Categories</a></li>
 						<li><a href="browse-resumes.html">Browse Resumes</a></li>
 					</ul>
@@ -82,10 +82,10 @@
 						<li><a href="dashboard-messages.html">Messages</a></li>
 						<li><a href="dashboard-manage-resumes.html">Manage Resumes</a></li>
 						<li><a href="dashboard-add-resume.html">Add Resume</a></li>
-						<li><a href="dashboard-job-alerts.html">Job Alerts</a></li>
-						<li><a href="dashboard-manage-jobs.html">Manage Jobs</a></li>
+						<li><a href="dashboard-Job-alerts.html">Job Alerts</a></li>
+						<li><a href="dashboard-manage-Jobs.html">Manage Jobs</a></li>
 						<li><a href="dashboard-manage-applications.html">Manage Applications</a></li>
-						<li><a href="dashboard-add-job.html">Add Job</a></li>
+						<li><a href="dashboard-add-Job.html">Add Job</a></li>
 						<li><a href="dashboard-my-profile.html">My Profile</a></li>
 					</ul>
 				</li>
@@ -138,7 +138,7 @@
 			<div class="col-lg-16 col-md-16">
 
 				<div class="dashboard-list-box margin-top-0">
-					<h4>ADD A JOB</h4>
+					<h4>ADD  JOB</h4>
 					<div class="dashboard-list-box-content">
 
 					<div class="submit-page">
@@ -175,7 +175,7 @@
 				<select data-placeholder="Full-Time" class="chosen-select-no-single">
 					<option value="1">Full-Time</option>
 					<option value="2">Part-Time</option>
-					<option value="2">Internship</option>
+					<option value="2">Job</option>
 					<option value="2">Freelance</option>
 				</select>
 			</div>
@@ -183,7 +183,7 @@
 						<div class="form">
 							<h5>Job Tags <span>(optional)</span></h5>
 							<input class="search-field" type="text" placeholder="e.g. PHP, Social Media, Management" value=""/>
-							<p class="note">Comma separate tags, such as required skills or technologies, for this job.</p>
+							<p class="note">Comma separate tags, such as required skills or technologies, for this Job.</p>
 						</div>
 
 							<!-- Company Name -->
@@ -197,39 +197,30 @@
 							<h5>Website <span>(optional)</span></h5>
 							<input type="text" placeholder="http://">
 						</div>
-							<!-- Logo -->
-							<div class="form">
-								<h5> Company Logo <span>(optional)</span></h5>
-								<label class="upload-btn">
-									<input type="file" multiple />
-									<i class="fa fa-upload"></i> Browse
-								</label>
-								<span class="fake-input">No file selected</span>
-							</div>
+							
 
 						<!-- Company Name -->
-						<div class="form">
+						<div class="form" style="width: 100%;">
 							<h5>About Company</h5>
-							<input type="text" placeholder="Enter About Company">
+							<textarea class="WYSIWYG" name="summary" cols="40" rows="3" id="summary" spellcheck="true"></textarea>
 						</div>
 						<!-- Company Name -->
-						<div class="form">
+						<div class="form" style="width: 100%;">
 							<h5>Job Roles</h5>
-							<input type="text" placeholder="Enter the Job Roles">
+							<textarea class="WYSIWYG" name="summary" cols="40" rows="3" id="summary" spellcheck="true"></textarea>
 						</div>
 						<!-- Company Name -->
-						<div class="form">
+						<div class="form" style="width: 100%;">
 							<h5>Job Requirements / Skills</h5>
-							<input type="text" placeholder="Enter the Job Requirements/Skills">
+							<textarea class="WYSIWYG" name="summary" cols="40" rows="3" id="summary" spellcheck="true"></textarea>
 						</div>
 
 						
 
 					<!-- Location -->
 						<div class="form">
-							<h5>Location </h5>
+							<h5>Location <span>(optional)</span></h5>
 							<input class="search-field" type="text" placeholder="Enter Location" value=""/>
-							<p class="note">Leave this blank if the location is not important</p>
 						</div>
 
 						<!-- Application email/url -->
@@ -260,6 +251,15 @@
 						</div>
 						<!-- Logo -->
 						<div class="form">
+							<h5> Company Logo <span>(optional)</span></h5>
+							<label class="upload-btn">
+								<input type="file" multiple />
+								<i class="fa fa-upload"></i> Browse
+							</label>
+							<span class="fake-input">No file selected</span>
+						</div>
+						<!-- Logo -->
+						<div class="form">
 							<h5>Download Notification <span>(optional)</span></h5>
 							<label class="upload-btn">
 								<input type="file" multiple />
@@ -267,7 +267,14 @@
 							</label>
 							<span class="fake-input">No file selected</span>
 						</div>
-
+						<div class="form">
+							<h5>Company Portal URL </h5>
+							<input type="text" placeholder="http://">
+						</div>
+						<div class="form">
+							<!-- <h5>Company Portal URL </h5>
+							<input type="text" placeholder="http://"> -->
+						</div>
 
 					</div>
 
@@ -400,5 +407,5 @@
 
 </body>
 
-<!-- Mirrored from www.vasterad.com/themes/workscout_2019/dashboard-add-job.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 May 2020 07:16:09 GMT -->
+<!-- Mirrored from www.vasterad.com/themes/workscout_2019/dashboard-add-Job.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 May 2020 07:16:09 GMT -->
 </html>
