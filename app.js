@@ -8,7 +8,6 @@ const cors = require('cors')
 // Connecting to database
 mongoose
   .connect(process.env.MONGO_URL, {
-    //mongodb://127.0.0.1:27017/hh
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
@@ -19,13 +18,15 @@ mongoose
     console.log(err);
   });
 
-app.listen(process.env.PORT,()=>{
+  const PORT = process.env.PORT || 3000
+app.listen( PORT,()=>{
   console.log('Server Running');
 })
 
 // Routes
 var contactRouter = require("./routes/contactRouter");
 var authRouter = require("./routes/authRouter");
+var jobRouter = require("./routes/jobRouter");
 
 // Middlewares
 app.use(express.urlencoded({ extended: false }));
@@ -39,3 +40,4 @@ app.use(cors({
 //Routes
 app.use("/contact.html", contactRouter);
 app.use("/api/auth", authRouter);
+app.use("/api/jobs", jobRouter);
