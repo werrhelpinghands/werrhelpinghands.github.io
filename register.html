@@ -68,14 +68,30 @@
 
     <div id="sidebarMenu">
       <ul class="sidebarMenuInner">
-        <a id="linkmenu" href="./index.html" ><li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Home </i></li></a>
-        <a id="linkmenu" href="./index.html#about"><li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;About us </i></li></a>
-        <a id="linkmenu" href="./projects.html"><li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Projects </i></li></a>
-        <a id="linkmenu" href="./index_job_common.html"><li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Jobs</i></li></a>
-        <a id="linkmenu" href="./team.html"><li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Our Team </i></li></a>
-        <a id="linkmenu" href="./surveys.html"><li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Surveys </i></li></a>
-        <a id="linkmenu" href="./career.html"><li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Career </i></li></a>
-        <a id="linkmenu" href="./index.html#contact-us"><li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Contact us </i></li></a>
+        <a id="linkmenu" href="./index.html">
+          <li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Home </i></li>
+        </a>
+        <a id="linkmenu" href="./index.html#about">
+          <li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;About us </i></li>
+        </a>
+        <a id="linkmenu" href="./projects.html">
+          <li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Projects </i></li>
+        </a>
+        <a id="linkmenu" href="./index_job_common.html">
+          <li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Jobs</i></li>
+        </a>
+        <a id="linkmenu" href="./team.html">
+          <li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Our Team </i></li>
+        </a>
+        <a id="linkmenu" href="./surveys.html">
+          <li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Surveys </i></li>
+        </a>
+        <a id="linkmenu" href="./career.html">
+          <li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Career </i></li>
+        </a>
+        <a id="linkmenu" href="./index.html#contact-us">
+          <li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Contact us </i></li>
+        </a>
         <a id="linkmenu" href="./register.html">
           <li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Account </i></li>
         </a>
@@ -296,6 +312,8 @@
                 document.getElementById("error").innerHTML = "";
                 document.getElementById("success").innerHTML = "Login Successful";
                 localStorage.setItem('admin', res.data.user.admin)
+                if (res.data.user.admin) window.location.assign('/dashboard-manage-applications_admin.html')
+                else window.location.assign('/dashboard-manage-applications_user.html')
               })
               .catch((err) => {
                 console.log(err);

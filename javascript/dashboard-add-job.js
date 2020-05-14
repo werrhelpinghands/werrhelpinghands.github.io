@@ -42,7 +42,7 @@ async function addJob() {
   formBody.append("file", notification);
 
   await axios({
-    url: "http://localhost:3000/api/jobs/addJob",
+    url: "https://helpinghands-server.herokuapp.com/api/jobs/addJob",
     method: "POST",
     headers: {
       "Content-Type": "multipart/form-data",

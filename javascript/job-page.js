@@ -1,7 +1,7 @@
 async function getJob() {
   let _id = window.location.search.split("=")[1];
   await axios({
-    url: `http://localhost:3000/api/jobs/${_id}`,
+    url: `https://helpinghands-server.herokuapp.com/api/jobs/${_id}`,
     method: "GET",
   }).then((res) => {
     let data = res.data;

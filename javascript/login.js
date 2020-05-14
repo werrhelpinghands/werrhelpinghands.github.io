@@ -21,6 +21,8 @@ loginBtn.addEventListener("click", async (e) => {
         localStorage.setItem("admin", res.data.user.admin);
         document.getElementById("error").innerHTML = "";
         document.getElementById("success").innerHTML = "Login Successful";
+        if(res.data.user.admin) window.location.assign('/dashboard-manage-applications_admin.html')
+        else window.location.assign('/dashboard-manage-applications_user.html')
       })
       .catch((err) => {
         document.getElementById("email").value = "";
