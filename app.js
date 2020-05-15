@@ -5,9 +5,9 @@ const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const cors = require('cors')
 
-// Connecting to database
+// Connecting to database process.env.MONGO_URL
 mongoose
-  .connect(process.env.MONGO_URL, {
+  .connect('mongodb://127.0.0.1:27017/hh', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })

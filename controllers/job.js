@@ -41,10 +41,10 @@ const uploadToStorage = (file) => {
 };
 
 exports.addJob = async (req, res) => {
-  let file1;
-  await uploadToStorage(req.files[0]).then((url) => (file1 = url));
-  let file2;
-  await uploadToStorage(req.files[1]).then((url) => (file2 = url));
+  let file1 = '';
+  if(req.files[0]) await uploadToStorage(req.files[0]).then((url) => (file1 = url));
+  let file2 = '';
+  if(req.files[1]) await uploadToStorage(req.files[1]).then((url) => (file2 = url));
 
   const {
     title,
