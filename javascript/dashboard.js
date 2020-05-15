@@ -17,9 +17,7 @@ async function getJobs() {
       <td>${post.createdAt.split("T")[0]}</td>
       <td>${post.expireAt.split("T")[0]}</td>
       <td class="action">
-          <a href="#" onclick="deleteJob(${
-            post._id
-          })" class="delete"><i class="fa fa-remove"></i> Delete</a>
+          <a href="#" onclick="deleteJob('${post._id}')" class="delete"><i class="fa fa-remove"></i> Delete</a>
       </td>
   </tr>`;
     });
@@ -34,6 +32,8 @@ function logout() {
 }
 
 async function deleteJob(id) {
+    console.log('delete');
+    
   await axios({
     url: `https://helpinghands-server.herokuapp.com/api/jobs/delete/${id}`,
     method: "DELETE",
@@ -42,5 +42,7 @@ async function deleteJob(id) {
     },
   }).then((res) => {
     window.location.reload();
-  });
+  }).catch(err=>{
+      console.log(err);
+  })
 }
