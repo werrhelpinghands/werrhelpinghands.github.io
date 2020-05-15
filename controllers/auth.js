@@ -47,8 +47,6 @@ exports.signin = (req, res) => {
         token,
         user: { _id, firstName, email, admin },
       });
-      if(admin) res.redirect('/dashboard-manage-applications_admin.html')
-      else res.redirect('/dashboard-manage-applications_user.html')
     })
     .catch((err) => {
       res.status(400);
@@ -85,8 +83,6 @@ exports.OAuth = (req, res) => {
         token,
         user: { _id, firstName, email, admin },
       });
-      if(admin) res.redirect('/dashboard-manage-applications_admin.html')
-      else res.redirect('/dashboard-manage-applications_user.html')
     })
     .catch((err) => {
       res.status(400);
