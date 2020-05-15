@@ -17,6 +17,6 @@ jobRouter.get('/', getAllJobs)
 
 jobRouter.get('/:id', getJob)
 
-jobRouter.delete('delete/:id', isSignedIn, isAdmin, deleteJob)
+jobRouter.delete('/delete/:id', isSignedIn, isAdmin, deleteJob)
 
 module.exports = jobRouter
