@@ -20,7 +20,7 @@
 <link rel="stylesheet" href="css/stylee.css">
 <link rel="stylesheet" href="css/colors.css">
 
-
+<script src="./javascript//browse-jobs_admin.js"></script>
 
 </head>
 
@@ -95,7 +95,7 @@
 			<li><a href="./login.html"><i class="fa fa-lock"></i> Log In</a></li>
 		</ul> -->
 		<ul class="float-right">
-			<li><a href="./register.html"><i class="fa fa-user"></i> Log Out</a></li>
+			<li><a href="#" onclick="logout()"><i class="fa fa-user"></i> Log Out</a></li>
 			<!-- <li><a href="./login.html"><i class="fa fa-lock"></i> Log In</a></li> -->
 		</ul>
 
@@ -231,40 +231,8 @@
 	<div class="eleven columns">
 	<div class="padding-right">
 
-		<div class="listings-container">
-			
-			
-			
-			
-			<!-- Listing -->
-			<a href="job-page.html" class="listing full-time">
-				<div class="listing-logo">
-					<img src="images/job-list-logo-02.png" alt="">
-				</div>
-				<div class="listing-title">
-					<h6 style="font-weight: bold;">INTERNSHIP</h6>
-					<h6>COMPANY NAME</h6>
-					<h6 >Core PHP Developer for Site Maintenance  <span class="listing-type">APPLY</span></h6>
-					<h6>LOCATION</h6>
-					<h6>PAID-SALARY/UNPAID</h6>
-					<h6>TYPE : WFH/OFFICE</h6>
-				</div>
-			</a>
-
-			<!-- Listing -->
-			<a href="job-page-alt.html" class="listing full-time">
-				<div class="listing-logo">
-					<img src="images/job-list-logo-01.png" alt="">
-				</div>
-				<div class="listing-title">
-					<h6 style="font-weight: bold;">JOB</h6>
-					<h4>JOB TITLE <span class="listing-type">APPLY</span></h4>
-					<h6>TOTAL POSITIONS/VACANCIES : 10</h6>
-					<H6>LAST DAY TO APPLY : <div class="listing-date">DD/MM/YYYY</div></H6>
-				</div>
-			</a>
-
-			
+		<div id="jobs-container" class="listings-container">
+	
 		</div>
 		<div class="clearfix"></div>
 
