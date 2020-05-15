@@ -38,9 +38,6 @@ exports.signin = (req, res) => {
         "helpinghands"
       );
 
-      res.cookie("token", token, {
-        domain: ".werhelpinghands.tk",
-      });
       const { _id, firstName, email, admin } = user;
       res.status(200);
       res.json({
@@ -74,9 +71,6 @@ exports.OAuth = (req, res) => {
         "helpinghands"
       );
 
-      res.cookie("token", token, {
-        sameSite: true,
-      });
       const { _id, firstName, email, admin } = user;
       res.status(200);
       res.json({
