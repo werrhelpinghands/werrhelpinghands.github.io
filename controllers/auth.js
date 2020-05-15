@@ -75,7 +75,7 @@ exports.OAuth = (req, res) => {
       );
 
       res.cookie("token", token, {
-        sameSite: false,
+        sameSite: true,
       });
       const { _id, firstName, email, admin } = user;
       res.status(200);
