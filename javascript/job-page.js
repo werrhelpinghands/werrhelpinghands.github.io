@@ -116,8 +116,8 @@ async function getJob() {
                     </ul>
 
 
-                    <a href=${data.portal} class="button">Apply For This Job</a>
-                    <a href=${data.notification} class="button">Download Notification</a>
+                    <a href=${data.portal} target="_blank" class="button">Apply For This Job</a>
+                    <a href=${data.notification} target="_blank" class="button">Download Notification</a>
 
                 </div>
 
