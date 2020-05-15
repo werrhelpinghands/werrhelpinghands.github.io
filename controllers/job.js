@@ -122,3 +122,27 @@ exports.getJob = (req,res)=>{
     })
   })
 }
+
+exports.deleteJob = (req,res) => {
+  Job.findByIdAndDelete(req.params.id)
+  .then(jobs=>{
+    res.status(200)
+    res.json(jobs)
+  })
+  .catch(error=>{
+    res.status(400)
+    res.json({
+      "error": error
+    })
+  })
+  .then(jobs=>{
+    res.status(200)
+    res.json(jobs)
+  })
+  .catch(error=>{
+    res.status(400)
+    res.json({
+      "error": error
+    })
+  })
+}
