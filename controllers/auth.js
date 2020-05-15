@@ -74,9 +74,7 @@ exports.OAuth = (req, res) => {
         "helpinghands"
       );
 
-      res.cookie("token", token, {
-        domain: '.werhelpinghands.tk',
-      });
+      res.cookie("token", token);
       const { _id, firstName, email, admin } = user;
       res.status(200);
       res.json({
