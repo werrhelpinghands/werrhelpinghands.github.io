@@ -121,6 +121,7 @@ exports.isOldUser = (req, res) => {
 
 // Protected Routes
 exports.isSignedIn = expressJwt({
+  getToken: req.headers.authorization,
   secret: "helpinghands",
   requestProperty: "user",
 });
