@@ -75,7 +75,6 @@ exports.OAuth = (req, res) => {
       );
 
       res.cookie("token", token, {
-        domaim: '.werhelpinghands.tk',
         sameSite: 'none',
       });
       const { _id, firstName, email, admin } = user;
