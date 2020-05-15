@@ -39,7 +39,7 @@ exports.signin = (req, res) => {
       );
 
       res.cookie("token", token, {
-        domain: '.werhelpinghands.tk'
+        domain: ".werhelpinghands.tk",
       });
       const { _id, firstName, email, admin } = user;
       res.status(200);
@@ -74,7 +74,9 @@ exports.OAuth = (req, res) => {
         "helpinghands"
       );
 
-      res.cookie("token", token);
+      res.cookie("token", token, {
+        sameSite: true,
+      });
       const { _id, firstName, email, admin } = user;
       res.status(200);
       res.json({
@@ -130,7 +132,7 @@ exports.isSignedIn = expressJwt({
 });
 
 // Custom Middlewares
-exports.isAdmin = (req, res, next) => {  
+exports.isAdmin = (req, res, next) => {
   if (!req.user.admin) {
     res.status(403);
     res.json({
