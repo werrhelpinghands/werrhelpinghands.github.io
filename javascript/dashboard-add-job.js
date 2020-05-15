@@ -1,9 +1,9 @@
 async function addJob() {
   let title = document.getElementById("title").value;
   let category = document.getElementById("category").value;
-  let category = document.getElementById("category").options[category].text
+  category = document.getElementById("category").options[category].text
   let type = document.getElementById("type").value;
-  let type = document.getElementById("type").options[type].text
+  type = document.getElementById("type").options[type].text
   let tags = document.getElementById("tags").value;
   let company = document.getElementById("company").value;
   let website = document.getElementById("website").value;
