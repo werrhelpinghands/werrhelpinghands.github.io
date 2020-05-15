@@ -41,14 +41,14 @@ async function getJob() {
                 </p>
 
                 <br>
-                <h3>Internship Roles</h3>
+                <h3>Roles</h3>
                 <ul class="list-1">
                     ${roles(data.roles)}
                 </ul>
 
                 <br>
 
-                <h4 class="margin-bottom-10">Job Requirment / Skills</h4>
+                <h4 class="margin-bottom-10">Requirment / Skills</h4>
 
                 <ul class="list-1">
                     ${skills(data.skills)}
