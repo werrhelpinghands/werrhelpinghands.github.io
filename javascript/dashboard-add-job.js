@@ -47,10 +47,7 @@ async function addJob() {
     headers: {
       "Content-Type": "multipart/form-data",
       Authorization: `Bearer ${
-        document.cookie
-          .split(";")
-          .filter((a) => a.includes("token"))[0]
-          .split("=")[1]
+        localStorage.getItem('token')
       }`,
     },
     data: formBody,
