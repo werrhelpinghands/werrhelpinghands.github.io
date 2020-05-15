@@ -37,6 +37,9 @@ async function deleteJob(id) {
   await axios({
     url: `https://helpinghands-server.herokuapp.com/api/jobs/delete/${id}`,
     method: "DELETE",
+    headers: {
+      Authorization: `Bearer ${localStorage.getItem("token")}`,
+    },
   }).then((res) => {
     window.location.reload();
   });
