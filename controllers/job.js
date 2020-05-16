@@ -132,8 +132,8 @@ exports.getJob = (req, res) => {
 exports.deleteJob = (req, res) => {
   Job.findById(req.params.id)
   .then((job) => {    
-    let logo = job.logo.split("/")[7].split("?")[0];
-    let notification = job.notification.split("/")[7].split("?")[0];
+    let logo = job.logo.split("/")[7].split("?")[0].replace("%2F", "/");
+    let notification = job.notification.split("/")[7].split("?")[0].replace("%2F", "/");;
     deleteFromStorage(logo);
     deleteFromStorage(notification);
   });
