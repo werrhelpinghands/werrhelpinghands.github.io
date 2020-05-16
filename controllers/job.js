@@ -130,8 +130,8 @@ exports.getJob = (req, res) => {
 };
 
 exports.deleteJob = (req, res) => {
-  Job.findById(req.param.id)
-  .then((job) => {
+  Job.findById(req.params.id)
+  .then((job) => {    
     let logo = job.logo.split("/")[7].split("?")[0];
     let notification = job.notification.split("/")[7].split("?")[0];
     deleteFromStorage(logo);
