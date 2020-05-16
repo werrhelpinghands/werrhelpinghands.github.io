@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const cors = require('cors')
 
-// Connecting to database 'mongodb://127.0.0.1:27017/hh'
+// Connecting to database 'mongodb://127.0.0.1:27017/hh' process.env.MONGO_URL
 mongoose
   .connect(process.env.MONGO_URL , {
     useNewUrlParser: true,
@@ -42,4 +42,4 @@ app.use(cors({
 app.use("/contact.html", contactRouter);
 app.use("/api/auth", authRouter);
 app.use("/api/jobs", jobRouter);
-app.use("/api/jobs/news", jobRouter);
+app.use("/api/jobs/news", jobNewsRouter);

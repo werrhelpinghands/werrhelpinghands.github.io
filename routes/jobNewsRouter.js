@@ -1,12 +1,12 @@
 var express = require("express");
 var jobNewsRouter = express.Router();
 const { isSignedIn, isAdmin } = require("../controllers/auth");
-const { addNews, getAllNews } = require("../controllers/jobNews");
+const { addNews, getAllNews, deleteNews } = require("../controllers/jobNews");
 
-jobRouter.get("/", getAllNews);
+jobNewsRouter.get("/", getAllNews);
 
-jobRouter.post("/", isSignedIn, isAdmin, addNews);
+jobNewsRouter.post("/", isSignedIn, isAdmin, addNews);
 
-jobRouter.delete("/:id", isSignedIn, isAdmin, deleteNews);
+jobNewsRouter.delete("/:id", isSignedIn, isAdmin, deleteNews);
 
 module.exports = jobNewsRouter;
