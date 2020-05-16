@@ -153,6 +153,9 @@ font-family: 'Bangers', serif;
   color: white;
   text-shadow: 2px 2px black;
 }
+.gridd img:hover{
+  border: 2px solid black;
+}
 
 
 @media all and (max-width:600px){
