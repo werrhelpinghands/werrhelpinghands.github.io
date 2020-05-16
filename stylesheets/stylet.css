@@ -21,6 +21,7 @@
   position: fixed;
 }
 .banner h1{
+  background-color: rgba(0,0,0,0.3);
   color: white;
   font-family: 'Bangers', serif;
   text-shadow: 3px 3px black;
