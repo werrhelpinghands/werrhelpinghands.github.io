@@ -28,3 +28,19 @@ async function addNews() {
     window.location.assign(`/dashboard-manage-applications_admin.html`);
   });
 }
+
+async function deleteNews(id) {
+    console.log('delete');
+    
+  await axios({
+    url: `https://helpinghands-server.herokuapp.com/api/jobs/news/delete/${id}`,
+    method: "DELETE",
+    headers: {
+      Authorization: `Bearer ${localStorage.getItem("token")}`,
+    },
+  }).then((res) => {
+    window.location.reload();
+  }).catch(err=>{
+      console.log(err);
+  })
+}
