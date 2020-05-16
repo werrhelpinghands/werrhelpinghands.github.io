@@ -27,6 +27,7 @@ app.listen( PORT,()=>{
 var contactRouter = require("./routes/contactRouter");
 var authRouter = require("./routes/authRouter");
 var jobRouter = require("./routes/jobRouter");
+var jobNewsRouter = require("./routes/jobNewsRouter");
 
 // Middlewares
 app.use(express.urlencoded({ extended: false }));
@@ -41,3 +42,4 @@ app.use(cors({
 app.use("/contact.html", contactRouter);
 app.use("/api/auth", authRouter);
 app.use("/api/jobs", jobRouter);
+app.use("/api/jobs/news", jobRouter);

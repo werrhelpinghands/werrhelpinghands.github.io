@@ -40,11 +40,17 @@ const uploadToStorage = (file) => {
   });
 };
 
+const deleteFromStorage = (filename) => {
+  bucket.file(filename).delete()
+};
+
 exports.addJob = async (req, res) => {
-  let file1 = '';
-  if(req.files[0]) await uploadToStorage(req.files[0]).then((url) => (file1 = url));
-  let file2 = '';
-  if(req.files[1]) await uploadToStorage(req.files[1]).then((url) => (file2 = url));
+  let file1 = "";
+  if (req.files[0])
+    await uploadToStorage(req.files[0]).then((url) => (file1 = url));
+  let file2 = "";
+  if (req.files[1])
+    await uploadToStorage(req.files[1]).then((url) => (file2 = url));
 
   const {
     title,
@@ -69,12 +75,12 @@ exports.addJob = async (req, res) => {
     title: title,
     type: type,
     category: category,
-    tags: tags.split(','),
+    tags: tags.split(","),
     company: company,
     website: website,
     about: about,
-    roles: roles.split(','),
-    skills: skills.split(','),
+    roles: roles.split(","),
+    skills: skills.split(","),
     location: location,
     duration: duration,
     pay: pay,
@@ -97,52 +103,50 @@ exports.addJob = async (req, res) => {
 
 exports.getAllJobs = (req, res) => {
   Job.find({})
-  .then(jobs=>{
-    res.status(200)
-    res.json(jobs)
-  })
-  .catch(error=>{
-    res.status(400)
-    res.json({
-      "error": error
+    .then((jobs) => {
+      res.status(200);
+      res.json(jobs);
     })
-  })
+    .catch((error) => {
+      res.status(400);
+      res.json({
+        error: error,
+      });
+    });
 };
 
-exports.getJob = (req,res)=>{
+exports.getJob = (req, res) => {
   Job.findById(req.params.id)
-  .then(jobs=>{
-    res.status(200)
-    res.json(jobs)
-  })
-  .catch(error=>{
-    res.status(400)
-    res.json({
-      "error": error
+    .then((jobs) => {
+      res.status(200);
+      res.json(jobs);
     })
-  })
-}
+    .catch((error) => {
+      res.status(400);
+      res.json({
+        error: error,
+      });
+    });
+};
 
-exports.deleteJob = (req,res) => {
+exports.deleteJob = (req, res) => {
+  Job.findById(req.param.id)
+  .then((job) => {
+    let logo = job.logo.split("/")[7].split("?")[0];
+    let notification = job.notification.split("/")[7].split("?")[0];
+    deleteFromStorage(logo);
+    deleteFromStorage(notification);
+  });
+
   Job.findByIdAndDelete(req.params.id)
-  .then(jobs=>{
-    res.status(200)
-    res.json(jobs)
-  })
-  .catch(error=>{
-    res.status(400)
-    res.json({
-      "error": error
+    .then((jobs) => {
+      res.status(200);
+      res.json(jobs);
     })
-  })
-  .then(jobs=>{
-    res.status(200)
-    res.json(jobs)
-  })
-  .catch(error=>{
-    res.status(400)
-    res.json({
-      "error": error
-    })
-  })
-}
+    .catch((error) => {
+      res.status(400);
+      res.json({
+        error: error,
+      });
+    });
+};
