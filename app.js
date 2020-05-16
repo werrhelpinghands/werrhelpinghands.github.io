@@ -42,4 +42,4 @@ app.use(cors({
 app.use("/contact.html", contactRouter);
 app.use("/api/auth", authRouter);
 app.use("/api/jobs", jobRouter);
-app.use("/api/jobs/news", jobNewsRouter);
+app.use("/api/news", jobNewsRouter);
