@@ -1,25 +1,3 @@
-function logout() {
-  localStorage.removeItem("admin");
-  localStorage.removeItem("token");
-  window.location.replace("/index_job_common.html");
-}
-
-async function deleteNews(id) {
-    console.log('delete');
-    
-  await axios({
-    url: `https://helpinghands-server.herokuapp.com/api/jobs/news/delete/${id}`,
-    method: "DELETE",
-    headers: {
-      Authorization: `Bearer ${localStorage.getItem("token")}`,
-    },
-  }).then((res) => {
-    window.location.reload();
-  }).catch(err=>{
-      console.log(err);
-  })
-}
-
 function getNews() {
   await axios({
     url: "https://helpinghands-server.herokuapp.com/api/jobs/news",
@@ -48,4 +26,26 @@ function getNews() {
     });
     document.getElementById('news-container').innerHTML = body
   });
+}
+
+function logout() {
+  localStorage.removeItem("admin");
+  localStorage.removeItem("token");
+  window.location.replace("/index_job_common.html");
+}
+
+async function deleteNews(id) {
+    console.log('delete');
+    
+  await axios({
+    url: `https://helpinghands-server.herokuapp.com/api/jobs/news/delete/${id}`,
+    method: "DELETE",
+    headers: {
+      Authorization: `Bearer ${localStorage.getItem("token")}`,
+    },
+  }).then((res) => {
+    window.location.reload();
+  }).catch(err=>{
+      console.log(err);
+  })
 }
