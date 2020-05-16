@@ -156,7 +156,7 @@ font-family: 'Bangers', serif;
 @media all and (max-width:600px){
   .banner{
     background: url(../images/carbanver.jpeg);
-  height: 500px;
+  height: 650px;
   }
   .banner h1{
 
