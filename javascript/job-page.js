@@ -103,7 +103,7 @@ async function getJob() {
                             <i class="ln ln-icon-Close-Window"></i>
                             <div>
                                 <strong>Closing Date</strong>
-                                <span>${data.expireAt}</span>
+                                <span>${data.expireAt.split('T')[0]}</span>
                             </div>
                         </li>
                         <li>
