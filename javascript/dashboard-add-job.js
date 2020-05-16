@@ -73,3 +73,9 @@ async function addJob() {
     window.location.assign(`/job-page.html?id=${res.data._id}`)
   });
 }
+
+function logout() {
+  localStorage.removeItem("admin");
+  localStorage.removeItem("token");
+  window.location.replace("/login.html");
+}
