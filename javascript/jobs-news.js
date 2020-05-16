@@ -1,16 +1,14 @@
 async function getNews() {
   await axios({
-    url: "https://helpinghands-server.herokuapp.com/api/jobs/news",
+    url: "https://helpinghands-server.herokuapp.com/api/news",
     method: "GET",
   }).then((res) => {
-    console.log(res.data);
     let body = "";
     res.data.forEach((news) => {
       body = `${body} 
       <div class="application">
       <div class="app-content">
 
-        <!-- Name / Avatar -->
         <div class="info">
           <span><a href="${news.url}" target="_blank">${news.title}</a></span>
           <br>
@@ -25,7 +23,9 @@ async function getNews() {
     </div>`;
     });
     document.getElementById("news-container").innerHTML = body;
-  });
+  }).catch(err=>{
+    console.log(err)
+  })
 }
 
 function logout() {
@@ -38,7 +38,7 @@ async function deleteNews(id) {
   console.log("delete");
 
   await axios({
-    url: `https://helpinghands-server.herokuapp.com/api/jobs/news/delete/${id}`,
+    url: `https://helpinghands-server.herokuapp.com/api/news/delete/${id}`,
     method: "DELETE",
     headers: {
       Authorization: `Bearer ${localStorage.getItem("token")}`,

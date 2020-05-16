@@ -6,20 +6,20 @@ async function addNews() {
   let description = document.getElementById("description").value;
   let url = document.getElementById("url").value;
 
-  const formBody = new FormData();
-
-  formBody.set("title", title);
-  formBody.set("description", description);
-  formBody.set("url", url);
+  let body = {
+    title : title,
+    description: description,
+    url : url
+  }
 
   await axios({
-    url: "https://helpinghands-server.herokuapp.com/api/jobs/news",
+    url: "https://helpinghands-server.herokuapp.com/api/news",
     method: "POST",
     headers: {
-      "Content-Type": "multipart/form-data",
+      "Content-Type": "application/json",
       Authorization: `Bearer ${localStorage.getItem("token")}`,
     },
-    data: formBody,
+    data: body,
   }).then((res) => {
     title = "";
     description = "";
