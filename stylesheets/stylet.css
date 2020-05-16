@@ -146,16 +146,16 @@ font-family: 'Bangers', serif;
 
 .gridd:hover{
   background-color: #ffa16e;
-  transition: 1s ease-in-out;
+  transition: 0.5s ease-in-out;
   box-shadow: 3px 6px #080300;
   color: white;
   text-shadow: 2px 2px black;
 }
 
 
-@media all and (max-width:500px){
+@media all and (max-width:600px){
   .banner{
-    background: url(../images/carbanver.jpeg) no-repeat center;
+    background: url(../images/carbanver.jpeg);
   height: 500px;
   }
   .banner h1{
