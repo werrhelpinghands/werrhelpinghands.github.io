@@ -26,9 +26,7 @@ exports.getAllNews = (req, res) => {
     })
     .catch((error) => {
       res.status(400);
-      res.json({
-        error: error,
-      });
+      res.json(error);
     });
 };
 
@@ -43,5 +41,5 @@ exports.deleteNews = (req, res) => {
       res.json({
         error: error,
       });
-    })
+    });
 };
