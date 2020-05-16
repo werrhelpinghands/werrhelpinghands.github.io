@@ -137,7 +137,6 @@ font-family: 'Bangers', serif;
   border-radius: 10px;
   margin: 10px 10px 10px 10px;
   cursor: pointer;
-  z-index: -1;
 }
 .gridd img{
   width: calc(100% - 30px);
@@ -178,4 +177,12 @@ font-family: 'Bangers', serif;
   align-items: center;
   
 }
+.gridd:hover{
+  background-color: #ffa16e;
+  transition: 0.5s ease-in-out;
+  box-shadow: 3px 6px #080300;
+  color: white;
+  text-shadow: 2px 2px black;
 }
+
+} 
