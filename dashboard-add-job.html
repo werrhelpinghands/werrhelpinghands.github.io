@@ -309,7 +309,7 @@
 											<input id="inputlogo" type="file" multiple />
 											<i class="fa fa-upload"></i> Browse
 										</label>
-										<span class="fake-input">No file selected</span>
+										<p id="fake-input1">No file selected</p>
 									</div>
 									<!-- Notification -->
 									<div class="form">
@@ -318,8 +318,18 @@
 											<input id="notification" type="file" multiple />
 											<i class="fa fa-upload"></i> Browse
 										</label>
-										<span class="fake-input">No file selected</span>
+										<p id="fake-input2">No file selected</p>
 									</div>
+									<script>
+										document.getElementById('notification').onchange = function () {
+										 
+										document.getElementById('fake-input2').innerHTML= document.getElementById('notification').files.item(0).name;
+										};
+										document.getElementById('inputlogo').onchange = function () {
+										 
+										document.getElementById('fake-input1').innerHTML= document.getElementById('inputlogo').files.item(0).name;
+										};
+									</script>
 									<div class="form">
 										<h5>Company Portal URL </h5>
 										<input id="portal" type="text" placeholder="http://">
