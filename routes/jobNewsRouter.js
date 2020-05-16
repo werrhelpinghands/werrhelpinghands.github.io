@@ -7,6 +7,6 @@ jobNewsRouter.get("/", getAllNews);
 
 jobNewsRouter.post("/", isSignedIn, isAdmin, addNews);
 
-jobNewsRouter.delete("delete/:id", isSignedIn, isAdmin, deleteNews);
+jobNewsRouter.delete("/delete/:id", isSignedIn, isAdmin, deleteNews);
 
 module.exports = jobNewsRouter;
