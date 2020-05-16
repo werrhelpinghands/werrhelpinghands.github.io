@@ -13,7 +13,7 @@ async function getJobs() {
     res.data.forEach((post) => {
       body = `${body} 
       <tr>
-      <td class="title"><a href="#">${post.title}</span></a></td>
+      <td class="title"><a href="job-page.html?id=${post._id}">${post.title}</span></a></td>
       <td>${post.createdAt.split("T")[0]}</td>
       <td>${post.expireAt.split("T")[0]}</td>
       <td class="action">
@@ -29,7 +29,7 @@ async function getJobs() {
 function logout() {
   localStorage.removeItem("admin");
   localStorage.removeItem("token");
-  window.location.replace("/login.html");
+  window.location.replace("/index_job_common.html");
 }
 
 async function deleteJob(id) {

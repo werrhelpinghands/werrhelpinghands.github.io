@@ -1,5 +1,8 @@
 async function addJob() {
+
   document.getElementById('postBtn').innerHTML = `Loading...`
+  document.getElementById('postBtn').disabled = true
+
   let title = document.getElementById("title").value;
   let category = document.getElementById("category").value;
   category = document.getElementById("category").options[category].text
@@ -70,6 +73,7 @@ async function addJob() {
     portal = "";
     logo = "";
     notification = "";
+    document.getElementById('postBtn').disabled = false
     window.location.assign(`/job-page.html?id=${res.data._id}`)
   });
 }
@@ -77,5 +81,5 @@ async function addJob() {
 function logout() {
   localStorage.removeItem("admin");
   localStorage.removeItem("token");
-  window.location.replace("/login.html");
+  window.location.replace("/index_job_common.html");
 }

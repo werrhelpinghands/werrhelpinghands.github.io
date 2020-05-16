@@ -122,17 +122,6 @@ async function getJob() {
                 </div>
 
             </div>
-            <div class="eight columns">
-                <ul class="social-icons">
-                    <li style="margin-left: 10%;"><a class="facebook" href="#"><i class="icon-facebook"></i></a>
-                    </li>
-                    <li style="margin-left: 10px;"><a class="twitter" href="#"><i class="icon-twitter"></i></a>
-                    </li>
-                    <li style="margin-left: 10px;"><a class="gplus" href="#"><i class="icon-gplus"></i></a></li>
-                    <li style="margin-left: 10px;"><a class="linkedin" href="#"><i
-                                class="icon-linkedin"></i></a></li>
-                </ul>
-            </div>
         </div>
 
         <!-- Widgets / End -->
@@ -162,5 +151,5 @@ function skills(val) {
 function logout() {
     localStorage.removeItem("admin");
     localStorage.removeItem("token");
-    window.location.replace("/login.html");
+    window.location.replace("/index_job_common.html");
   }
