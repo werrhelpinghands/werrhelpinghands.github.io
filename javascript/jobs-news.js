@@ -13,7 +13,7 @@ async function getNews() {
           <span><a href="${news.url}" target="_blank">${news.title}</a></span>
           <br>
           <label>${news.description}</label>
-          <a href=${news.url} target="_blank"><h4>Read more</h4></a>
+          <a href=${news.url} target="_blank"><h4>Read more...</h4></a>
           <br>
           <button onclick="deleteNews('${news._id}')" >Delete</button>
         </div>
