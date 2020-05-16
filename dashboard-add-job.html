@@ -7,22 +7,20 @@
 <!-- Mirrored from www.vasterad.com/themes/workscout_2019/dashboard-add-Job.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 May 2020 07:16:09 GMT -->
 
 <head>
-<style>
-	input[type="date"]{
-  font-weight: 500;
-  font-size: 16px;
-  min-height: 60px;
-  float: left;
-  box-sizing: border-box;
-  padding: 19px 20px;
-  border: none;
-  margin-right: 2%;
-  width: 44.5%;
-  float: left;
-}
-
-	
-</style>
+	<style>
+		input[type="date"] {
+			font-weight: 500;
+			font-size: 16px;
+			min-height: 60px;
+			float: left;
+			box-sizing: border-box;
+			padding: 19px 20px;
+			border: none;
+			margin-right: 2%;
+			width: 44.5%;
+			float: left;
+		}
+	</style>
 	<!-- Basic Page Needs
 ================================================== -->
 	<meta charset="utf-8">
@@ -41,6 +39,12 @@
 
 
 	<script src="https://maps.google.com/maps/api/js?sensor=true"></script>
+
+	<script>
+		if (!localStorage.getItem('admin')) {
+			window.location.replace('/login.html')
+		}
+	</script>
 
 	<!-- Axios -->
 	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
@@ -68,49 +72,20 @@
 					<nav id="navigation" class="menu">
 						<ul id="responsive">
 
-							<li><a href="./index_job_admin.html">Home</a>
-								<!-- <ul>
-						<li><a href="./index_job.html">Home #1</a></li>
-						<li><a href="index-2.html">Home #2</a></li>
-						<li><a href="index-3.html">Home #3</a></li>
-						<li><a href="index-4.html">Home #4</a></li>
-						<li><a href="index-5.html">Home #5</a></li>
-					</ul> -->
+							<li>
+								<a href="./index_job_admin.html">Home</a>
 							</li>
 
-							<li><a href="./browse-jobs_admin.html">Jobs</a>
-								<!-- <ul>
-						<li><a href="job-page.html">Job Page</a></li>
-						<li><a href="job-page-alt.html">Job Page Alternative</a></li>
-						<li><a href="resume-page.html">Resume Page</a></li>
-						<li><a href="shortcodes.html">Shortcodes</a></li>
-						<li><a href="icons.html">Icons</a></li>
-						<li><a href="pricing-tables.html">Pricing Tables</a></li>
-						<li><a href="blog.html">Blog</a></li>
-						<li><a href="contact.html">Contact</a></li>
-					</ul> -->
+							<li>
+								<a href="./browse-jobs_admin.html">Jobs</a>
 							</li>
 
-							<li><a href="./dashboard-manage-applications_admin.html">Job News</a>
-								<!-- <ul>
-						<li><a href="browse-jobs.html">Browse Jobs</a></li>
-						<li><a href="browse-resumes.html">Browse Resumes</a></li>
-						<li><a href="browse-categories.html">Browse Categories</a></li>
-					</ul> -->
+							<li>
+								<a href="./dashboard-manage-applications_admin.html">Job News</a>
 							</li>
 
-							<li><a id="current" href="./dashboard.html">Dashboard</a>
-								<!-- <ul>
-						<li><a href="dashboard.html">Dashboard</a></li>
-						<li><a href="dashboard-messages.html">Messages</a></li>
-						<li><a href="dashboard-manage-resumes.html">Manage Resumes</a></li>
-						<li><a href="dashboard-add-resume.html">Add Resume</a></li>
-						<li><a href="dashboard-Internship-alerts.html">Internship Alerts</a></li>
-						<li><a href="dashboard-manage-Internships.html">Manage Internships</a></li>
-						<li><a href="dashboard-manage-applications.html">Manage Applications</a></li>
-						<li><a href="dashboard-add-Internship.html">Add Internship</a></li>
-						<li><a href="dashboard-my-profile.html">My Profile</a></li>
-					</ul> -->
+							<li>
+								<a id="current" href="./dashboard.html">Dashboard</a>
 							</li>
 						</ul>
 
@@ -161,7 +136,7 @@
 					<div class="col-lg-16 col-md-16">
 
 						<div class="dashboard-list-box margin-top-0">
-							<h4>ADD JOB</h4>
+							<h4>ADD JOB / INTERNSHIP</h4>
 							<div class="dashboard-list-box-content">
 
 								<div class="submit-page">
@@ -170,7 +145,7 @@
 
 									<!-- Title -->
 									<div class="form">
-										<h5>Job Title</h5>
+										<h5>Title</h5>
 										<input id="title" class="search-field" type="text" placeholder="" value="" />
 									</div>
 
@@ -178,7 +153,8 @@
 									<div class="form">
 										<div class="select">
 											<h5>Category</h5>
-											<select id="category" data-placeholder="Choose Categories" class="chosen-select" multiple>
+											<select id="category" data-placeholder="Choose Category"
+												class="chosen-select-no-single">
 												<option value="1">Web Developers</option>
 												<option value="2">Mobile Developers</option>
 												<option value="3">Designers & Creatives</option>
@@ -194,21 +170,19 @@
 
 									<!-- Job Type -->
 									<div class="form">
-										<h5>Job Type</h5>
-										<select id="type" data-placeholder="Full-Time" class="chosen-select-no-single">
-											<option value="1">Full-Time</option>
-											<option value="2">Part-Time</option>
-											<option value="2">Job</option>
-											<option value="2">Freelance</option>
+										<h5>Type</h5>
+										<select id="type" data-placeholder="Choose Type"
+											class="chosen-select-no-single">
+											<option value="1">Job</option>
+											<option value="2">Internship</option>
 										</select>
 									</div>
 									<!-- Tags -->
 									<div class="form">
-										<h5>Job Tags <span>(optional)</span></h5>
+										<h5>Tags / Keywords</h5>
 										<input id="tags" class="search-field" type="text"
-											placeholder="e.g. PHP, Social Media, Management" value="" />
-										<p class="note">Comma separate tags, such as required skills or technologies,
-											for this Job.</p>
+											placeholder="e.g. php,social media,management" value="" />
+										<p class="note">Comma separate values, such as required skills or technologies in lower case</p>
 									</div>
 
 									<!-- Company Name -->
@@ -232,13 +206,13 @@
 									</div>
 									<!-- Company Name -->
 									<div class="form" style="width: 100%;">
-										<h5>Job Roles</h5>
+										<h5>Roles</h5>
 										<textarea class="WYSIWYG" name="summary" cols="40" rows="3" id="roles"
 											spellcheck="true"></textarea>
 									</div>
 									<!-- Company Name -->
 									<div class="form" style="width: 100%;">
-										<h5>Job Requirements / Skills</h5>
+										<h5>Requirements / Skills</h5>
 										<textarea class="WYSIWYG" name="summary" cols="40" rows="3" id="skills"
 											spellcheck="true"></textarea>
 									</div>
@@ -248,7 +222,8 @@
 									<!-- Location -->
 									<div class="form">
 										<h5>Location <span>(optional)</span></h5>
-										<input id="location" class="search-field" type="text" placeholder="Enter Location" value="" />
+										<input id="location" class="search-field" type="text"
+											placeholder="Enter Location" value="" />
 									</div>
 
 									<!-- Application email/url -->
@@ -264,7 +239,7 @@
 									<!-- TClosing Date -->
 									<div class="form">
 										<h5>Closing Date </h5>
-										<input id="closingDate"  data-role="date" type="date" placeholder="yyyy-mm-dd">
+										<input id="closingDate" data-role="date" type="date" placeholder="yyyy-mm-dd">
 
 									</div>
 
@@ -300,8 +275,6 @@
 										<input id="portal" type="text" placeholder="http://">
 									</div>
 									<div class="form">
-										<!-- <h5>Company Portal URL </h5>
-							<input type="text" placeholder="http://"> -->
 									</div>
 
 								</div>
@@ -311,7 +284,8 @@
 
 
 
-						<a onclick="addJob()"class="button margin-top-30">Post <i class="fa fa-arrow-circle-right"></i></a>
+						<a id="postBtn" onclick="addJob()" class="button margin-top-30">Post <i
+								class="fa fa-arrow-circle-right"></i></a>
 					</div>
 
 

@@ -22,6 +22,7 @@ async function getJobs() {
   </tr>`;
     });
     document.getElementById("jobs-container").innerHTML = body;
+    document.getElementById("jobs-count").innerHTML = res.data.length
   });
 }
 

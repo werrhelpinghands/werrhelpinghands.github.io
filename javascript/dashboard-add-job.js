@@ -1,4 +1,5 @@
 async function addJob() {
+  document.getElementById('postBtn').innerHTML = `Loading...`
   let title = document.getElementById("title").value;
   let category = document.getElementById("category").value;
   category = document.getElementById("category").options[category].text
