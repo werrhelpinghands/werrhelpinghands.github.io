@@ -1,4 +1,4 @@
-function getNews() {
+async function getNews() {
   await axios({
     url: "https://helpinghands-server.herokuapp.com/api/jobs/news",
     method: "GET",
@@ -24,7 +24,7 @@ function getNews() {
       </div>
     </div>`;
     });
-    document.getElementById('news-container').innerHTML = body
+    document.getElementById("news-container").innerHTML = body;
   });
 }
 
@@ -35,17 +35,19 @@ function logout() {
 }
 
 async function deleteNews(id) {
-    console.log('delete');
-    
+  console.log("delete");
+
   await axios({
     url: `https://helpinghands-server.herokuapp.com/api/jobs/news/delete/${id}`,
     method: "DELETE",
     headers: {
       Authorization: `Bearer ${localStorage.getItem("token")}`,
     },
-  }).then((res) => {
-    window.location.reload();
-  }).catch(err=>{
-      console.log(err);
   })
+    .then((res) => {
+      window.location.reload();
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 }
