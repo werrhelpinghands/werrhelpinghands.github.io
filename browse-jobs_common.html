@@ -1,60 +1,66 @@
 <!DOCTYPE html>
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html lang="en">
+<!--<![endif]-->
 
 <!-- Mirrored from www.vasterad.com/themes/workscout_2019/browse-jobs.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 May 2020 07:16:07 GMT -->
+
 <head>
 
-<!-- Basic Page Needs
+	<!-- Basic Page Needs
 ================================================== -->
-<meta charset="utf-8">
-<title>Helping Hands</title>
+	<meta charset="utf-8">
+	<title>Helping Hands</title>
 
-<!-- Mobile Specific Metas
+	<!-- Mobile Specific Metas
 ================================================== -->
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-<!-- CSS
+	<!-- CSS
 ================================================== -->
-<link rel="stylesheet" href="css/style.css">
-<link rel="stylesheet" href="css/stylee.css">
-<link rel="stylesheet" href="css/colors.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/stylee.css">
+	<link rel="stylesheet" href="css/colors.css">
 
 
-
+	<script src="./javascript/browse-jobs_user.js"></script>
+	<!-- Axios -->
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 
-<body>
-<div id="wrapper">
+<body onload="getJobs()">
+	<div id="wrapper">
 
 
-<!-- Header
+		<!-- Header
 ================================================== -->
-<header class="sticky-header">
-<div class="container">
-	<div class="sixteen columns">
+		<header class="sticky-header">
+			<div class="container">
+				<div class="sixteen columns">
 
-		<!-- Logo -->
-		<div id="logo">
-			<h1><a href="./index.html"><img src="./images/lb2.png" style="width: 150px;height: 60px;" alt="main-logo" /></a></h1>
-		</div>
+					<!-- Logo -->
+					<div id="logo">
+						<h1><a href="./index.html"><img src="./images/lb2.png" style="width: 150px;height: 60px;"
+									alt="main-logo" /></a></h1>
+					</div>
 
-		<!-- Menu -->
-		<nav id="navigation" class="menu">
-			<ul id="responsive">
+					<!-- Menu -->
+					<nav id="navigation" class="menu">
+						<ul id="responsive">
 
-				<li><a href="./browse-jobs_common.html">Home</a>
-					<!-- <ul>
+							<li><a href="./index_job_common.html">Home</a>
+								<!-- <ul>
 						<li><a href="./index_job.html">Home #1</a></li>
 						<li><a href="index-2.html">Home #2</a></li>
 						<li><a href="index-3.html">Home #3</a></li>
 						<li><a href="index-4.html">Home #4</a></li>
 						<li><a href="index-5.html">Home #5</a></li>
 					</ul> -->
-				</li>
+							</li>
 
-				<li><a id="current" href="#">Jobs</a>
-					<!-- <ul>
+							<li><a id="current" href="#">Jobs</a>
+								<!-- <ul>
 						<li><a href="job-page.html">Job Page</a></li>
 						<li><a href="job-page-alt.html">Job Page Alternative</a></li>
 						<li><a href="resume-page.html">Resume Page</a></li>
@@ -64,17 +70,17 @@
 						<li><a href="blog.html">Blog</a></li>
 						<li><a href="contact.html">Contact</a></li>
 					</ul> -->
-				</li>
+							</li>
 
-				<li><a href="#">Job News</a>
-					<!-- <ul>
+							<li><a href="./dashboard-manage-applications_common.html">Job News</a>
+								<!-- <ul>
 						<li><a href="browse-jobs.html">Browse Jobs</a></li>
 						<li><a href="browse-resumes.html">Browse Resumes</a></li>
 						<li><a href="browse-categories.html">Browse Categories</a></li>
 					</ul> -->
-				</li>
+							</li>
 
-				<!-- <li><a href="#">Dashboard</a>
+							<!-- <li><a href="#">Dashboard</a>
 					<ul>
 						<li><a href="dashboard.html">Dashboard</a></li>
 						<li><a href="dashboard-messages.html">Messages</a></li>
@@ -87,406 +93,284 @@
 						<li><a href="dashboard-my-profile.html">My Profile</a></li>
 					</ul>
 				</li> -->
-			</ul>
+						</ul>
 
 
-			<ul class="float-right">
-				<li><a href="./register.html"><i class="fa fa-user"></i> Sign Up</a></li>
-				<li><a href="./login.html"><i class="fa fa-lock"></i> Log In</a></li>
-			</ul>
+						<ul class="float-right">
+							<li><a href="./register.html"><i class="fa fa-user"></i> Sign Up</a></li>
+							<li><a href="./login.html"><i class="fa fa-lock"></i> Log In</a></li>
+						</ul>
 
-		</nav>
+					</nav>
 
-		<!-- Navigation -->
-		<div id="mobile-navigation">
-			<a href="#menu" class="menu-trigger"><i class="fa fa-reorder"></i> Menu</a>
-		</div>
+					<!-- Navigation -->
+					<div id="mobile-navigation">
+						<a href="#menu" class="menu-trigger"><i class="fa fa-reorder"></i> Menu</a>
+					</div>
 
-	</div>
-</div>
-</header>
-<div class="clearfix"></div>
-
-
-
-<!-- Content
-================================================== -->
-<div class="container">
-	<!-- Widgets -->
-	<div class="five columns">
-
-		<!-- Sort by -->
-		<div class="widget">
-			<h4>SORT BY CATEGORY</h4>
-
-			<!-- Select -->
-			<select data-placeholder="Choose Category" class="chosen-select-no-single">
-				<option selected="selected" value="ratelow">.NET DEVELOPMENT</option>
-				<option value="ratelow">3D PRINTING</option>
-				<option value="ratelow">ACCOUNTS</option>
-				<option value="ratelow">ACTING</option>
-				<option value="ratelow">AEROSPACE ENGINEERING</option>
-				<option value="ratelow">AGRICULTURE & FOOD ENGINEERING</option>
-				<option value="ratelow">ANALYTICS</option>
-				<option value="ratelow">ANDROID APP DEVELOPMENT</option>
-				<option value="ratelow">ANGULAR.JS DEVELOPMENT</option>
-				<option value="ratelow">ANIMATION</option>
-				<option value="ratelow">ARCHITECTURE</option>
-				<option value="ratelow">ARTIFICIAL INTELLIGENCE (AI)</option>
-				<option value="ratelow">ASP.NET DEVELOPMENT</option>
-				<option value="ratelow">AUTOMOBILE ENGINEERING</option>
-				<option value="ratelow">BACKEND DEBELOPMENT</option>
-				<option value="ratelow">BIG DATA</option>
-				<option value="ratelow">BIOINFORMATICS</option>
-				<option value="ratelow">BIOLOGY</option>
-				<option value="ratelow">BIOTECHNOLOGY ENGINEERING</option>
-				<option value="ratelow">BLOGGING</option>
-				<option value="ratelow">BRAND MANAGEMENT</option>
-				<option value="ratelow">CAD DESIGN</option>
-				<option value="ratelow">CAMPUS AMBASSADOR</option>
-				<option value="ratelow">CHARTERED ACCOUNTANCY (CA)</option>
-				<option value="ratelow">CHEMICAL ENGINEERING</option>
-				<option value="ratelow">CHEMISTRY</option>
-				<option value="ratelow">CINEMATOGRAPHY</option>
-				<option value="ratelow">CIVIL ENGINEERING</option>
-				<option value="ratelow">COMMERCE</option>
-				<option value="ratelow">COMPANY SECRETARY (CS)</option>
-				<option value="ratelow">COMPUTER SCIENCE</option>
-				<option value="ratelow">COMPUTER VISION</option>
-				<option value="ratelow">CONTENT WRITING</option>
-				<option value="ratelow">COPYWRITING</option>
-				<option value="ratelow">CREATIVE WRITING</option>
-				<option value="ratelow">CUSTOMER SERVICE</option>
-				<option value="ratelow">CYBER SECURITY</option>
-				<option value="ratelow">DATA ENTRY</option>
-				<option value="ratelow">ENGINEERING DESIGN</option>
-				<option value="ratelow">ENVIRONMENTAL SCIENCES</option>
-				<option value="ratelow">EVENT MANAGEMENT</option>
-				<option value="ratelow">FACEBOOK MARKETING</option>
-				<option value="ratelow">FASHION DESIGN</option>
-				<option value="ratelow">FILM MAKING</option>
-				<option value="ratelow">FINANCE</option>
-				<option value="ratelow">FRONT END DEVELOPMENT</option>
-				<option value="ratelow">FULL STACK DEVELOPMENT </option>
-				<option value="ratelow">FUND RAISING</option>
-				<option value="ratelow">GAME DEVELOPMENT</option>
-				<option value="ratelow">GENERAL MANAGEMENT</option>
-				<option value="ratelow">GOVERNMENT</option>
-				<option value="ratelow">GRAPHIC DESIGN</option>
-				<option value="ratelow">HOSPITALITY</option>
-				<option value="ratelow">HOTEL MANAGEMENT</option>
-				<option value="ratelow">HUMAN RESOURCE (HR)</option>
-				<option value="ratelow">HUMANITIES</option>
-				<option value="ratelow">IMAGE PROCESSING</option>
-
-
-			</select>
-
-		</div>
-
-		<!-- Location -->
-		<div class="widget">
-			<h4>LOCATION</h4>
-			<form action="#" method="get">
-				<div style="display: flex; justify-content:start;align-items: center;">
-				<input type="text" style="width: 300px;margin: 10px;" placeholder="State / Province" value=""/>
-				
-				<button style="height: 45px;" class="button">Filter</button></div>
-			</form>
-		</div>
-
-		<!-- Job Type -->
-		<div class="widget">
-			<h4>JOB TYPE</h4>
-
-			<ul class="checkboxes">
-				<li>
-					<input id="check-1" type="checkbox" name="check" value="0" checked>
-					<label for="check-1">ANY TYPE</label>
-				</li>
-				<li>
-					<input id="check-2" type="checkbox" name="check" value="1">
-					<label for="check-2">JOBS</label>
-				</li>
-				<li>
-					<input id="check-3" type="checkbox" name="check" value="2">
-					<label for="check-3">INTERNSHIPS</label>
-				</li>
-
-			</ul>
-
-		</div>
-
-		
-
-
-
-	</div>
-	<!-- Widgets / End -->
-	<!-- Recent Jobs -->
-	<div class="eleven columns">
-	<div class="padding-right">
-
-		<div class="listings-container">
-			
-			
-			
-			
-			<!-- Listing -->
-			<a href="job-page.html" class="listing full-time">
-				<div class="listing-logo">
-					<img src="images/job-list-logo-02.png" alt="">
 				</div>
-				<div class="listing-title">
-					<h6 style="font-weight: bold;">INTERNSHIP</h6>
-					<h6>COMPANY NAME</h6>
-					<h6 >Core PHP Developer for Site Maintenance  <span class="listing-type">APPLY</span></h6>
-					<h6>LOCATION</h6>
-					<h6>PAID-SALARY/UNPAID</h6>
-					<h6>TYPE : WFH/OFFICE</h6>
-				</div>
-			</a>
-
-			<!-- Listing -->
-			<a href="job-page-alt.html" class="listing full-time">
-				<div class="listing-logo">
-					<img src="images/job-list-logo-01.png" alt="">
-				</div>
-				<div class="listing-title">
-					<h6 style="font-weight: bold;">JOB</h6>
-					<h4>Restaurant Team Member - Crew  <span class="listing-type">APPLY</span></h4>
-					<h6>TOTAL POSITIONS/VACANCIES : 10</h6>
-					<H6>LAST DAY TO APPLY : <div class="listing-date">DD/MM/YYYY</div></H6>
-				</div>
-			</a>
-
-			<!-- Listing -->
-			<a href="job-page.html" class="listing full-time">
-				<div class="listing-logo">
-					<img src="images/job-list-logo-04.png" alt="">
-				</div>
-				<div class="listing-title">
-					<h4>Power Systems User Experience Designer <span class="listing-type">APPLY</span></h4>
-					<ul class="listing-icons">
-						<li><i class="ln ln-icon-Management"></i> Hexagon</li>
-						<li><i class="ln ln-icon-Map2"></i> London</li>
-						<li><i class="ln ln-icon-Money-2"></i> $55 / hour</li>
-						<li><div class="listing-date">4d ago</div></li>
-					</ul>
-				</div>
-			</a>
-
-			<!-- Listing -->
-			<a href="job-page.html" class="listing full-time">
-				<div class="listing-logo">
-					<img src="images/job-list-logo-05.png" alt="">
-				</div>
-				<div class="listing-title">
-					<h4>iPhone / Android Music App Development  <span class="listing-type">APPLY</span></h4>
-					<ul class="listing-icons">
-						<li><i class="ln ln-icon-Management"></i> Hexagon</li>
-						<li><i class="ln ln-icon-Map2"></i> London</li>
-						<li><i class="ln ln-icon-Money-2"></i> $85 / hour</li>
-						<li><div class="listing-date">4d ago</div></li>
-					</ul>
-				</div>
-			</a>
-
-			
-			<!-- Listing -->
-			<a href="job-page.html" class="listing full-time">
-				<div class="listing-logo">
-					<img src="images/job-list-logo-02.png" alt="">
-				</div>
-				<div class="listing-title">
-					<h4>Core PHP Developer for Site Maintenance  <span class="listing-type">APPLY</span></h4>
-					<ul class="listing-icons">
-						<li><i class="ln ln-icon-Management"></i> Cubico</li>
-						<li><i class="ln ln-icon-Map2"></i> Sydney</li>
-						<li><i class="ln ln-icon-Money-2"></i> $125 / hour</li>
-						<li><div class="listing-date">3d ago</div></li>
-					</ul>
-				</div>
-			</a>
-
-			<!-- Listing -->
-			<a href="job-page.html" class="listing full-time">
-				<div class="listing-logo">
-					<img src="images/job-list-logo-01.png" alt="">
-				</div>
-				<div class="listing-title">
-					<h4>Restaurant Team Member - Crew <span class="listing-type">APPLY</span></h4>
-					<ul class="listing-icons">
-						<li><i class="ln ln-icon-Management"></i> King</li>
-						<li><i class="ln ln-icon-Map2"></i> Sydney</li>
-						<li><div class="listing-date">3d ago</div></li>
-					</ul>
-				</div>
-			</a>
-
-			<!-- Listing -->
-			<a href="job-page.html" class="listing full-time">
-				<div class="listing-logo">
-					<img src="images/job-list-logo-04.png" alt="">
-				</div>
-				<div class="listing-title">
-					<h4>Power Systems User Experience Designer <span class="listing-type">APPLY</span></h4>
-					<ul class="listing-icons">
-						<li><i class="ln ln-icon-Management"></i> Hexagon</li>
-						<li><i class="ln ln-icon-Map2"></i> London</li>
-						<li><i class="ln ln-icon-Money-2"></i> $55 / hour</li>
-						<li><div class="listing-date">4d ago</div></li>
-					</ul>
-				</div>
-			</a>
-
-		</div>
+			</div>
+		</header>
 		<div class="clearfix"></div>
 
-		<div class="pagination-container">
-			<nav class="pagination">
-				<ul>
-					<li><a href="#" class="current-page">1</a></li>
-					<li><a href="#">2</a></li>
-					<li><a href="#">3</a></li>
-					<li class="blank">...</li>
-					<li><a href="#">22</a></li>
-				</ul>
-			</nav>
 
-			<nav class="pagination-next-prev">
-				<ul>
-					<li><a href="#" class="prev">Previous</a></li>
-					<li><a href="#" class="next">Next</a></li>
-				</ul>
-			</nav>
+
+		<!-- Content
+================================================== -->
+		<div class="container">
+			<!-- Widgets -->
+			<div class="five columns">
+
+				<!-- Sort by -->
+				<div class="widget">
+					<h4>SORT BY CATEGORY</h4>
+
+					<!-- Select -->
+					<select data-placeholder="Choose Category" class="chosen-select-no-single">
+						<option value="0">.NET DEVELOPMENT</option>
+						<option value="1">3D PRINTING</option>
+						<option value="2">ACCOUNTS</option>
+						<option value="3">ACTING</option>
+						<option value="4">AEROSPACE ENGINEERING</option>
+						<option value="5">AGRICULTURE & FOOD ENGINEERING</option>
+						<option value="6">ANALYTICS</option>
+						<option value="7">ANDROID APP DEVELOPMENT</option>
+						<option value="8">ANGULAR.JS DEVELOPMENT</option>
+						<option value="9">ANIMATION</option>
+						<option value="10">ARCHITECTURE</option>
+						<option value="11">ARTIFICIAL INTELLIGENCE (AI)</option>
+						<option value="12">ASP.NET DEVELOPMENT</option>
+						<option value="13">AUTOMOBILE ENGINEERING</option>
+						<option value="14">BACKEND DEBELOPMENT</option>
+						<option value="15">BIG DATA</option>
+						<option value="16">BIOINFORMATICS</option>
+						<option value="17">BIOLOGY</option>
+						<option value="18">BIOTECHNOLOGY ENGINEERING</option>
+						<option value="19">BLOGGING</option>
+						<option value="20">BRAND MANAGEMENT</option>
+						<option value="21">CAD DESIGN</option>
+						<option value="22">CAMPUS AMBASSADOR</option>
+						<option value="23">CHARTERED ACCOUNTANCY (CA)</option>
+						<option value="24">CHEMICAL ENGINEERING</option>
+						<option value="25">CHEMISTRY</option>
+						<option value="26">CINEMATOGRAPHY</option>
+						<option value="27">CIVIL ENGINEERING</option>
+						<option value="28">COMMERCE</option>
+						<option value="29">COMPANY SECRETARY (CS)</option>
+						<option value="30">COMPUTER SCIENCE</option>
+						<option value="31">COMPUTER VISION</option>
+						<option value="32">CONTENT WRITING</option>
+						<option value="33">COPYWRITING</option>
+						<option value="34">CREATIVE WRITING</option>
+						<option value="35">CUSTOMER SERVICE</option>
+						<option value="36">CYBER SECURITY</option>
+						<option value="37">DATA ENTRY</option>
+						<option value="38">ENGINEERING DESIGN</option>
+						<option value="39">ENVIRONMENTAL SCIENCES</option>
+						<option value="40">EVENT MANAGEMENT</option>
+						<option value="41">FACEBOOK MARKETING</option>
+						<option value="42">FASHION DESIGN</option>
+						<option value="43">FILM MAKING</option>
+						<option value="44">FINANCE</option>
+						<option value="45">FRONT END DEVELOPMENT</option>
+						<option value="46">FULL STACK DEVELOPMENT </option>
+						<option value="47">FUND RAISING</option>
+						<option value="48">GAME DEVELOPMENT</option>
+						<option value="49">GENERAL MANAGEMENT</option>
+						<option value="50">GOVERNMENT</option>
+						<option value="51">GRAPHIC DESIGN</option>
+						<option value="52">HOSPITALITY</option>
+						<option value="53">HOTEL MANAGEMENT</option>
+						<option value="54">HUMAN RESOURCE (HR)</option>
+						<option value="55">HUMANITIES</option>
+						<option value="56">IMAGE PROCESSING</option>
+
+
+
+					</select>
+
+				</div>
+
+				<!-- Location -->
+				<div class="widget">
+					<h4>LOCATION</h4>
+					<form action="#" method="get">
+						<div style="display: flex; justify-content:start;align-items: center;">
+							<input type="text" style="width: 300px;margin: 10px;" placeholder="State / Province"
+								value="" />
+
+							<button style="height: 45px;" class="button">Filter</button></div>
+					</form>
+				</div>
+
+				<!-- Job Type -->
+				<div class="widget">
+					<h4>JOB TYPE</h4>
+
+					<ul class="checkboxes">
+						<li>
+							<input id="check-1" type="checkbox" name="check" value="0" checked>
+							<label for="check-1">ANY TYPE</label>
+						</li>
+						<li>
+							<input id="check-2" type="checkbox" name="check" value="1">
+							<label for="check-2">JOBS</label>
+						</li>
+						<li>
+							<input id="check-3" type="checkbox" name="check" value="2">
+							<label for="check-3">INTERNSHIPS</label>
+						</li>
+
+					</ul>
+
+				</div>
+
+
+
+
+
+			</div>
+			<!-- Widgets / End -->
+			<!-- Recent Jobs -->
+			<div class="eleven columns">
+				<div class="padding-right">
+
+					<div id="jobs-container" class="listings-container">
+
+						<!-- Injected by JS -->
+
+					</div>
+					<div class="clearfix"></div>
+
+				</div>
+			</div>
+
+
+
+
+
 		</div>
 
-	</div>
-	</div>
 
-
-	
-
-
-</div>
-
-
-<!-- Footer
+		<!-- Footer
 ================================================== -->
-<div class="margin-top-25"></div>
+		<div class="margin-top-25"></div>
 
 
-<footer class="full-footer" >
-    <div class="container topFooter p-md-3 p-4">
-      <div class="row">
-        <div class="col-md-3" >
-          <h5 style="color: white">HELPING HANDS</h5>
+		<footer class="full-footer">
+			<div class="container topFooter p-md-3 p-4">
+				<div class="row">
+					<div class="col-md-3">
+						<h5 style="color: white">HELPING HANDS</h5>
 
-          <p>
-            Helping Hands is a Research based Platform / Blog / Medium for
-            anyone,anytime and anywhere.
-          </p>
-		  <br />
-		  <div class="footan">
-          <a class="p-2" href="https://www.facebook.com/helpinghands4world/">
-            <img src="./images/facebook.png" class="logo-icon-smalll" alt="facebook"></a>
-          <a class="p-2" href="https://www.instagram.com/we_r_helping_hands">
-            <img src="./images/instagram.png" class="logo-icon-smalll" alt="icon-instagram"></a>
-          <a class="p-2" href="https://www.linkedin.com/company/we-r-helping-hands">
-            <img src="./images/linkedin.png" class="logo-icon-smalll" alt="icon-linkedin"></a>
-          <a class="p-2" href="https://twitter.com/werhelpinghands">
-            <img src="./images/twitter.png" class="logo-icon-smalll" alt="icon-twitter"></i></a>
-          <a class="p-2" href="tel:+917906980871">
-            <img src="./images/whatsapp.png" class="logo-icon-smalll" alt="icon-whatsapp"></i></a></div>
-          <br>
-          <br>
-        </div>
-        &#32;
-
-
-        <div class="col-md-3">
-          <h5 style="color:white;">Important Links</h5>
-          <a class="p-1" href="./login.html">Accounts</a><br />
-          <a class="p-1" href="./blogs.html">Blog Articles</a><br />
-          <a class="p-1" href="./social-contact.html">Social Media</a><br />
-          <br>
-
-        </div>
+						<p>
+							Helping Hands is a Research based Platform / Blog / Medium for
+							anyone,anytime and anywhere.
+						</p>
+						<br />
+						<div class="footan">
+							<a class="p-2" href="https://www.facebook.com/helpinghands4world/">
+								<img src="./images/facebook.png" class="logo-icon-smalll" alt="facebook"></a>
+							<a class="p-2" href="https://www.instagram.com/we_r_helping_hands">
+								<img src="./images/instagram.png" class="logo-icon-smalll" alt="icon-instagram"></a>
+							<a class="p-2" href="https://www.linkedin.com/company/we-r-helping-hands">
+								<img src="./images/linkedin.png" class="logo-icon-smalll" alt="icon-linkedin"></a>
+							<a class="p-2" href="https://twitter.com/werhelpinghands">
+								<img src="./images/twitter.png" class="logo-icon-smalll" alt="icon-twitter"></i></a>
+							<a class="p-2" href="tel:+917906980871">
+								<img src="./images/whatsapp.png" class="logo-icon-smalll" alt="icon-whatsapp"></i></a>
+						</div>
+						<br>
+						<br>
+					</div>
+					&#32;
 
 
-        <div class="col-md-3">
-          <h5 style="color: white;">Our Services</h5>
+					<div class="col-md-3">
+						<h5 style="color:white;">Important Links</h5>
+						<a class="p-1" href="./login.html">Accounts</a><br />
+						<a class="p-1" href="./blogs.html">Blog Articles</a><br />
+						<a class="p-1" href="./social-contact.html">Social Media</a><br />
+						<br>
 
-          <a class="p-1" href="./projects.html">Projects</a><br />
-          <a class="p-1" href="./surveys.html">Surveys</a><br />
-          <br />
-		  <h5 style="color: white">Available in:</h5>
-		  <div class="footan">
-          <a class="p-1" href="#"><img src="./images/android.png" class="logo-icon-smalll" alt="icon-android"></a>
-          <a class="p-1" href="#"><img src="./images/apple.png" class="logo-icon-smalll" alt="icon-apple"></a></div>
-          <br>
-          <br>
-        </div>
-        <div class="col-md-3">
+					</div>
 
-		  <h5 style="color:white;">Contact Us</h5>
-		  
-          <a href="tel:+917906980871" class="footan">
-            <img src="./images/call.png" class="logo-icon-smalll" alt="icon-call"> +(91) 7906980871</a>
-          <br />
-          <a class="footan"  href="mailto:werrhelpinghands@gmail.com">
-            <img src="./images/gmail.png" class="logo-icon-smalll" alt="icon-gmail">
-            werrhelpinghands@gmail.com</a><br />
-          <br>
-          <div style="width: 100;height: 90; overflow: hidden;">
-            <iframe class="embed-responsive-item"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448181.16374162206!2d76.81306442366603!3d28.647279935570428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!5e0!3m2!1sen!2sin!4v1561834027057!5m2!1sen!2sin"
-              frameborder="10px" frameborder="0" style="border:0" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="visitor">
-      <!-- hitwebcounter Code START -->
-	  <h6 style="color: white !important;">VISITOR NO. :</h6>
-	  <div style="width: 90px;height: 30px;  position: relative;display: flex;justify-content: center;align-items: center;">
-	  <img src="https://hitwebcounter.com/counter/counter.php?page=7230855&style=0006&nbdigits=5&type=ip&initCount=0"
-            title="User Stats" Alt="PHP Hits Count"  border="0"/></div>
-        
-    </div> 
-    <div class="bootfoot">
-	<p style="font-size: 12px;">Copyrights @ Helping Hands 2020 - All Rights Reserved
-	</p>	
+
+					<div class="col-md-3">
+						<h5 style="color: white;">Our Services</h5>
+
+						<a class="p-1" href="./projects.html">Projects</a><br />
+						<a class="p-1" href="./surveys.html">Surveys</a><br />
+						<br />
+						<h5 style="color: white">Available in:</h5>
+						<div class="footan">
+							<a class="p-1" href="#"><img src="./images/android.png" class="logo-icon-smalll"
+									alt="icon-android"></a>
+							<a class="p-1" href="#"><img src="./images/apple.png" class="logo-icon-smalll"
+									alt="icon-apple"></a></div>
+						<br>
+						<br>
+					</div>
+					<div class="col-md-3">
+
+						<h5 style="color:white;">Contact Us</h5>
+
+						<a href="tel:+917906980871" class="footan">
+							<img src="./images/call.png" class="logo-icon-smalll" alt="icon-call"> +(91) 7906980871</a>
+						<br />
+						<a class="footan" href="mailto:werrhelpinghands@gmail.com">
+							<img src="./images/gmail.png" class="logo-icon-smalll" alt="icon-gmail">
+							werrhelpinghands@gmail.com</a><br />
+						<br>
+						<div style="width: 100;height: 90; overflow: hidden;">
+							<iframe class="embed-responsive-item"
+								src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448181.16374162206!2d76.81306442366603!3d28.647279935570428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!5e0!3m2!1sen!2sin!4v1561834027057!5m2!1sen!2sin"
+								frameborder="10px" frameborder="0" style="border:0" allowfullscreen></iframe>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="visitor">
+				<!-- hitwebcounter Code START -->
+				<h6 style="color: white !important;">VISITOR NO. :</h6>
+				<div
+					style="width: 90px;height: 30px;  position: relative;display: flex;justify-content: center;align-items: center;">
+					<img src="https://hitwebcounter.com/counter/counter.php?page=7230855&style=0006&nbdigits=5&type=ip&initCount=0"
+						title="User Stats" Alt="PHP Hits Count" border="0" /></div>
+
+			</div>
+			<div class="bootfoot">
+				<p style="font-size: 12px;">Copyrights @ Helping Hands 2020 - All Rights Reserved
+				</p>
+			</div>
+		</footer>
+
+
+		<!-- Back To Top Button -->
+		<div id="backtotop"><a href="#"></a></div>
+
 	</div>
-  </footer>
+	<!-- Wrapper / End -->
 
 
-<!-- Back To Top Button -->
-<div id="backtotop"><a href="#"></a></div>
-
-</div>
-<!-- Wrapper / End -->
-
-
-<!-- Scripts
+	<!-- Scripts
 ================================================== -->
-<script src="scripts/jquery-3.4.1.min.js"></script>
-<script src="scripts/jquery-migrate-3.1.0.min.js"></script>
-<script src="scripts/custom.js"></script>
-<script src="scripts/jquery.superfish.js"></script>
-<script src="scripts/jquery.themepunch.tools.min.js"></script>
-<script src="scripts/jquery.themepunch.revolution.min.js"></script>
-<script src="scripts/jquery.themepunch.showbizpro.min.js"></script>
-<script src="scripts/jquery.flexslider-min.js"></script>
-<script src="scripts/chosen.jquery.min.js"></script>
-<script src="scripts/jquery.magnific-popup.min.js"></script>
-<script src="scripts/waypoints.min.js"></script>
-<script src="scripts/jquery.counterup.min.js"></script>
-<script src="scripts/jquery.jpanelmenu.js"></script>
-<script src="scripts/stacktable.js"></script>
-<script src="scripts/slick.min.js"></script>
-<script src="scripts/headroom.min.js"></script>
+	<script src="scripts/jquery-3.4.1.min.js"></script>
+	<script src="scripts/jquery-migrate-3.1.0.min.js"></script>
+	<script src="scripts/custom.js"></script>
+	<script src="scripts/jquery.superfish.js"></script>
+	<script src="scripts/jquery.themepunch.tools.min.js"></script>
+	<script src="scripts/jquery.themepunch.revolution.min.js"></script>
+	<script src="scripts/jquery.themepunch.showbizpro.min.js"></script>
+	<script src="scripts/jquery.flexslider-min.js"></script>
+	<script src="scripts/chosen.jquery.min.js"></script>
+	<script src="scripts/jquery.magnific-popup.min.js"></script>
+	<script src="scripts/waypoints.min.js"></script>
+	<script src="scripts/jquery.counterup.min.js"></script>
+	<script src="scripts/jquery.jpanelmenu.js"></script>
+	<script src="scripts/stacktable.js"></script>
+	<script src="scripts/slick.min.js"></script>
+	<script src="scripts/headroom.min.js"></script>
 
 
 
@@ -495,4 +379,5 @@
 </body>
 
 <!-- Mirrored from www.vasterad.com/themes/workscout_2019/browse-jobs.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 May 2020 07:16:07 GMT -->
+
 </html>
