@@ -1,4 +1,9 @@
 
+$('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+
+
 var a = document.querySelectorAll('#linkmenu');
 var cbox = document.querySelector('#openSidebarMenu');
 for (i = 0; i < a.length; i++) {
