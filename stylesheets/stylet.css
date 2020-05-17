@@ -1,21 +1,30 @@
 .banner{
-  height: 350px;
-  width: calc(100% - 30px);
-  margin: auto;
+  top: -25px;
+  height: 520px;
   position: relative;
   background: url(../images/carbanner.jpg) no-repeat center;
   background-attachment: fixed;
   background-size: 100% 100%;
-  border: 2px solid rgb(105, 197, 250);
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.bannerlogo{
+  position: absolute;
+  display: block;
+  text-align: center;
+  top: 0px;
+  width: 100%;
+  background-color: rgba(0,0,0,0.5);
+  height: 65px;
+  position: fixed;
+}
 .banner h1{
+  background-color: rgba(0,0,0,0.3);
   color: white;
   font-family: 'Bangers', serif;
-  text-shadow: 5px 5px black;
+  text-shadow: 3px 3px black;
 font-size: 50px;
 
 }
@@ -108,12 +117,13 @@ font-family: 'Bangers', serif;
 .gridbox{
   position: relative;
   display: grid;
-  grid-template-columns: repeat(auto-fill , 420px);
+  grid-template-columns: repeat(auto-fill , 360px);
   text-align: center;
   align-items: center;
-  justify-items: center;
   margin-top: 40px;
   margin-bottom: 40px;
+  justify-items: center;
+  justify-content: space-evenly;
 }
 
 .gridd{
@@ -138,19 +148,20 @@ font-family: 'Bangers', serif;
 
 .gridd:hover{
   background-color: #ffa16e;
-  transition: 1s ease-in-out;
+  transition: 0.5s ease-in-out;
   box-shadow: 3px 6px #080300;
   color: white;
   text-shadow: 2px 2px black;
 }
+.gridd img:hover{
+  border: 2px solid black;
+}
 
 
-@media all and (max-width:500px){
+@media all and (max-width:600px){
   .banner{
-    background: url(../images/carbanver.jpeg) no-repeat center;
-    background-attachment: fixed;
-    background-size: 100% 100%;
-  height: 500px;
+    background: url(../images/carbanver.jpeg);
+  height: 650px;
   }
   .banner h1{
 
@@ -163,31 +174,18 @@ font-family: 'Bangers', serif;
   margin: 10px;
 }
 .gridbox{
-  grid-template-columns: repeat(auto-fill , 500px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   
 }
-}
-@media all and (max-width:400px){
-.gridd{
-  height: 300px;
-  width: 300px;
-  margin: 10px;
-}
-.gridbox{
-  grid-template-columns: repeat(auto-fill , 400px);
-  
-}
-}
-@media all and (max-width:300px){
-.gridd{
-  height: 400px;
-  width: 200px;
-  margin: 10px;
-}
-.gridbox{
-  grid-template-columns: repeat(auto-fill , 300px);
-  
+.gridd:hover{
+  background-color: #ffa16e;
+  transition: 0.5s ease-in-out;
+  box-shadow: 3px 6px #080300;
+  color: white;
+  text-shadow: 2px 2px black;
 }
 
-}
-
+} 

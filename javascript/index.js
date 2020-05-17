@@ -20,7 +20,7 @@ function submitForm() {
 }
 function myFunction() {
   let page = document.body.scrollTop;
-  if (page >= 450) {
+  if (page >= 300) {
     document.querySelector(".itemactive").classList.add("scroll");
   } else {
     document.querySelector(".itemactive").classList.remove("scroll");
