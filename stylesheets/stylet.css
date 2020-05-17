@@ -191,10 +191,16 @@ font-family: 'Bangers', serif;
 } 
 
 .modcontent{
+  margin-top: -35px !important;
+  text-transform: uppercase;
+  padding: 20px;
 width: 100%;
+color: #000;
+font-size: 20px;
+font-weight: bold;
 height: 300px;
 overflow: hidden;
 overflow-y: auto;
 overflow-x: auto;
-border: 2px solid #7EE8FA;
+border: 2px solid rgb(156, 156, 156);
 }
