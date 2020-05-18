@@ -27,15 +27,24 @@ if (category.trim() != ""){
 
             if(closingDate.trim() != ""){
 
+              if(logo != ""){
 
-                
+                if(notification != ""){
+   
               addJob()
 
+            }else{
+              alert("please upload the notification");
+              return false;
+
+                }
                 
 
+              }else{
 
-              
-
+                alert("please upload the logo");
+                return false;
+              }
             }else{
               
   alert("closing date cannot empty");
