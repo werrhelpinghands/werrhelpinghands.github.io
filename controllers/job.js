@@ -44,11 +44,16 @@ const deleteFromStorage = (filename) => {
   bucket.file(filename).delete()
 };
 
+const check = (string) => {
+  if(string === "") return "-"
+  else return string
+}
+
 exports.addJob = async (req, res) => {
-  let file1 = "";
+  let file1 = "#";
   if (req.files[0])
     await uploadToStorage(req.files[0]).then((url) => (file1 = url));
-  let file2 = "";
+  let file2 = "#";
   if (req.files[1])
     await uploadToStorage(req.files[1]).then((url) => (file2 = url));
 
@@ -72,24 +77,24 @@ exports.addJob = async (req, res) => {
   } = req.body;
 
   Job.create({
-    title: title,
-    type: type,
-    category: category,
+    title: check(title),
+    type: check(type),
+    category: check(category),
     tags: tags.split(","),
-    company: company,
-    website: website,
-    about: about,
+    company: check(company),
+    website: check(website),
+    about: check(about),
     roles: roles.split(","),
     skills: skills.split(","),
-    location: location,
-    duration: duration,
-    pay: pay,
-    available: available,
+    location: check(location),
+    duration: check(duration),
+    pay: check(pay),
+    available: check(available),
     expireAt: new Date(expireAt),
-    url: url,
+    url: check(url),
     logo: file1,
     notification: file2,
-    portal: portal,
+    portal: check(portal),
   })
     .then((job) => {
       res.status(200);
