@@ -1,29 +1,26 @@
 function checkval(){
   let title = document.getElementById("title").value;//
-  let category = document.getElementById("category").value;//
-  let type = document.getElementById("type").value;//
-  type = document.getElementById("type").options[type].text
   let tags = document.getElementById("tags").value;//
   let company = document.getElementById("company").value;//
   let website = document.getElementById("website").value;//
   let roles = document.getElementById("roles").value;//
   let skills = document.getElementById("skills").value;//
-  let location = document.getElementById("location").value;//
+  let portal = document.getElementById("portal").value;
   let closingDate = document.getElementById("closingDate").value;//
 
 if (title.trim() != ""){
 
-if (category.trim() != ""){
-
-  if(type.trim() != ""){
+  if(document.getElementById("category").value != ""){
+  if(document.getElementById("type").value != ""){
 
     if(tags.trim() != ""){
 
       if(company.trim() != ""){
+      
 
         if(website.trim() != ""){
 
-          if(location.trim() != ""){
+          if( portal.trim() != ""){
 
             if(closingDate.trim() != ""){
 
@@ -47,9 +44,9 @@ if (category.trim() != ""){
                     
                   }else{
                     
-  alert("ROLES CANNOT BE EMPTY!!");
-  document.getElementById("roles").style.border="2px solid red";
-          return false;  
+                      alert("ROLES CANNOT BE EMPTY!!");
+                      document.getElementById("roles").style.border="2px solid red";
+                              return false;  
                   }
 
             }else{
@@ -66,16 +63,16 @@ if (category.trim() != ""){
               }
             }else{
               
-  alert("CLOSING DATE CANNOT BE EMPTY!!");
-  document.getElementById("closingDate").style.border="2px solid red";
-              return false;
+                alert("CLOSING DATE CANNOT BE EMPTY!!");
+                document.getElementById("closingDate").style.border="2px solid red";
+                            return false;
             }
 
           }else{
             
-  alert("LOCATION CANNOT BE EMPTY!!");
-  document.getElementById("location").style.border="2px solid red";
-          return false;  
+                  alert("COMPANY PORTAL URL CANNOT BE EMPTY!!");
+                  document.getElementById("portal").style.border="2px solid red";
+                          return false;  
         }
 
 
@@ -96,7 +93,7 @@ if (category.trim() != ""){
 
 
       }
-
+  
     }else{
       
       alert("TAGS CANNOT BE EMPTY!!");
