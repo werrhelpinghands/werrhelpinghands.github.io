@@ -11,6 +11,7 @@ async function getNews() {
 
         <div class="info">
           <span><a href="${news.url}" target="_blank">${news.title}</a></span>
+          <p>${news.createdAt.split('T')[0]}<p>
           <br>
           <label>${news.description}</label>
           <a href=${news.url} target="_blank"><h4>Read more...</h4></a>
