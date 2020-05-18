@@ -6,10 +6,10 @@ function checkval(){
   let tags = document.getElementById("tags").value;//
   let company = document.getElementById("company").value;//
   let website = document.getElementById("website").value;//
+  let roles = document.getElementById("roles").value;//
+  let skills = document.getElementById("skills").value;//
   let location = document.getElementById("location").value;//
   let closingDate = document.getElementById("closingDate").value;//
-  let logo = document.getElementById("inputlogo").files[0];//
-  let notification = document.getElementById("notification").files[0];//
 
 if (title.trim() != ""){
 
@@ -27,11 +27,30 @@ if (category.trim() != ""){
 
             if(closingDate.trim() != ""){
 
-              if(logo != ""){
+              if(document.getElementById("inputlogo").value != ""){
 
-                if(notification != ""){
-   
-              addJob()
+                if(document.getElementById("notification").value != ""){
+
+                  if(roles != ""){
+
+                    if(skills != ""){
+
+                      addJob()
+
+                    }else{
+  
+                      alert("skills cannot empty");
+                      document.getElementById("skills").style.border="2px solid red";
+                              return false;  
+                                      
+                    }
+                    
+                  }else{
+                    
+  alert("roles cannot empty");
+  document.getElementById("roles").style.border="2px solid red";
+          return false;  
+                  }
 
             }else{
               alert("please upload the notification");
