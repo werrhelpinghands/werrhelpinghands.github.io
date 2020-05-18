@@ -84,7 +84,7 @@ exports.addJob = async (req, res) => {
     company: check(company),
     website: check(website),
     about: check(about),
-    roles: roles.split(","),
+    roles: roles.split("."),
     skills: skills.split(","),
     location: check(location),
     duration: check(duration),

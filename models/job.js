@@ -39,30 +39,39 @@ const jobSchema = new Schema({
     },
     location:{
         type: String,
+        required: true
     },
     duration:{
         type: String,
+        required: true
     },
     pay:{
         type: String,
+        required: true
     },
     available:{
         type: String,
+        required: true
     },
     expireAt:{
         type: Date,
+        required: true
     },
     url:{
-        type: String
+        type: String,
+        required: true
     },
     logo:{
-        type: String
+        type: String,
+        required: true
     },
     notification:{
-        type: String
+        type: String,
+        required: true
     },
     portal:{
-        type: String
+        type: String,
+        required: true
     }
 },{
     timestamps: true
