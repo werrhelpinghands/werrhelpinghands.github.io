@@ -1219,7 +1219,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 overflow: hidden;
-background: linear-gradient(#83EAF1,#63A4FF);
+background: rgba(0,0,0,0);
 }
 
 .team-btn-join{

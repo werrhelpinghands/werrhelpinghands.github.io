@@ -204,3 +204,31 @@ overflow-y: auto;
 overflow-x: auto;
 border: 2px solid rgb(156, 156, 156);
 }
+
+
+.careerdiv{
+  width: 100%;
+  background-color: whitesmoke;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: rgba(0,0,0,0);
+  }
+  
+  .car-btn{
+    width: 400px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Bangers';
+    font-size: 22px;
+    border:2px solid black;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background: linear-gradient(#09C6F9,#045DE9  );
+  }
+  .car-btn:hover{
+    background:linear-gradient(#37D5D6,#36096D  );
+  }
