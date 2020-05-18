@@ -39,7 +39,7 @@ if (category.trim() != ""){
 
                     }else{
   
-                      alert("skills cannot empty");
+                      alert("SKILLS CANNOT BE EMPTY!!");
                       document.getElementById("skills").style.border="2px solid red";
                               return false;  
                                       
@@ -47,13 +47,13 @@ if (category.trim() != ""){
                     
                   }else{
                     
-  alert("roles cannot empty");
+  alert("ROLES CANNOT BE EMPTY!!");
   document.getElementById("roles").style.border="2px solid red";
           return false;  
                   }
 
             }else{
-              alert("please upload the notification");
+              alert("PLEASE UPLOAD NOTIFICATION!!");
               return false;
 
                 }
@@ -61,19 +61,19 @@ if (category.trim() != ""){
 
               }else{
 
-                alert("please upload the logo");
+                alert("PLEASE UPLOAD LOGO!!");
                 return false;
               }
             }else{
               
-  alert("closing date cannot empty");
+  alert("CLOSING DATE CANNOT BE EMPTY!!");
   document.getElementById("closingDate").style.border="2px solid red";
               return false;
             }
 
           }else{
             
-  alert("location cannot empty");
+  alert("LOCATION CANNOT BE EMPTY!!");
   document.getElementById("location").style.border="2px solid red";
           return false;  
         }
@@ -81,7 +81,7 @@ if (category.trim() != ""){
 
         }else{
 
-          alert("website cannot empty");
+          alert("WEBSITE CANNOT BE EMPTY!!");
           document.getElementById("website").style.border="2px solid red";
           return false;
 
@@ -90,7 +90,7 @@ if (category.trim() != ""){
 
       }else{
     
-  alert("company cannot empty");
+  alert("COMPANY CANNOT BE EMPTY!!");
   document.getElementById("company").style.border="2px solid red";
         return false;
 
@@ -99,7 +99,7 @@ if (category.trim() != ""){
 
     }else{
       
-      alert("tags cannot empty");
+      alert("TAGS CANNOT BE EMPTY!!");
       document.getElementById("tags").style.border="2px solid red";
       return false;
     }
@@ -107,21 +107,21 @@ if (category.trim() != ""){
 
   }else{
     
-  alert("type cannot empty");
+  alert("TYPE CANNOT BE EMPTY!!");
   document.getElementById("type").style.border="2px solid red";
     return false;
   }
 
 }else{
 
-  alert("category cannot be empty");
+  alert("CATEGORY CANNOT BE EMPTY!!");
   document.getElementById("category").style.border="2px solid red";
   return false;
 }
 
 }else{
   
-  alert("title is empty");
+  alert("TITLE CANNOT BE EMPTY!!");
   document.getElementById("title").style.border="2px solid red";
   return false;
 }
