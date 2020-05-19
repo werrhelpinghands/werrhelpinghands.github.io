@@ -21,7 +21,7 @@ exports.addNews = (req, res) => {
 exports.getAllNews = (req, res) => {
   console.log(req.body);
   
-  News.find({})
+  News.find({}).sort({createdAt: 'desc'})
     .then((news) => {
       res.status(200);
       res.json(news);
