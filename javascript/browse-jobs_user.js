@@ -29,10 +29,9 @@ async function getJobs() {
                               </div>
                               <div class="listing-title">
                                   <h6 style="font-weight: bold;">${post.title}</h6>
-                                  <h6>${post.location}</h6>
+                                  <h6>${post.company}</h6>
                                   <h6><span class="listing-type">APPLY</span></h6>
                                   <h6>Total Postions/Vacancies: ${post.available}</h6>
-                                  <h6>${post.pay}</h6>
                                   <h6>Last Day to apply : ${post.expireAt.split('T')[0]}</h6>
                               </div>
                           </a>`;
