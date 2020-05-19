@@ -101,64 +101,65 @@
 					<h4>SORT BY CATEGORY</h4>
 
 					<!-- Select -->
-					<select data-placeholder="Choose Category" class="chosen-select-no-single">
-						<option value="0">.NET DEVELOPMENT</option>
-						<option value="1">3D PRINTING</option>
-						<option value="2">ACCOUNTS</option>
-						<option value="3">ACTING</option>
-						<option value="4">AEROSPACE ENGINEERING</option>
-						<option value="5">AGRICULTURE & FOOD ENGINEERING</option>
-						<option value="6">ANALYTICS</option>
-						<option value="7">ANDROID APP DEVELOPMENT</option>
-						<option value="8">ANGULAR.JS DEVELOPMENT</option>
-						<option value="9">ANIMATION</option>
-						<option value="10">ARCHITECTURE</option>
-						<option value="11">ARTIFICIAL INTELLIGENCE (AI)</option>
-						<option value="12">ASP.NET DEVELOPMENT</option>
-						<option value="13">AUTOMOBILE ENGINEERING</option>
-						<option value="14">BACKEND DEBELOPMENT</option>
-						<option value="15">BIG DATA</option>
-						<option value="16">BIOINFORMATICS</option>
-						<option value="17">BIOLOGY</option>
-						<option value="18">BIOTECHNOLOGY ENGINEERING</option>
-						<option value="19">BLOGGING</option>
-						<option value="20">BRAND MANAGEMENT</option>
-						<option value="21">CAD DESIGN</option>
-						<option value="22">CAMPUS AMBASSADOR</option>
-						<option value="23">CHARTERED ACCOUNTANCY (CA)</option>
-						<option value="24">CHEMICAL ENGINEERING</option>
-						<option value="25">CHEMISTRY</option>
-						<option value="26">CINEMATOGRAPHY</option>
-						<option value="27">CIVIL ENGINEERING</option>
-						<option value="28">COMMERCE</option>
-						<option value="29">COMPANY SECRETARY (CS)</option>
-						<option value="30">COMPUTER SCIENCE</option>
-						<option value="31">COMPUTER VISION</option>
-						<option value="32">CONTENT WRITING</option>
-						<option value="33">COPYWRITING</option>
-						<option value="34">CREATIVE WRITING</option>
-						<option value="35">CUSTOMER SERVICE</option>
-						<option value="36">CYBER SECURITY</option>
-						<option value="37">DATA ENTRY</option>
-						<option value="38">ENGINEERING DESIGN</option>
-						<option value="39">ENVIRONMENTAL SCIENCES</option>
-						<option value="40">EVENT MANAGEMENT</option>
-						<option value="41">FACEBOOK MARKETING</option>
-						<option value="42">FASHION DESIGN</option>
-						<option value="43">FILM MAKING</option>
-						<option value="44">FINANCE</option>
-						<option value="45">FRONT END DEVELOPMENT</option>
-						<option value="46">FULL STACK DEVELOPMENT </option>
-						<option value="47">FUND RAISING</option>
-						<option value="48">GAME DEVELOPMENT</option>
-						<option value="49">GENERAL MANAGEMENT</option>
-						<option value="50">GOVERNMENT</option>
-						<option value="51">GRAPHIC DESIGN</option>
-						<option value="52">HOSPITALITY</option>
-						<option value="53">HOTEL MANAGEMENT</option>
-						<option value="54">HUMAN RESOURCE (HR)</option>
-						<option value="55">HUMANITIES</option>
-						<option value="56">IMAGE PROCESSING</option>
+					<select id="category" onchange="handleFilter()" data-placeholder="Choose Category" class="chosen-select-no-single">
+						<option value="0">ALL</option>
+						<option value="1">.NET DEVELOPMENT</option>
+						<option value="2">3D PRINTING</option>
+						<option value="3">ACCOUNTS</option>
+						<option value="4">ACTING</option>
+						<option value="5">AEROSPACE ENGINEERING</option>
+						<option value="6">AGRICULTURE & FOOD ENGINEERING</option>
+						<option value="7">ANALYTICS</option>
+						<option value="8">ANDROID APP DEVELOPMENT</option>
+						<option value="9">ANGULAR.JS DEVELOPMENT</option>
+						<option value="10">ANIMATION</option>
+						<option value="11">ARCHITECTURE</option>
+						<option value="12">ARTIFICIAL INTELLIGENCE (AI)</option>
+						<option value="13">ASP.NET DEVELOPMENT</option>
+						<option value="14">AUTOMOBILE ENGINEERING</option>
+						<option value="15">BACKEND DEVELOPMENT</option>
+						<option value="16">BIG DATA</option>
+						<option value="17">BIOINFORMATICS</option>
+						<option value="18">BIOLOGY</option>
+						<option value="19">BIOTECHNOLOGY ENGINEERING</option>
+						<option value="20">BLOGGING</option>
+						<option value="21">BRAND MANAGEMENT</option>
+						<option value="22">CAD DESIGN</option>
+						<option value="23">CAMPUS AMBASSADOR</option>
+						<option value="24">CHARTERED ACCOUNTANCY (CA)</option>
+						<option value="25">CHEMICAL ENGINEERING</option>
+						<option value="26">CHEMISTRY</option>
+						<option value="27">CINEMATOGRAPHY</option>
+						<option value="28">CIVIL ENGINEERING</option>
+						<option value="29">COMMERCE</option>
+						<option value="30">COMPANY SECRETARY (CS)</option>
+						<option value="31">COMPUTER SCIENCE</option>
+						<option value="32">COMPUTER VISION</option>
+						<option value="33">CONTENT WRITING</option>
+						<option value="34">COPYWRITING</option>
+						<option value="35">CREATIVE WRITING</option>
+						<option value="36">CUSTOMER SERVICE</option>
+						<option value="37">CYBER SECURITY</option>
+						<option value="38">DATA ENTRY</option>
+						<option value="39">ENGINEERING DESIGN</option>
+						<option value="40">ENVIRONMENTAL SCIENCES</option>
+						<option value="41">EVENT MANAGEMENT</option>
+						<option value="42">FACEBOOK MARKETING</option>
+						<option value="43">FASHION DESIGN</option>
+						<option value="44">FILM MAKING</option>
+						<option value="45">FINANCE</option>
+						<option value="46">FRONT END DEVELOPMENT</option>
+						<option value="47">FULL STACK DEVELOPMENT </option>
+						<option value="48">FUND RAISING</option>
+						<option value="49">GAME DEVELOPMENT</option>
+						<option value="50">GENERAL MANAGEMENT</option>
+						<option value="51">GOVERNMENT</option>
+						<option value="52">GRAPHIC DESIGN</option>
+						<option value="53">HOSPITALITY</option>
+						<option value="54">HOTEL MANAGEMENT</option>
+						<option value="55">HUMAN RESOURCE (HR)</option>
+						<option value="56">HUMANITIES</option>
+						<option value="57">IMAGE PROCESSING</option>
 					</select>
 
 				</div>
@@ -166,13 +167,13 @@
 				<!-- Location -->
 				<div class="widget">
 					<h4>LOCATION</h4>
-					<form action="#" method="get">
+
 						<div style="display: flex; justify-content:start;align-items: center;">
-							<input type="text" style="width: 300px;margin: 10px;margin-left: -10px;" placeholder="State / Province"
+							<input id="location" type="text" style="width: 300px;margin: 10px;margin-left: -10px;" placeholder="State / Province"
 								value="" />
 
-							<button style="height: 45px;" class="button">Filter</button></div>
-					</form>
+							<button onclick="handleFilter()" style="height: 45px;" class="button">Filter</button></div>
+
 				</div>
 
 				<!-- Job Type -->
@@ -181,15 +182,17 @@
 
 					<ul class="checkboxes">
 						<li>
-							<input id="check-1" type="checkbox" name="check" value="0" checked>
+							<input onclick="document.getElementById('check-2').checked = false;
+							document.getElementById('check-3').checked = false;
+							handleFilter()" id="check-1" type="checkbox" name="check" value="0" checked>
 							<label for="check-1">ANY TYPE</label>
 						</li>
 						<li>
-							<input id="check-2" type="checkbox" name="check" value="1">
+							<input onclick="handleFilter()" id="check-2" type="checkbox" name="check" value="1">
 							<label for="check-2">JOBS</label>
 						</li>
 						<li>
-							<input id="check-3" type="checkbox" name="check" value="2">
+							<input onclick="handleFilter()" id="check-3" type="checkbox" name="check" value="2">
 							<label for="check-3">INTERNSHIPS</label>
 						</li>
 
