@@ -51,6 +51,7 @@ async function handleFilter() {
   let categoryIndex = document.getElementById("category").value;
   category = document.getElementById("category").options[categoryIndex].text;
   let location = document.getElementById("location").value;
+  let keyword = document.getElementById('searchBar').value
   let jobs = document.getElementById("check-2").checked;
   let internship = document.getElementById("check-3").checked;
 
@@ -79,6 +80,9 @@ async function handleFilter() {
     afterFilter = await afterFilter.filter((job) => {
       return job.location.toLowerCase() === location.toLowerCase();
     });
+  }
+  if(keyword){
+    afterFilter = await afterFilter.filter(job =>{ return job.tags.includes(keyword.toLowerCase())})
   }
 
   let body = "";
