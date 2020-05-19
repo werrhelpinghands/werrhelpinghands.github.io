@@ -43,6 +43,7 @@ async function deleteJob(id) {
       Authorization: `Bearer ${localStorage.getItem("token")}`,
     },
   }).then((res) => {
+    alert('Job Deleted')
     window.location.reload();
   }).catch(err=>{
       console.log(err);

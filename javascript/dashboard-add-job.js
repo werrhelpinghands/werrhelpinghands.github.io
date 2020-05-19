@@ -10,8 +10,8 @@ function checkval(){
 
 if (title.trim() != ""){
 
-  if(document.getElementById("category").value != ""){
-  if(document.getElementById("type").value != ""){
+  if(document.getElementById("category").value != "0"){
+  if(document.getElementById("type").value != "0"){
 
     if(tags.trim() != ""){
 
