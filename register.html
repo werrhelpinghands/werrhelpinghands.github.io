@@ -293,6 +293,7 @@
     var ui = new firebaseui.auth.AuthUI(firebase.auth());
     var uiConfig = {
       callbacks: {
+        signInSuccessUrl : '#',
         signInSuccessWithAuthResult: async function (authResult, redirectUrl) {
 
           let body = {
