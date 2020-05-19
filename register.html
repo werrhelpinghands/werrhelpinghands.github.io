@@ -19,6 +19,16 @@
   <title>Register with US</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <script>
+    if (localStorage.getItem('token')) {
+      if (localStorage.getItem('admin')) window.location.replace('/index_job_admin.html')
+      else window.location.replace('/index_job_user.html')
+    }
+  </script>
+
+
   <!-- Favicon -->
   <link rel="shortcut icon" type="image/x-icon" href="#">
   <!-- Bootstrap CSS -->

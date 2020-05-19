@@ -25,7 +25,7 @@
 	<link rel="stylesheet" href="css/colors.css">
 
 	<script>
-		if(!localStorage.getItem('token')){
+		if (!localStorage.getItem('token')) {
 			window.location.replace('/login.html')
 		}
 	</script>
@@ -69,8 +69,10 @@
 								<a href="./dashboard-manage-applications_admin.html">Job News</a>
 							</li>
 
-							<li>
-								<a href="./dashboard.html">Dashboard</a>
+							<li id="dash">
+								<script>
+									if (localStorage.getItem('admin')) document.getElementById('dash').innerHTML = '<a href="./dashboard.html">Dashboard</a>'
+								</script>
 							</li>
 						</ul>
 
