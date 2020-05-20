@@ -218,8 +218,9 @@ border: 2px solid rgb(156, 156, 156);
   }
   
   .car-btn{
-    width: 400px;
+    max-width: 400px;
     font-weight: bold;
+    margin: auto;
     text-align: center;
     font-family: 'Bangers';
     font-size: 22px;
