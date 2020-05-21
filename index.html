@@ -85,7 +85,12 @@ FOR U WE CARE">
           <a id="linkmenu" href="./register.html">
             <li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Account </i></li>
           </a>
-
+<script>
+  var link = document.getElementById('linkmenu');
+  link.addEventListener('click',function(){
+    document.getElementById('openSidebarMenu').checked=false;
+  });
+</script>
       </ul>
     </div>
   </nav>
