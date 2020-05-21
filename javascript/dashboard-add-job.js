@@ -26,7 +26,6 @@ if (title.trim() != ""){
 
               if(document.getElementById("inputlogo").value != ""){
 
-                if(document.getElementById("notification").value != ""){
 
                   if(roles != ""){
 
@@ -49,11 +48,7 @@ if (title.trim() != ""){
                               return false;  
                   }
 
-            }else{
-              alert("PLEASE UPLOAD NOTIFICATION!!");
-              return false;
-
-                }
+            
                 
 
               }else{
