@@ -85,12 +85,7 @@ FOR U WE CARE">
           <a id="linkmenu" href="./register.html">
             <li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Account </i></li>
           </a>
-<script>
-  var link = document.getElementById('linkmenu');
-  link.addEventListener('click',function(){
-    document.getElementById('openSidebarMenu').checked=false;
-  });
-</script>
+
       </ul>
     </div>
   </nav>
@@ -126,8 +121,13 @@ FOR U WE CARE">
     </div>
   </div>
 
-  <script></script>
-
+  <script type="text/javascript">
+    var link = document.querySelectorAll('#linkmenu');
+    for (var i = 0; i< link.length ; i ++){
+    link[i].addEventListener('click',function(){
+      document.getElementById('openSidebarMenu').checked=false;
+    });}
+  </script>
   <!--sdfnsfskfkd-->
   <div id="about" class="about-section paddingTB60 gray-bg">
     <div class="container">
