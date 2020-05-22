@@ -173,9 +173,9 @@ exports.recoverAccount = (req, res) => {
 
 exports.resetPassword = (req, res) => {
   const { code, newPassword } = req.body;
-  User.findByIdAndUpdate(
+  User.findOneAndUpdate(
     { recover: code },
-    { $set: { plainPassword: newPassword } }
+    { plainPassword: newPassword }
   ).then((user) => {
     if (user) {
       res.status(200);
