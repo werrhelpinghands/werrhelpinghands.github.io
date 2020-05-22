@@ -14,8 +14,8 @@
 <!-- Mirrored from affixtheme.com/html/xmee/demo/register-7.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 04 May 2020 08:25:10 GMT -->
 
 <head>
-  
-<link rel="icon" type="image/png" href="./images/fav.png" sizes="16x16">
+
+  <link rel="icon" type="image/png" href="./images/fav.png" sizes="16x16">
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>Register with US</title>
@@ -123,7 +123,7 @@
               <p>Register with US</p>
             </div>
             <div class="fxt-form">
-              <formsa>
+              <form>
                 <p id="success" class="form-group" style="color: green;"></p>
                 <p id="error" class="form-group" style="color: red;"></p>
                 <div class="form-group">
@@ -170,7 +170,7 @@
                     <button id="registerSubmit" class="fxt-btn-fill"><u> Register</u></button>
                   </div>
                 </div>
-                </form>
+              </form>
             </div>
             <div class="fxt-style-line">
               <div class="fxt-transformY-50 fxt-transition-delay-5">
@@ -295,7 +295,7 @@
     var ui = new firebaseui.auth.AuthUI(firebase.auth());
     var uiConfig = {
       callbacks: {
-        signInSuccessUrl : '#',
+        signInSuccessUrl: '#',
         signInSuccessWithAuthResult: async function (authResult, redirectUrl) {
 
           let body = {
