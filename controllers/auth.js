@@ -31,7 +31,7 @@ const sendRecoveryEmail = (email, code) => {
 };
 
 const securePassword = (plainpassword, salt) => {
-  console.log(plainPassword, salt);
+  console.log('secure' + plainpassword, salt);
 
   if (!plainpassword) return "";
   try {
@@ -190,7 +190,7 @@ exports.resetPassword = async (req, res) => {
   const newSalt = uuidv1();
   const ecryPassword = await securePassword(newPassword, newSalt);
 
-  console.log(newSalt, ecryPassword);
+  console.log('reset' + newSalt, ecryPassword);
 
   User.findOneAndUpdate(
     { recover: code },
