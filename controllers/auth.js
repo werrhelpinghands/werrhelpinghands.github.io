@@ -1,6 +1,34 @@
 const User = require("../models/user");
 const jwt = require("jsonwebtoken");
 const expressJwt = require("express-jwt");
+const { v1: uuidv1 } = require("uuid");
+const nodemailer = require("nodemailer");
+
+const sendRecoveryEmail = (email, code) => {
+  const mailer = nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    auth: {
+      user: process.env.SENDER_EMAIL,
+      pass: process.env.SENDER_PASSWORD,
+    },
+  });
+
+  var mailOptions = {
+    from: process.env.SENDER_EMAIL,
+    to: email,
+    subject: `Account Recovery`,
+    text: `https://www.werhelpinghands.tk/recover.html?code=${code}`,
+  };
+
+  mailer
+    .sendMail(mailOptions)
+    .then((mail) => {
+      console.log("Recovery Mail Sent to " + email);
+    })
+    .catch((err) => {
+      console.log("Recovery Mail Failed");
+    });
+};
 
 exports.signup = (req, res) => {
   const user = new User(req.body);
@@ -117,6 +145,46 @@ exports.isOldUser = (req, res) => {
         exist: false,
       });
     });
+};
+
+exports.recoverAccount = (req, res) => {
+  const { email } = req.body;
+  const recoverCode = uuidv1();
+
+  User.findByIdAndUpdate({ email }, { $set: { recover: recoverCode } }).then(
+    (user) => {
+      if (user) {
+        sendRecoveryEmail();
+        res.status(200);
+      } else {
+        res.status(400);
+        res.json({
+          error: "User not found",
+        });
+      }
+    }
+  );
+};
+
+exports.resetPassword = (req, res) => {
+  const { code, newPassword } = req.body;
+  User.findByIdAndUpdate(
+    { recover: code },
+    { $set: { plainPassword: newPassword } }
+  ).then((user) => {
+    if (user) {
+      res.status(200);
+      res.json({
+        status : 'success',
+        message: "Password Change successfull",
+      });
+    } else {
+      res.status(400);
+      res.json({
+        error: "User not found",
+      });
+    }
+  });
 };
 
 // Protected Routes

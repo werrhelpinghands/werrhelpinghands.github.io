@@ -1,14 +1,26 @@
-const authRouter = require('express').Router();
-const {signup, signin, OAuth, signout, isOldUser} = require('../controllers/auth')
+const authRouter = require("express").Router();
+const {
+  signup,
+  signin,
+  OAuth,
+  signout,
+  isOldUser,
+  recoverAccount,
+  resetPassword,
+} = require("../controllers/auth");
 
-authRouter.post('/signup', signup)
+authRouter.post("/signup", signup);
 
-authRouter.post('/signin', signin)
+authRouter.post("/signin", signin);
 
-authRouter.post('/OAuth', OAuth)
+authRouter.post("/OAuth", OAuth);
 
-authRouter.get('/signout', signout)
+authRouter.get("/signout", signout);
 
-authRouter.get('/isOldUser/:email', isOldUser)
+authRouter.get("/isOldUser/:email", isOldUser);
 
-module.exports = authRouter
+authRouter.post("/recoverAccount", recoverAccount);
+
+authRouter.post("/resetPassword", resetPassword);
+
+module.exports = authRouter;

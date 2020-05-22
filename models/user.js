@@ -25,6 +25,10 @@ const userSchema = new Schema({
     type: Boolean,
     default: false,
   },
+  recover : {
+    type: String,
+    default: ''
+  },
   dob: {
     type: String,
     default: ''
