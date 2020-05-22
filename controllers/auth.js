@@ -188,7 +188,7 @@ exports.resetPassword = async (req, res) => {
   const newSalt = uuidv1();
   const ecryPassword = await securePassword(newPassword, newSalt);
 
-  console.log(salt, ecryPassword);
+  console.log(newSalt, ecryPassword);
 
   User.findOneAndUpdate(
     { recover: code },
