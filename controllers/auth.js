@@ -173,7 +173,7 @@ exports.recoverAccount = (req, res) => {
 
 exports.resetPassword = (req, res) => {
   const { code, newPassword } = req.body;
-  User.findOne(
+  User.updateOne(
     { recover: code },
     { $set: { plainPassword: newPassword } }
   ).then((user) => {
