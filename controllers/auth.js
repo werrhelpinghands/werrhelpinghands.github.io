@@ -151,7 +151,7 @@ exports.recoverAccount = (req, res) => {
   const { email } = req.body;
   const recoverCode = uuidv1();
 
-  User.findByIdAndUpdate({ email }, { $set: { recover: recoverCode } })
+  User.findByIdAndUpdate({ email }, { recover: recoverCode })
     .then((user) => {
       if (user) {
         sendRecoveryEmail();
