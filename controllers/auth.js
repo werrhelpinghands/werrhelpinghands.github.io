@@ -183,13 +183,16 @@ exports.recoverAccount = (req, res) => {
     });
 };
 
-exports.resetPassword = (req, res) => {
+exports.resetPassword = async (req, res) => {
   const { code, newPassword } = req.body;
   const newSalt = uuidv1();
+  const ecryPassword = await securePassword(newPassword, newSalt);
+
+  console.log(salt, ecryPassword);
 
   User.findOneAndUpdate(
     { recover: code },
-    { salt: newSalt, password: securePassword(newPassword, newSalt) }
+    { salt: newSalt, password: ecryPassword }
   ).then((user) => {
     if (user) {
       res.status(200);
