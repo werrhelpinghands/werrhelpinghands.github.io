@@ -30,6 +30,18 @@ const sendRecoveryEmail = (email, code) => {
     });
 };
 
+const securePassword = (plainpassword, salt) => {
+  if (!plainpassword) return "";
+  try {
+    return crypto
+      .createHmac("sha256", salt)
+      .update(plainpassword)
+      .digest("hex");
+  } catch (err) {
+    return "";
+  }
+};
+
 exports.signup = (req, res) => {
   const user = new User(req.body);
   user
@@ -173,9 +185,11 @@ exports.recoverAccount = (req, res) => {
 
 exports.resetPassword = (req, res) => {
   const { code, newPassword } = req.body;
-  User.updateOne(
+  const newSalt = uuidv1();
+
+  User.findOneAndUpdate(
     { recover: code },
-    { $set: { plainPassword: newPassword } }
+    { salt: newSalt, password: securePassword(newPassword, salt) }
   ).then((user) => {
     if (user) {
       res.status(200);
