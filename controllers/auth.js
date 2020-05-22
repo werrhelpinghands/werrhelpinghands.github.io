@@ -154,7 +154,7 @@ exports.recoverAccount = (req, res) => {
   User.findOneAndUpdate({ email }, { recover: recoverCode })
     .then((user) => {
       if (user) {
-        sendRecoveryEmail();
+        sendRecoveryEmail(email, recoverCode);
         res.status(200);
       } else {
         res.status(400);
