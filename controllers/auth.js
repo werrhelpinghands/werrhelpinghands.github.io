@@ -3,6 +3,7 @@ const jwt = require("jsonwebtoken");
 const expressJwt = require("express-jwt");
 const { v1: uuidv1 } = require("uuid");
 const nodemailer = require("nodemailer");
+const crypto = require("crypto");
 
 const sendRecoveryEmail = (email, code) => {
   const mailer = nodemailer.createTransport({
@@ -31,8 +32,6 @@ const sendRecoveryEmail = (email, code) => {
 };
 
 const securePassword = (plainpassword, salt) => {
-  console.log('secure' + plainpassword, salt);
-
   if (!plainpassword) return "";
   try {
     return crypto
@@ -189,8 +188,6 @@ exports.resetPassword = async (req, res) => {
   const { code, newPassword } = req.body;
   const newSalt = uuidv1();
   const ecryPassword = await securePassword(newPassword, newSalt);
-
-  console.log('reset' + newSalt, ecryPassword);
 
   User.findOneAndUpdate(
     { recover: code },
