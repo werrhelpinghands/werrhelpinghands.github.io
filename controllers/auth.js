@@ -151,8 +151,8 @@ exports.recoverAccount = (req, res) => {
   const { email } = req.body;
   const recoverCode = uuidv1();
 
-  User.findByIdAndUpdate({ email }, { $set: { recover: recoverCode } }).then(
-    (user) => {
+  User.findByIdAndUpdate({ email }, { $set: { recover: recoverCode } })
+    .then((user) => {
       if (user) {
         sendRecoveryEmail();
         res.status(200);
@@ -162,8 +162,13 @@ exports.recoverAccount = (req, res) => {
           error: "User not found",
         });
       }
-    }
-  );
+    })
+    .catch((err) => {
+      res.status(400);
+      res.json({
+        error: err,
+      });
+    });
 };
 
 exports.resetPassword = (req, res) => {
@@ -175,7 +180,7 @@ exports.resetPassword = (req, res) => {
     if (user) {
       res.status(200);
       res.json({
-        status : 'success',
+        status: "success",
         message: "Password Change successfull",
       });
     } else {
