@@ -31,6 +31,8 @@ const sendRecoveryEmail = (email, code) => {
 };
 
 const securePassword = (plainpassword, salt) => {
+  console.log(plainPassword, salt);
+
   if (!plainpassword) return "";
   try {
     return crypto
