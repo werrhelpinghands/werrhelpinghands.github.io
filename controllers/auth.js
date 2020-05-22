@@ -189,7 +189,7 @@ exports.resetPassword = (req, res) => {
 
   User.findOneAndUpdate(
     { recover: code },
-    { salt: newSalt, password: securePassword(newPassword, salt) }
+    { salt: newSalt, password: securePassword(newPassword, newSalt) }
   ).then((user) => {
     if (user) {
       res.status(200);
