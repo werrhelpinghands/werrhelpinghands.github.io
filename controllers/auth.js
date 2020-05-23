@@ -166,10 +166,14 @@ exports.recoverAccount = (req, res) => {
   const { email } = req.body;
   const recoverCode = uuidv1();
 
+  console.log(email);
+
   User.findOneAndUpdate({ email }, { recover: recoverCode })
     .then((user) => {
+      console.log(user);
+      
       if (user) {
-        res.end(200)
+        res.end(200);
         sendRecoveryEmail(email, user.firstName, recoverCode);
       } else {
         res.status(400);
