@@ -520,12 +520,10 @@ exports.recoverAccount = (req, res) => {
   User.findOneAndUpdate({ email }, { recover: recoverCode })
     .then((user) => {
       if (user) {
-        console.log("user");
 
         res.status(200).end();
-        sendRecoveryEmail(email, user.firstName, recoverCode);
+        sendRecoveryEmail(email, recoverCode);
       } else {
-        console.log("pochu");
 
         res.status(400);
         res.json({
