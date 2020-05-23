@@ -20,7 +20,7 @@ const sendRecoveryEmail = (email, name, code) => {
     subject: `Helpinh Hands Account Recovery`,
     html: `<h3>Hi ${name}</h3> 
           <p>You recently requested to reset your password for your account. Use the button below to reset it.</p>
-          <a href="https://www.werhelpinghands.tk/recover.html?code=${code}"><button>Reset Password<button></a>`,
+          <a style="padding: 5px;" href="https://www.werhelpinghands.tk/recover.html?code=${code}">Reset Password</a>`,
   };
 
   mailer
@@ -169,7 +169,7 @@ exports.recoverAccount = (req, res) => {
   User.findOneAndUpdate({ email }, { recover: recoverCode })
     .then((user) => {
       if (user) {
-        res.status(200);
+        res.end(200)
         sendRecoveryEmail(email, user.firstName, recoverCode);
       } else {
         res.status(400);
@@ -186,10 +186,10 @@ exports.recoverAccount = (req, res) => {
     });
 };
 
-exports.resetPassword = async (req, res) => {
+exports.resetPassword = (req, res) => {
   const { code, newPassword } = req.body;
   const newSalt = uuidv1();
-  const ecryPassword = await securePassword(newPassword, newSalt);
+  const ecryPassword = securePassword(newPassword, newSalt);
 
   User.findOneAndUpdate(
     { recover: code },
