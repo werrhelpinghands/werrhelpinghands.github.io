@@ -81,8 +81,13 @@ async function handleFilter() {
       return job.location.toLowerCase() === location.toLowerCase();
     });
   }
+
+  function toLower (string) {
+    return string.toLowerCase()
+  }
+
   if(keyword){
-    afterFilter = await afterFilter.filter(job =>{ return job.tags.includes(keyword.toLowerCase())})
+    afterFilter = await afterFilter.filter(job =>{ return job.tags.map(toLower).includes(keyword.toLowerCase())})
   }
 
   let body = "";

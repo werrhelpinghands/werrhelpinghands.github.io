@@ -69,7 +69,7 @@ async function handleFilter(){
     afterFilter = await afterFilter.filter(job =>{ return job.location.toLowerCase() === location.toLowerCase()})
   }
   if(keyword){
-    afterFilter = await afterFilter.filter(job =>{ return job.tags.includes(keyword.toLowerCase())})
+    afterFilter = await afterFilter.filter(job =>{ return job.tags.map(toLower).includes(keyword.toLowerCase())})
   } 
 
   let body = "";
