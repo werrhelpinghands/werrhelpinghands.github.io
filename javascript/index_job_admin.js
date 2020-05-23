@@ -6,7 +6,6 @@ async function getJobs() {
     method: "GET",
   }).then((res) => {
     Alljobs = res.data
-    console.log(res.data);
     let body = "";
     res.data.forEach((post) => {
       if(post.type === 'Internship') {

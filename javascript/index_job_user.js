@@ -1,9 +1,11 @@
+let Alljobs
+
 async function getJobs() {
   await axios({
     url: "https://helpinghands-server.herokuapp.com/api/jobs",
     method: "GET",
   }).then((res) => {
-    console.log(res.data);
+    Alljobs = res.data
     let body = "";
     res.data.forEach((post) => {
       if (post.type === "Internship") {
@@ -54,8 +56,6 @@ async function handleFilter() {
   let keyword = document.getElementById('searchBar').value
   let jobs = document.getElementById("check-2").checked;
   let internship = document.getElementById("check-3").checked;
-
-  console.log(jobs, internship);
 
   let afterFilter = Alljobs;
 
