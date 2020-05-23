@@ -1,6 +1,9 @@
-function resetPassword() {
+document.getElementById("resetPassword").addEventListener("click", (e) => {
+  e.preventDefault();
   let password = document.getElementById("ConPass").value;
   let token = window.location.search.split("=")[1];
+  console.log("start");
+  console.log(password, token);
   axios({
     headers: {
       "Content-type": "application/json",
@@ -23,4 +26,4 @@ function resetPassword() {
       document.getElementById("success").innerHTML = "";
       document.getElementById("error").innerHTML = "User not Found";
     });
-}
+});

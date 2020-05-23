@@ -1,4 +1,6 @@
-function forgetPassword() {
+document.getElementById("sendMail").addEventListener("click", (e) => {
+  e.preventDefault()
+  console.log("start");
   let email = document.getElementById("email").value;
   axios({
     headers: {
@@ -25,4 +27,4 @@ function forgetPassword() {
       document.getElementById("success").innerHTML = "";
       document.getElementById("error").innerHTML = "User not Found";
     });
-}
+});
