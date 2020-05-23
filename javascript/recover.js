@@ -17,12 +17,14 @@ document.getElementById("resetPassword").addEventListener("click", (e) => {
   })
     .then((res) => {
       document.getElementById("NewPass").value = "";
-      password = "";
+      document.getElementById("ConPass").value = ""
       document.getElementById("error").innerHTML = "";
       document.getElementById("success").innerHTML =
         "Password Reset Successfull";
     })
     .catch((err) => {
+      document.getElementById("NewPass").value = "";
+      document.getElementById("ConPass").value = ""
       document.getElementById("success").innerHTML = "";
       document.getElementById("error").innerHTML = "User not Found";
     });
