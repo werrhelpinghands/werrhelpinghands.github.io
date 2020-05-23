@@ -1,9 +1,11 @@
+let Alljobs
+
 async function getJobs() {
   await axios({
     url: "https://helpinghands-server.herokuapp.com/api/jobs",
     method: "GET",
   }).then((res) => {
-    console.log(res.data);
+    Alljobs = res.data
     let body = "";
     res.data.forEach((post) => {
       if (post.type === "Internship") {
