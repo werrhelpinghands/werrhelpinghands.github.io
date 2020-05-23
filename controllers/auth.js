@@ -170,12 +170,15 @@ exports.recoverAccount = (req, res) => {
 
   User.findOneAndUpdate({ email }, { recover: recoverCode })
     .then((user) => {
-      console.log(user);
       
       if (user) {
-        res.end(200);
+        console.log('user');
+        
+        res.status(200).end();
         sendRecoveryEmail(email, user.firstName, recoverCode);
       } else {
+        console.log('pochu');
+        
         res.status(400);
         res.json({
           error: "User not found",
