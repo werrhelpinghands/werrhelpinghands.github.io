@@ -5,7 +5,7 @@ const { v1: uuidv1 } = require("uuid");
 const nodemailer = require("nodemailer");
 const crypto = require("crypto");
 
-const sendRecoveryEmail = (email, code) => {
+const sendRecoveryEmail = (email, name, code) => {
   const mailer = nodemailer.createTransport({
     host: "smtp.gmail.com",
     auth: {
@@ -17,8 +17,10 @@ const sendRecoveryEmail = (email, code) => {
   var mailOptions = {
     from: process.env.SENDER_EMAIL,
     to: email,
-    subject: `Account Recovery`,
-    text: `https://www.werhelpinghands.tk/recover.html?code=${code}`,
+    subject: `Helpinh Hands Account Recovery`,
+    html: `<h3>Hi ${name}</h3> 
+          <p>You recently requested to reset your password for your account. Use the button below to reset it.</p>
+          <a href="https://www.werhelpinghands.tk/recover.html?code=${code}"><button>Reset Password<button></a>`,
   };
 
   mailer
@@ -167,8 +169,8 @@ exports.recoverAccount = (req, res) => {
   User.findOneAndUpdate({ email }, { recover: recoverCode })
     .then((user) => {
       if (user) {
-        sendRecoveryEmail(email, recoverCode);
         res.status(200);
+        sendRecoveryEmail(email, user.firstName, recoverCode);
       } else {
         res.status(400);
         res.json({
