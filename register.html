@@ -25,7 +25,7 @@
 
   <script>
     if (localStorage.getItem('token')) {
-      if (localStorage.getItem('admin')) window.location.replace('/index_job_admin.html')
+      if (localStorage.getItem('admin') === true) window.location.replace('/index_job_admin.html')
       else window.location.replace('/index_job_user.html')
     }
   </script>
