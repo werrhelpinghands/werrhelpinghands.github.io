@@ -6,9 +6,9 @@ const newsSchema = new Schema(
     title: String,
     description: String,
     url: String,
-    date: {
+    expireAt: {
         type: Number,
-        default: 30
+        default: 10
     }
   },
   {
@@ -16,7 +16,7 @@ const newsSchema = new Schema(
   }
 );
 
-newsSchema.index({ expireAfterSeconds: this.date });
+newsSchema.index({ expireAfterSeconds: this.expireAt });
 
 var News = mongoose.model("News", newsSchema);
 module.exports = News;
