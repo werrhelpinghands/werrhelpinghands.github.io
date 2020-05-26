@@ -10,7 +10,7 @@ const newsSchema = new Schema(
       type: Date,
       default: function () {
         let date = Date.now()
-        return date.setDate(date.getDate() + 7);
+        return date.setDate(this.date.getDate() + 7);
       },
     },
   },
