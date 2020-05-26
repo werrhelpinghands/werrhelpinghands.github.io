@@ -1,13 +1,18 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const newsSchema = new Schema({
+const newsSchema = new Schema(
+  {
     title: String,
     description: String,
     url: String,
-},{
-    timestamps: true
-})
+  },
+  {
+    timestamps: true,
+  }
+);
 
-var News = mongoose.model('News',newsSchema);
+newsSchema.index({ createdAt: 1 }, { expireAfterSeconds: 60 });
+
+var News = mongoose.model("News", newsSchema);
 module.exports = News;
