@@ -12,7 +12,7 @@ const newsSchema = new Schema(
   }
 );
 
-newsSchema.index({ expireAt: 1 });
+newsSchema.index({ expireAfterSeconds: 60 });
 
 var News = mongoose.model("News", newsSchema);
 module.exports = News;
