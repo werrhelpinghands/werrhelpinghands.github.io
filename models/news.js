@@ -8,10 +8,7 @@ const newsSchema = new Schema(
     url: String,
     ex: {
       type: Date,
-      default: function () {
-        let date = Date.now()
-        return date.setDate(this.date.getDate() + 7);
-      },
+      default: this.updateDate(new Date())
     },
   },
   {
@@ -20,6 +17,12 @@ const newsSchema = new Schema(
 );
 
 newsSchema.index({ createdAt: 1 }, { expireAfterSeconds: 60 });
+
+newsSchema.methods = {
+  updateDate: function (date) {
+    return date.getDate() + 7;
+  },
+};
 
 var News = mongoose.model("News", newsSchema);
 module.exports = News;
