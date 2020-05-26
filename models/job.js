@@ -80,13 +80,9 @@ const jobSchema = new Schema(
   }
 );
 
-jobSchema.methods = {
-  setExpiry: function () {
-    return Math.abs(this.expireAt - this.createdAt) / 1000;
-  },
-};
-
-jobSchema.index({ expireAfterSeconds: this.setExpiry() });
+jobSchema.index({
+  expireAfterSeconds: Math.abs(this.expireAt - this.createdAt) / 1000,
+});
 
 var Job = mongoose.model("Job", jobSchema);
 module.exports = Job;
