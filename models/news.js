@@ -6,6 +6,13 @@ const newsSchema = new Schema(
     title: String,
     description: String,
     url: String,
+    ex: {
+      type: Date,
+      default: function () {
+        let date = Date.now()
+        return date.setDate(date.getDate() + 7);
+      },
+    },
   },
   {
     timestamps: true,
