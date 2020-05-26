@@ -14,6 +14,7 @@ exports.addNews = (req, res) => {
     })
     .catch((error) => {
       res.status(400);
+      console.log(error)
       res.json({ error: error });
     });
 };
