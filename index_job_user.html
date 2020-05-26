@@ -25,9 +25,8 @@
 	<link rel="stylesheet" href="css/colors.css">
 
 	<script>
-		if (!localStorage.getItem('token')) {
-			window.location.replace('/login.html')
-		}
+		if (!localStorage.getItem('token')) window.location.replace('/login.html')
+		if(localStorage.getItem('admin')=== true)  window.location.replace('/index_job_admin.html')
 	</script>
 
 	<script src="./javascript/index_job_user.js"></script>

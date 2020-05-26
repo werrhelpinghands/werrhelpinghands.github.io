@@ -24,9 +24,9 @@
 	<link rel="stylesheet" href="css/colors.css">
 
 	<script>
-		if (!localStorage.getItem('token')) {
-			window.location.replace('/login.html')
-		}
+		if (!localStorage.getItem('token')) window.location.replace('/login.html')
+		if (localStorage.getItem('admin') === true) window.location.replace('/dashboard-manage-applications_admin.html')
+
 	</script>
 
 	<script src="./javascript/jobs-news-user.js"></script>
