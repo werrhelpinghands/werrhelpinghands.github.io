@@ -1,0 +1,171 @@
+.bt-ppt{
+outline: none;
+border: none;
+background-color: rgba(0,0,0,0);
+margin: 20px;
+font-size: 20px;
+
+cursor: pointer;
+
+}
+.contitledes{
+    padding: 30px;
+    text-align: justify;
+}
+.contitledes h3{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: Oswald;
+    font-size: 35px;
+
+}
+.contitledes p{
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: Tenali Ramakrishna;
+
+}
+.bt-ppts{
+outline: none;
+border: 2px solid white;
+color: white;
+width: 120px;
+height: 50px;
+margin: 20px;
+
+cursor: pointer;
+background-color: black;
+}
+.bt-ppts:hover{
+outline: none;
+border: 2px solid black;
+color: black;
+width: 120px;
+height: 50px;
+margin: 20px;
+background-color: white;
+}
+.titledes{
+    border: 2px solid black;
+    width: 90%;
+    margin: auto;
+    background-color: lightgray;
+    margin-bottom:40px ;
+}
+#pptslider{
+    width: 100%;
+    height: 565px;
+
+}
+.social-lin{
+    display: flex;
+    justify-content: space-between;
+
+}
+.banner{
+    top: -25px;
+    height: 65px;
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+.bannerlogo{
+    position: absolute;
+    display: block;
+    text-align: center;
+    top: 0px;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    height: 65px;
+    position: fixed;
+  }
+
+.logo-icon {
+width: 35px;
+height: 30px;
+}
+.logo-icon-small {
+width: 25px;
+height: 20px;
+}
+.logo-icon-smalll {
+width: 30px;
+height: 25px;
+}
+.visitor {
+width: 100%;
+height: 30px;
+background-color: rgb(63, 63, 63);
+text-align: center;
+}
+
+.full-footer {
+background-color: black;
+color: white;
+text-decoration: none;
+}
+.full-footer a {
+color: white;
+}
+.foot {
+text-decoration: none;
+color: white;
+}
+
+#mainlogo{
+    width: 150px;
+    height: 50px;
+}
+
+
+@media all and (max-width:500px){
+    
+
+    #mainlogo {
+        width: 100px;
+        height: 40px;
+      }
+     
+}
+@media all and (max-width:600px){
+    
+.contitledes h3{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-family: Oswald;
+    font-size: 25px;
+
+}
+.contitledes p{
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-family: Tenali Ramakrishna;
+
+}
+    .banner{
+    
+    height: 65px;
+    }
+    .bt-ppt{
+        outline: none;
+        border: none;
+        background-color: rgba(0,0,0,0);
+        margin: 10px;
+        font-size: 20px;
+        
+        }
+        .bt-ppts{
+            padding: 3px;
+            width: 100px;
+            height: 55px;
+            margin: 10px;
+            }
+}  
+
