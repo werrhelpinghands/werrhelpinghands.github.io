@@ -133,39 +133,48 @@ color: white;
      
 }
 @media all and (max-width:600px){
-    
+
 .contitledes h3{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-weight: bold;
-    font-family: Oswald;
-    font-size: 25px;
+margin-top: 20px;
+margin-bottom: 20px;
+font-weight: bold;
+font-family: Oswald;
+font-size: 25px;
 
 }
 .contitledes p{
-    font-size: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-family: Tenali Ramakrishna;
+font-size: 20px;
+margin-top: 20px;
+margin-bottom: 20px;
+font-family: Tenali Ramakrishna;
 
 }
-    .banner{
-    
-    height: 65px;
-    }
-    .bt-ppt{
-        outline: none;
-        border: none;
-        background-color: rgba(0,0,0,0);
-        margin: 10px;
-        font-size: 20px;
-        
-        }
-        .bt-ppts{
-            padding: 3px;
-            width: 100px;
-            height: 55px;
-            margin: 10px;
-            }
+.banner{
+
+height: 65px;
+}
+.bt-ppt{
+outline: none;
+border: none;
+background-color: rgba(0,0,0,0);
+margin: 10px;
+font-size: 20px;
+
+}
+.bt-ppts{
+padding: 3px;
+width: 100px;
+height: 55px;
+margin: 10px;
+}
+.bt-ppts:hover{
+outline: none;
+border: 2px solid black;
+color: black;
+width: 100px;
+height: 55px;
+margin: 10px;
+background-color: white;
+}
 }  
 
