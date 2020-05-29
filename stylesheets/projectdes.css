@@ -132,6 +132,10 @@ color: white;
       }
      
 }
+.a2a_kit a{
+    margin: 10px;
+
+}
 @media all and (max-width:600px){
 
 .contitledes h3{
