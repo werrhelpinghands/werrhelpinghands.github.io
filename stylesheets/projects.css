@@ -12,6 +12,7 @@
   }
   
 .bannerlogo{
+    z-index: 1;
     position: absolute;
     display: block;
     text-align: center;
@@ -148,9 +149,31 @@ grid-template-columns: repeat(auto-fill , 360px);
     font-size: 30px;
 }
 
-#mainlogo{
+.accountbtn{
+    
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: right;
+  }
+  .button-account{
+    cursor: pointer;
+    outline: 0;
+    border: none;
+    color: white;
+    background-color: rgb(0, 68, 255);
+    z-index: 1;
+    margin: 5px;
+    width: 70px;
+    height: 30px;
+  }
+
+#mainlogoo{
     width: 150px;
-    height: 50px;
+  height: 50px;
+  margin-top: 10px;
+  position: fixed;
 }
 
 
@@ -172,7 +195,17 @@ grid-template-columns: repeat(auto-fill , 360px);
     background-size:100% 100%;
       }
 }
+.button-account:hover{
+    background-color: blue;
+    color: white;
+    border: 1px solid black;
+}
 @media all and (max-width:600px){
+    #mainlogoo {
+        margin-left: -20px;
+        width: 100px;
+        height: 40px;
+      }
     .banner{
       background: url(../images/projectbannerpage.jpg) no-repeat center;
       background-size: 100% 100%;
