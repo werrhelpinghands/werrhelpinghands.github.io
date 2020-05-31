@@ -178,7 +178,37 @@ color: white;
     margin: 10px;
 
 }
+.commentsecmain{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.maincommentbtn{
+    
+    border: none;
+    outline: none;
+    background-color: lightgray;
 
+}
+
+.btnn1{
+    width: 150px;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid darkorange;
+
+}
+.btnn2{
+    width: 50px;
+    height: 40px;
+    border: none;
+    outline: none;
+
+}
 .formclass{
     position: relative;
     width: 100%;
