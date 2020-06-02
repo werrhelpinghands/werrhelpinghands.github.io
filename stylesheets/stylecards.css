@@ -62,6 +62,24 @@
   width: 100%;
   border-top:1px solid #666;
 }
+.sur-btn{
+  float: left;
+
+}
+.surbtn{
+  margin: 5px;
+  background-color: darkorange;
+  color: black;
+  border: 2px solid black;
+  outline: none;
+  width: 100px;
+  height: 25px;
+  font-size: 15px;
+}
+.surbtn:hover{
+  background-color: rgb(160, 89, 1);
+
+}
 .links{
   float: right;
 }
@@ -95,7 +113,7 @@
   background-color: rgba(255, 255, 255, 0);
 }
 .card .card-title {
-  background: rgba(157, 187, 63, 0.85);
+  background: rgba(255, 140, 0, 0.85);
   padding: 3.5% 0 2.5% 0;
   color: white;
   font-family: 'Roboto Condensed', sans-serif;
@@ -111,7 +129,6 @@
   margin: 0;
 }
 .card .card-meta {
-  max-height: 0;
   overflow: hidden;
   color: #666;
   font-size: .78em;
@@ -119,7 +136,7 @@
   position: absolute;
   bottom: 5%;
   padding: 0 5%;
-  -moz-transition-property: max-height;
+  /* -moz-transition-property: max-height;
   -o-transition-property: max-height;
   -webkit-transition-property: max-height;
   transition-property: max-height;
@@ -130,19 +147,19 @@
   -moz-transition-timing-function: ease-in-out;
   -o-transition-timing-function: ease-in-out;
   -webkit-transition-timing-function: ease-in-out;
-  transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out; */
 }
 .card:hover, .card:focus {
   background: white;
-  -moz-box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 20px 0px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 20px 0px;
+  /* -moz-box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 20px 0px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 20px 0px; */
   box-shadow: rgba(0, 0, 0, 0.45) 0px 0px 20px 0px;
 }
 .card:hover .card-title, .card:focus .card-title {
-  background: rgba(157, 187, 63, 0.95);
+  background: rgba(255, 100, 0, 0.85);
 }
 .card:hover .card-meta, .card:focus .card-meta {
-  max-height: 1em;
+  max-height: 1.5em;
 }
 
 img {
@@ -156,7 +173,7 @@ body {
   font-family: 'Jaldi', sans-serif;
 }
 
-* {
+/* * {
   -moz-transition-property: background-color, border-color, box-shadow, color, opacity, text-shadow, -moz-transform;
   -o-transition-property: background-color, border-color, box-shadow, color, opacity, text-shadow, -o-transform;
   -webkit-transition-property: background-color, border-color, box-shadow, color, opacity, text-shadow, -webkit-transform;
@@ -169,4 +186,4 @@ body {
   -o-transition-timing-function: linear;
   -webkit-transition-timing-function: linear;
   transition-timing-function: linear;
-}
+} */
