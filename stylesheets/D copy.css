@@ -1,9 +1,4 @@
-body{
-  background: linear-gradient(360deg,#B7F8DB , #50A7C2);
-  overflow-x: hidden;
-  height: 100%;
-  width: 100%;
-}
+
 #sidebarMenu {
     height: 100%;
     position: fixed;
@@ -224,8 +219,6 @@ body{
     }
     
     #mainlogoo{
-      
-  margin-left: -60px;
         width: 150px;
       height: 50px;
       margin-top: 10px;
@@ -234,16 +227,13 @@ body{
     
     
 .banner{
-  top: -25px;
-  height: 600px;
-  position: relative;
-  background: url(../images/surveys-img1.png) no-repeat center;
-  background-attachment: fixed;
-  background-size: 100% 100%;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    top: -25px;
+    height: 65px;
+    position: relative;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
 .bannerlogo{
@@ -293,122 +283,18 @@ body{
     background-size: 100% 100%;
     text-align: center;
   }
-  .survey-cards-section{
-  width: 100%;
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(auto-fill , 360px);
-  text-align: center;
-  align-items: center;
-  margin-top: 40px;
-  margin-bottom: 40px;
-  justify-items: center;
-  justify-content: space-evenly;
-  }
-.survey-card-1{
-  
-  margin: 10px;
-  background-color: #ffffff;
-background-image: linear-gradient(246deg, #ffffff 0%, #d7e1ec 74%);
-  position: relative;
-  height: 300px;
-  width: 300px;
-  border-radius: 10px;
-  background-color: rgb(228, 228, 228);
-  -moz-box-shadow:    3px 3px 5px 6px #778ba5;  /* Firefox 3.5 - 3.6 */
-  -webkit-box-shadow: 3px 3px 5px 6px #778ba5;  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
-  box-shadow:         3px 3px 5px 6px #778ba5; 
-}
-.survey-p-head {
-  position: relative;
-  top: 20px;
-  border: 1px solid rgba(0,0,0,0.3);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  border-right: none;
-  width: 70%;
-  height: 50px;
-  box-shadow: 0 8px 6px -6px black;
-  float: right;
-}
-.survey-p-head h3{
-font-size: 25px;
-  font-family: 'Oswald';
-  font-weight: bold;
-  margin-top: -2px;
-}
-.survey-p-d{
-  position: relative;
-  font-size: 40px;
-  border: 1px solid rgba(0,0,0,0.3);
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 10px;
-  top: 40px;
-  width: 70%;
-  box-shadow: 0 8px 6px -6px black;
-  float: left;
 
-}
-.survey-p-d h5{
-  font-size: 18px;
-  font-family: 'Oswald';
-  font-weight: bold;
-  margin-top: -2px;
-}
-.surveybtn{
-  position: relative;
-  top: 60px;
-  width: 100%;
-  display: flex;
-  font-size: 18px;
-  font-family: 'Oswald';
-  font-weight: bold;
-  justify-content: center;
-  align-items: center;
-}
-.surveybtn a{
-
-  text-decoration: none;
-  color: #000;
-}
-.btnstext{
-  background-color: white;
-  border: 2px solid rgba(0,0,0,0.2);
-  box-shadow: 0 8px 6px -6px black;
+.h100{
+    height: 1000px;
 }
 @media all and (max-width: 600px) {
-  .survey-cards-section{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-  }
-  .banner{
-    /* background: url(../images/projectbannerpage.jpg) no-repeat center; */
-    background-size: 100% 100%;
-  height: 650px;
-  }
 #gear {
     width: 45px;
     height: 45px;
 }
 #mainlogoo {
-  right: 10px;
+    margin-left: -10px;
     width: 100px;
     height: 40px;
   }
-}
-.banner-text{
-  width: calc(100% - 10%);
-  margin: auto;
-  background-color: rgba(0,0,0,0.15);
-  color: white;
-  text-align: justify;
-  padding: 10px;
-  font-family: 'Patrick Hand';
 }
