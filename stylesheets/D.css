@@ -308,7 +308,7 @@ body{
 .survey-card-1{
   
   margin: 10px;
-background: linear-gradient(246deg, #ffffff 0%, #d7e1ec 74%);
+background: linear-gradient(246deg, #F53803,#F5D020);
   position: relative;
   height: 300px;
   width: 300px;
@@ -319,7 +319,7 @@ background: linear-gradient(246deg, #ffffff 0%, #d7e1ec 74%);
   box-shadow:         3px 3px 5px 6px #778ba5; 
 }
 .survey-card-1:hover{
-  background: rgb(226, 225, 225);
+  background: linear-gradient(246deg, #EC9F05,#FF4E00);
 }
 .survey-p-head {
   position: relative;
@@ -332,6 +332,8 @@ background: linear-gradient(246deg, #ffffff 0%, #d7e1ec 74%);
   border-right: none;
   width: 70%;
   height: 50px;
+  background-color: darkorange;
+  color: black;
   box-shadow: 0 8px 6px -6px black;
   float: right;
 }
@@ -344,6 +346,8 @@ font-size: 25px;
 .survey-p-d{
   position: relative;
   font-size: 40px;
+  background-color: darkorange;
+  color: black;
   border: 1px solid rgba(0,0,0,0.3);
   display: flex;
   justify-content: flex-start;
@@ -354,6 +358,10 @@ font-size: 25px;
   box-shadow: 0 8px 6px -6px black;
   float: left;
 
+}
+.survey-p-d a{
+  text-decoration: none;
+  color: black;
 }
 .survey-p-d h5{
   font-size: 18px;
@@ -377,10 +385,19 @@ font-size: 25px;
   text-decoration: none;
   color: #000;
 }
+.surveybtn a:hover{
+
+  text-decoration: none;
+  color: #000;
+}
 .btnstext{
-  background-color: white;
+  width:150px ;
+  background-color: darkorange;
   border: 2px solid rgba(0,0,0,0.2);
   box-shadow: 0 8px 6px -6px black;
+}
+.btnstext:hover{
+  background-color: rgb(197, 115, 14);
 }
 @media all and (max-width: 600px) {
   .survey-cards-section{
