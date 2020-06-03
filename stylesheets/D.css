@@ -392,8 +392,8 @@ font-size: 25px;
 }
 .btnstext{
   width:150px ;
-  background-color: darkorange;
-  border: 2px solid rgba(0,0,0,0.2);
+  background-color: #FF4E00;
+  border: 2px solid black;
   box-shadow: 0 8px 6px -6px black;
 }
 .btnstext:hover{
