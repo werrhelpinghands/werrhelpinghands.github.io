@@ -98,6 +98,9 @@ padding: 0;
 }
 
 @media all and (max-width:500px){
+  .floatleft1{
+    margin-left: -80px;
+  }
   #fntfooter{
     font-size: 13px;
   }

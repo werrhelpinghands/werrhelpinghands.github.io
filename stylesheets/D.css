@@ -308,7 +308,6 @@ body{
 .survey-card-1{
   
   margin: 10px;
-background: linear-gradient(246deg, #F53803,#F5D020);
   position: relative;
   height: 300px;
   width: 300px;
@@ -319,7 +318,7 @@ background: linear-gradient(246deg, #F53803,#F5D020);
   box-shadow:         3px 3px 5px 6px #778ba5; 
 }
 .survey-card-1:hover{
-  background: linear-gradient(246deg, #EC9F05,#FF4E00);
+  background: rgb(214, 214, 214);
 }
 .survey-p-head {
   position: relative;
@@ -343,35 +342,10 @@ font-size: 25px;
   font-weight: bold;
   margin-top: -2px;
 }
-.survey-p-d{
-  position: relative;
-  font-size: 40px;
-  background-color: darkorange;
-  color: black;
-  border: 1px solid rgba(0,0,0,0.3);
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 10px;
-  top: 40px;
-  width: 70%;
-  box-shadow: 0 8px 6px -6px black;
-  float: left;
 
-}
-.survey-p-d a{
-  text-decoration: none;
-  color: black;
-}
-.survey-p-d h5{
-  font-size: 18px;
-  font-family: 'Oswald';
-  font-weight: bold;
-  margin-top: -2px;
-}
 .surveybtn{
-  position: relative;
-  top: 60px;
+  position: absolute;
+  top: 250px;
   width: 100%;
   display: flex;
   font-size: 18px;
@@ -379,6 +353,17 @@ font-size: 25px;
   font-weight: bold;
   justify-content: center;
   align-items: center;
+}
+.survey-p-d{
+  padding: 10px;
+  position: absolute;
+  text-align: justify;
+  top: 100px;
+  margin-bottom: 20px;
+}
+.survey-p-d a{
+  text-decoration: none;
+  color: #000;
 }
 .surveybtn a{
 
@@ -392,12 +377,13 @@ font-size: 25px;
 }
 .btnstext{
   width:150px ;
-  background-color: #FF4E00;
+  background-color: lightgreen;
   border: 2px solid black;
   box-shadow: 0 8px 6px -6px black;
 }
 .btnstext:hover{
-  background-color: rgb(197, 115, 14);
+  background-color: rgb(111, 184, 111);
+  cursor: pointer;
 }
 @media all and (max-width: 600px) {
   .survey-cards-section{
