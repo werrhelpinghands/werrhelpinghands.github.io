@@ -12,3 +12,5 @@ projectRouter.post("/addProject", isSignedIn, isAdmin, addProject);
 projectRouter.get("/:id", getProject);
 
 projectRouter.get("/allProjects", getAllProjects);
+
+module.exports = projectRouter;
