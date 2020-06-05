@@ -13,7 +13,7 @@ projectRouter.post("/addProject", isSignedIn, isAdmin, addProject);
 
 projectRouter.get("/:id", getProject);
 
-projectRouter.get("/allProjects", getAllProjects);
+projectRouter.get("/", getAllProjects);
 
 projectRouter.post("/addComment/:id", isSignedIn, addComment);
 
