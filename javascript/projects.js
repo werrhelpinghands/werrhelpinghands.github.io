@@ -1,6 +1,6 @@
 async function getProjects() {
   await axios({
-    url: `https://helpinghands-server.herokuapp.com/api/projects/getAllProjects`,
+    url: `https://helpinghands-server.herokuapp.com/api/projects`,
     method: "GET",
   }).then((res) => {
       let projects = res.data;
