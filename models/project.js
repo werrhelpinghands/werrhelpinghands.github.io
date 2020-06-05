@@ -7,7 +7,12 @@ const projectSchema = new Schema(
     ppt: String,
     description: String,
     contactName: String,
-    contactEmail: String
+    contactEmail: String,
+    likes: Number,
+    comments: {
+      type: Array,
+      default: []
+    }
   },
   {
     timestamps: true,

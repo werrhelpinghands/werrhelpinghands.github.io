@@ -1,4 +1,5 @@
 const Project = require("../models/project");
+const User = require("../models/user");
 
 exports.addProject = (req, res) => {
   const { title, ppt, description, contactName, contactEmail } = req.body;
@@ -32,6 +33,55 @@ exports.getAllProjects = (req, res) => {
     .then((projects) => {
       res.status(200);
       res.json(projects);
+    })
+    .catch((err) => {
+      res.status(400);
+      res.json({
+        error: err,
+      });
+    });
+};
+
+exports.addComment = (req, res) => {
+  User.findOne({ _id: req.user._id })
+    .then((user) => {
+      let newComment = {
+        user: user.firstName,
+        comment: req.body.comment,
+      };
+      Project.updateOne(
+        { _id: req.params.id },
+        { $push: { comments: newComment } },
+        { new: true }
+      )
+        .then((project) => {
+          res.status(200);
+          res.json(project);
+        })
+        .catch((err) => {
+          res.status(400);
+          res.json({
+            error: err,
+          });
+        });
+    })
+    .catch((err) => {
+      res.status(400);
+      res.json({
+        error: err,
+      });
+    });
+};
+
+exports.addLike = (req, res) => {
+  Project.updateOne(
+    { _id: req.params.id },
+    { $inc: { likes: 1 } },
+    { new: true }
+  )
+    .then((project) => {
+      res.status(200);
+      res.json(project);
     })
     .catch((err) => {
       res.status(400);
