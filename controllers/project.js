@@ -1,6 +1,6 @@
 const Project = require("../models/project");
 
-exports.addProject((req, res) => {
+exports.addProject = (req, res) => {
   const { title, ppt, description, contactName, contactEmail } = req.body;
   Project.create({ title, ppt, description, contactName, contactEmail })
     .then((project) => {
@@ -11,9 +11,9 @@ exports.addProject((req, res) => {
       res.status(400);
       res.json({ error: err });
     });
-});
+};
 
-exports.getProject((req, res) => {
+exports.getProject = (req, res) => {
   Project.findById(req.params.id)
     .then((projects) => {
       res.status(200);
@@ -25,9 +25,9 @@ exports.getProject((req, res) => {
         error: err,
       });
     });
-});
+};
 
-exports.getAllProjects((req, res) => {
+exports.getAllProjects = (req, res) => {
   Project.find({})
     .then((projects) => {
       res.status(200);
@@ -39,4 +39,4 @@ exports.getAllProjects((req, res) => {
         error: err,
       });
     });
-});
+};
