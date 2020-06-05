@@ -31,7 +31,7 @@
 
   <!-- Axios -->
   <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-  
+
 </head>
 
 <body onload="loadProject()" style="background: linear-gradient(360deg,#B7F8DB , #50A7C2) !important">
@@ -87,9 +87,22 @@
     <div class="bannerlogo">
       <a href="./index.html"><img id="mainlogoo" src="../images/lgwh.png" alt="main-logo" /></a>
 
-      <div class="accountbtn">
-        <a href="./login.html"><button class="button-account">Login</button></a>
-        <a href="./register.html"><button class="button-account">Signup</button></a>
+      <div id="loginState" class="accountbtn">
+        <script>
+          if (!localStorage.getItem('token')) {
+            document.getElementById('loginState').innerHTML = `<a href="./login.html"><button class="button-account">Login</button></a>
+        <a href="./register.html"><button class="button-account">Signup</button></a>`
+          }
+          else{
+            if(localStorage.getItem('admin') === true) {
+              document.getElementById('loginState').innerHTML = `<a href="./login.html"><button class="button-account">Logout</button></a>
+          <a href="./addprojectadmin.html"><button style="width: 100px !important;" class="button-account">Add Project</button></a>`
+            }else{
+              document.getElementById('loginState').innerHTML = `<a href="./login.html"><button class="button-account">Logout</button></a>`
+            }
+          }
+        </script>
+
       </div>
     </div>
   </div>
@@ -170,7 +183,7 @@
         </div>
       </div>
     </div> -->
-    
+
   </div>
 
   <!--START FOOTER-->

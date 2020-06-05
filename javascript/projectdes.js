@@ -71,7 +71,7 @@ async function loadProject() {
     });
 }
 
-function addComment(e) {
+async function addComment(e) {
   let _id = window.location.search.split("=")[1];
   let body = {
     comment: document.getElementById('formtextbox').value
@@ -89,7 +89,7 @@ function addComment(e) {
   })
 }
 
-function addLike() {
+async function addLike() {
   let _id = window.location.search.split("=")[1];
   await axios({
     url: `https://helpinghands-server.herokuapp.com/api/projects/addLike/${_id}`,
