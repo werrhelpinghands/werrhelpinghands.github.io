@@ -8,7 +8,10 @@ const projectSchema = new Schema(
     description: String,
     contactName: String,
     contactEmail: String,
-    likes: Number,
+    likes: {
+      type: Number,
+      default: 0
+    },
     comments: {
       type: Array,
       default: []
