@@ -17,6 +17,6 @@ projectRouter.get("/allProjects", getAllProjects);
 
 projectRouter.post("/addComment/:id", isSignedIn, addComment);
 
-projectRouter.post("/addLike/:id", isSignedIn, addLike)
+projectRouter.get("/addLike/:id", isSignedIn, addLike)
 
 module.exports = projectRouter;
