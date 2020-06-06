@@ -8,7 +8,7 @@ async function getProjects() {
       
       html = ''
       projects.forEach(project=>{
-          html = html + `<a class="card" href="https://helpinghands-server.herokuapp.com/api/projects/?id=${project._id}">
+          html = html + `<a class="card" href="/projects/?id=${project._id}">
           <span class="card-header" style="background-image: url(http://placeimg.com/400/400/people)">
             <span class="card-title">
               <h3>${project.title}</h3>
