@@ -40,7 +40,7 @@ async function loadProject() {
     <div class="commentsecmain">
       <button id="btnn1" class="maincommentbtn btnn1"><i class="fas fa-comment"></i> &nbsp; COMMENTS</button>
       <button class="maincommentbtn btnn2" onclick="addLike()"><i class="fas fa-thumbs-up"></i></button>
-      <p style="margin-top: 13px; id="likes">${data.likes} upvotes</p>
+      <p style="margin-top: 13px;" id="likes">${data.likes} upvotes</p>
     </div>
     <div id="slidersec">
       <div class="commentssec">
