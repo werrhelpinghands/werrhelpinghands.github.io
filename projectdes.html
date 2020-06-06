@@ -93,11 +93,11 @@
             document.getElementById('loginState').innerHTML = `<a href="./login.html"><button class="button-account">Login</button></a>
         <a href="./register.html"><button class="button-account">Signup</button></a>`
           }
-          else{
-            if(localStorage.getItem('admin') === "true") {
+          else {
+            if (localStorage.getItem('admin') === "true") {
               document.getElementById('loginState').innerHTML = `<a href="./login.html"><button class="button-account">Logout</button></a>
           <a href="./addprojectadmin.html"><button style="width: 100px !important;" class="button-account">Add Project</button></a>`
-            }else{
+            } else {
               document.getElementById('loginState').innerHTML = `<a href="./login.html"><button class="button-account">Logout</button></a>`
             }
           }

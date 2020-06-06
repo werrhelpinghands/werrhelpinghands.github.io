@@ -63,7 +63,7 @@ async function loadProject() {
     </div>`;
       });
       html =html + `</div></div>`;
-      document.getElementById("projectConatiner").innerHTML = html;
+      document.getElementById("projectContainer").innerHTML = html;
       document.getElementById("newComment").hidden = localStorage.getItem('token') ? true : false
     })
     .catch((err) => {
