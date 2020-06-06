@@ -96,8 +96,7 @@ async function addLike() {
     method: "GET",
     headers: {
       Authorization: `Bearer ${localStorage.getItem("token")}`,
-    },
-    data: body,
+    }
   }).then(()=>{
     let upvote = document.getElementById('formtextbox').value
     let newCount = parseInt(upvote.split(" ")[0]) + 1
