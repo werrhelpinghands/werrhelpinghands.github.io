@@ -109,7 +109,20 @@
           <textarea name="txtarea" id="textar1" cols="30" rows="10"></textarea>
         </div>
       </div>
-
+      <div class="row-form-2">
+        <div class="form-g-2">
+          <label  for="description">Upload Image</label>
+          <div id="browsefile"><label class="custom-file-upload">Browse <i class="fa fa-download" aria-hidden="true"></i>
+          <input id="notification" multiple accept="image/*" type="file"> </label>&nbsp;<p id="infofile">No file Selected</p></div>
+        </div>
+      </div>
+      <script>
+        document.getElementById('notification').onchange = function () {
+         
+        document.getElementById('infofile').innerHTML= document.getElementById('notification').files.item(0).name;
+        };
+       
+      </script>
       <div class="row-form-3">
         <div class="form-g-3">
           <label for="Contact Details">Contact Details</label>

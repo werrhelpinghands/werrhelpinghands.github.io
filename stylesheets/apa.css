@@ -357,6 +357,19 @@ width:50%;
 height: 50px;    
 padding: 10px;
 }
+#notification{
+  display: none;
+  }
+  .custom-file-upload {
+    border: 2px solid white;
+    padding: 6px 12px;
+    cursor: pointer;
+    width: 100px;
+    text-align: center;
+    height: 40px;
+    background-color: teal;
+    color: white;
+}
 .form-g-4 input[type="submit"]{
 width:200px;
 height: 50px;    
@@ -374,7 +387,13 @@ width:30%;
 height: 50px;    
 padding: 10px;
 }
+#browsefile{
+  width: 40%;display: flex;justify-content: flex-start;align-items: center;
+}
 @media all and (max-width: 600px) {
+  #browsefile{
+    width: 100%;
+  }
     #sub-btn{
         width: calc(100% - 10%);
         margin: auto;
