@@ -98,8 +98,8 @@ async function addLike() {
       Authorization: `Bearer ${localStorage.getItem("token")}`,
     }
   }).then(()=>{
-    let upvote = document.getElementById('likes').value
+    let upvote = document.getElementById('likes').innerHTML
     let newCount = parseInt(upvote.split(" ")[0]) + 1
-    document.getElementById('likes').value = `${newCount} upvotes`
+    document.getElementById('likes').innerHTML = `${newCount} upvotes`
   })
 }
