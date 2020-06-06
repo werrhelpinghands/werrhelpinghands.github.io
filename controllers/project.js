@@ -3,21 +3,13 @@ const User = require("../models/user");
 
 exports.addProject = (req, res) => {
   const { title, ppt, description, contactName, contactEmail } = req.body;
-  Project.create({
-    title: title,
-    ppt: ppt,
-    description: description,
-    contactName: contactName,
-    contactEmail: contactEmail,
-  })
+  Project.create({ title, ppt, description, contactName, contactEmail })
     .then((project) => {
-      res.statud(200);
+      res.status(200);
       res.json(project);
     })
     .catch((err) => {
       res.status(400);
-      console.log(err);
-      
       res.json({ error: err });
     });
 };
