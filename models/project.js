@@ -8,6 +8,7 @@ const projectSchema = new Schema(
     description: String,
     contactName: String,
     contactEmail: String,
+    image: String,
     likes: {
       type: Number,
       default: 0
