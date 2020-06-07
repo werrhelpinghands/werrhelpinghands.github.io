@@ -10,7 +10,7 @@ async function addProject(title, ppt, description, contactName, contactEmail) {
   var description = document.getElementById("textar1").value;
   var contactName = document.getElementById("contactName").value;
   var contactEmail = document.getElementById("formtemptxt").value;
-  var image = document.getElementById("infofile").files[0]
+  var image = document.getElementById("notification").files[0]
 
   const formBody = new FormData();
 
