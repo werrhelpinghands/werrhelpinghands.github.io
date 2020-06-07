@@ -4,8 +4,7 @@ async function getProjects() {
     method: "GET",
   }).then((res) => {
       let projects = res.data;
-      console.log(projects);
-      
+   
       html = ''
       projects.forEach(project=>{
           html = html + `<a class="card" href="/projectdes.html?id=${project._id}">

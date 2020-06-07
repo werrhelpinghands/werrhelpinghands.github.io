@@ -36,6 +36,6 @@ async function addProject(title, ppt, description, contactName, contactEmail) {
     contactName = "";
     contactEmail = "";
     document.getElementById("sub-btn").disabled = false;
-    window.location.assign(`/projectdes.html?id=${res.data.id}`);
+    window.location.assign(`/projectdes.html?id=${res.data._id}`);
   });
 }
