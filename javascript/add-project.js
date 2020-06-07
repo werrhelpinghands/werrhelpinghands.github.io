@@ -10,6 +10,16 @@ async function addProject(title, ppt, description, contactName, contactEmail) {
   var description = document.getElementById("textar1").value;
   var contactName = document.getElementById("contactName").value;
   var contactEmail = document.getElementById("formtemptxt").value;
+  var image = document.getElementById("inputfile").files[0]
+
+  const formBody = new FormData();
+
+  formBody.set('title',title)
+  formBody.set('ppt',ppt)
+  formBody.set('description',description)
+  formBody.set('contactName',contactName)
+  formBody.set('contactEmail',contactEmail)
+  formBody.append('file', image)
 
   let body = { title, ppt, description, contactName, contactEmail };
 
@@ -17,10 +27,10 @@ async function addProject(title, ppt, description, contactName, contactEmail) {
     url: "https://helpinghands-server.herokuapp.com/api/projects/addProject",
     method: "POST",
     headers: {
-      "Content-Type": "application/json",
+      "Content-Type": "multipart/form-data",
       Authorization: `Bearer ${localStorage.getItem("token")}`,
     },
-    data: body,
+    data: formBody,
   }).then((res) => {
     title = "";
     description = "";
