@@ -42,7 +42,7 @@ const uploadToStorage = (file) => {
   });
 };
 
-exports.addProject = (req, res) => {
+exports.addProject = async (req, res) => {
   const { title, ppt, description, contactName, contactEmail } = req.body;
   let image = '' 
 
