@@ -18,7 +18,7 @@ const multer = Multer({
   });
 
 
-projectRouter.post("/addProject", isSignedIn, isAdmin, addProject);
+projectRouter.post("/addProject", isSignedIn, isAdmin, multer.single('file'), addProject);
 
 projectRouter.get("/:id", getProject);
 
@@ -26,6 +26,6 @@ projectRouter.get("/", getAllProjects);
 
 projectRouter.post("/addComment/:id", isSignedIn, addComment);
 
-projectRouter.get("/addLike/:id", isSignedIn, multer.single('file'), addLike)
+projectRouter.get("/addLike/:id", isSignedIn, addLike)
 
 module.exports = projectRouter;
