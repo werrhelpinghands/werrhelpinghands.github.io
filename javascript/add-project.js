@@ -21,8 +21,6 @@ async function addProject(title, ppt, description, contactName, contactEmail) {
   formBody.set('contactEmail',contactEmail)
   formBody.append('file', image)
 
-  let body = { title, ppt, description, contactName, contactEmail };
-
   await axios({
     url: "https://helpinghands-server.herokuapp.com/api/projects/addProject",
     method: "POST",
