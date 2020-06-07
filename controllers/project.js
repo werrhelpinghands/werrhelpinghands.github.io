@@ -46,7 +46,7 @@ exports.addProject = async (req, res) => {
   const { title, ppt, description, contactName, contactEmail } = req.body;
   let image = '' 
 
-  await uploadToStorage(req.files).then((url) => (image = url));
+  await uploadToStorage(req.file).then((url) => (image = url));
 
   Project.create({ title, ppt, description, contactName, contactEmail, image })
     .then((project) => {
