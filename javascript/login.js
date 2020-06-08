@@ -22,8 +22,9 @@ loginBtn.addEventListener("click", async (e) => {
         localStorage.setItem("token", res.data.token);
         document.getElementById("error").innerHTML = "";
         document.getElementById("success").innerHTML = "Login Successful";
-        if(res.data.user.admin) window.location.assign('/index_job_admin.html')
-        else window.location.assign('/index_job_user.html')
+        // if(res.data.user.admin) window.location.assign('/index_job_admin.html')
+        // else window.location.assign('/index_job_user.html')
+        window.history.back()
       })
       .catch((err) => {
         document.getElementById("email").value = "";
