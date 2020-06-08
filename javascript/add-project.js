@@ -11,6 +11,7 @@ async function addProject(title, ppt, description, contactName, contactEmail) {
   var contactName = document.getElementById("contactName").value;
   var contactEmail = document.getElementById("formtemptxt").value;
   var image = document.getElementById("notification").files[0];
+  var survey = document.getElementById("survey").value
 
   const formBody = new FormData();
 
@@ -19,6 +20,7 @@ async function addProject(title, ppt, description, contactName, contactEmail) {
   formBody.set("description", description);
   formBody.set("contactName", contactName);
   formBody.set("contactEmail", contactEmail);
+  formBody.set("survey", survey);
   formBody.append("file", image);
 
   await axios({

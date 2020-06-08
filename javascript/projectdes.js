@@ -10,6 +10,9 @@ async function loadProject() {
       let data = res.data;
       let html = `${data.ppt}
     <div class="contitledes">
+    <div>
+    <button id="deleteBtn" onclick="deleteProject()" style="color: white; background-color: red; border: none; padding: 5px; border-radius: 5px;"> Delete Project <button>
+    </div>
       <h3>${data.title}</h3>
       <p>
         ${data.description}
@@ -61,6 +64,7 @@ async function loadProject() {
       )
         ? false
         : true;
+      document.getElementById('deleteBtn').hidden = localStorage.getItem('admin') === "true" ? false : true
     })
     .catch((err) => {
       console.log("error", err);
@@ -104,6 +108,21 @@ async function addLike() {
     let newCount = parseInt(upvote.split(" ")[0]) + 1;
     document.getElementById("likes").innerHTML = `${newCount} upvotes`;
   });
+}
+
+async function deleteProject() {
+  let _id = window.location.search.split("=")[1];
+  await axios({
+    url: `https://helpinghands-server.herokuapp.com/api/projects/deleteProject/${_id}`,
+    method: "DELETE",
+    headers: {
+      Authorization: `Bearer ${localStorage.getItem("token")}`,
+    },
+  }).then((res) => {
+    window.location.assign(`/projects.html`);
+  }).catch(err=>{
+    console.log(err);
+  })
 }
 
 function logout() {
