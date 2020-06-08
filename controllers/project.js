@@ -9,7 +9,6 @@ const storage = new Storage({
 
 const bucket = storage.bucket("gs://website-833a3.appspot.com");
 
-
 const uploadToStorage = (file) => {
   return new Promise((resolve, reject) => {
     if (!file) {
@@ -42,13 +41,17 @@ const uploadToStorage = (file) => {
   });
 };
 
+const deleteFromStorage = (filename) => {
+  bucket.file(filename).delete()
+};
+
 exports.addProject = async (req, res) => {
-  const { title, ppt, description, contactName, contactEmail } = req.body;
-  let image = '' 
+  const { title, ppt, description, contactName, contactEmail, survey } = req.body;
+  let image = "";
 
   await uploadToStorage(req.file).then((url) => (image = url));
 
-  Project.create({ title, ppt, description, contactName, contactEmail, image })
+  Project.create({ title, ppt, description, contactName, contactEmail, image, survey })
     .then((project) => {
       res.status(200);
       res.json(project);
@@ -83,6 +86,26 @@ exports.getAllProjects = (req, res) => {
       res.status(400);
       res.json({
         error: err,
+      });
+    });
+};
+
+exports.deleteProject = (req, res) => {
+  Project.findById(req.params.id)
+  .then((project) => {    
+    let image = project.image.split("/")[7].split("?")[0].replace("%2F", "/");
+    deleteFromStorage(image);
+  });
+
+  Project.findByIdAndDelete(req.params.id)
+    .then((project) => {
+      res.status(200);
+      res.json(project);
+    })
+    .catch((error) => {
+      res.status(400);
+      res.json({
+        error: error,
       });
     });
 };

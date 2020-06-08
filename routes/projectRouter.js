@@ -6,6 +6,7 @@ const {
   addProject,
   getProject,
   getAllProjects,
+  deleteProject,
   addComment,
   addLike
 } = require("../controllers/project");
@@ -23,6 +24,8 @@ projectRouter.post("/addProject", isSignedIn, isAdmin, multer.single('file'), ad
 projectRouter.get("/:id", getProject);
 
 projectRouter.get("/", getAllProjects);
+
+projectRouter.delete("/deleteProject/:id", isSignedIn, isAdmin, deleteProject);
 
 projectRouter.post("/addComment/:id", isSignedIn, addComment);
 

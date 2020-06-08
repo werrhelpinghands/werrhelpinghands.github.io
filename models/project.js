@@ -9,6 +9,7 @@ const projectSchema = new Schema(
     contactName: String,
     contactEmail: String,
     image: String,
+    survey: String,
     likes: {
       type: Number,
       default: 0
