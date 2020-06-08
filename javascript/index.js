@@ -29,7 +29,8 @@ setInterval(() => {
 }, 100);
 
 
-async function getProjects() {
+async function loadProjects() {
+
   await axios({
     url: `https://helpinghands-server.herokuapp.com/api/projects`,
     method: "GET",
