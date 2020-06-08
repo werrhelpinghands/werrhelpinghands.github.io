@@ -27,20 +27,31 @@ function myFunction() {
 setInterval(() => {
   window.addEventListener("scroll", myFunction());
 }, 100);
-/*var slideIndex = 0;
-showSlides();
 
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {
-    slideIndex = 1;
-  }
-  slides[slideIndex - 1].style.display = "block";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
+
+async function getProjects() {
+  await axios({
+    url: `https://helpinghands-server.herokuapp.com/api/projects`,
+    method: "GET",
+  })
+    .then((res) => {
+      let projects = res.data;
+
+      html = "";
+      projects.forEach((project) => {
+        html =
+          html + `<li>
+          <a href="/projectdes.html?id=${project._id}">
+          <div>
+            <img src="${project.image}" class="proimg" alt="projectpic">
+            <div id="imageh4"><p>${project.title}</p></div>
+            <h6 id="changemargin">${project.description.substr(0, 100)}.... Read more!</h6>
+          </div></a>       
+        </li>`;
+      });
+      document.getElementById("projects-box").innerHTML = html;
+    })
+    .catch((err) => {
+      console.log("error", err);
+    });
 }
-console.log("s");*/

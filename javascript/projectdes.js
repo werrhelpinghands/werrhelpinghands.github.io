@@ -31,7 +31,7 @@ async function loadProject() {
       </div>
 
       <div class="tsurvey">
-        <a href="https://forms.gle/HZhbibgeLb5RgtJu6"><button class="bt-ppts">TAKE SURVEY</button></a>
+        <a href="${data.survey}"><button class="bt-ppts">TAKE SURVEY</button></a>
       </div>
     </div>
     <div class="commentsecmain">
