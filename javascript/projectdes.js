@@ -81,12 +81,13 @@ async function addComment(e) {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
       data: body,
-    }).then(() => {
-      window.location.reload();
-    }).catch(err=>{
-      console.log(err);
-      
     })
+      .then(() => {
+        window.location.reload();
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }
 }
 
@@ -103,4 +104,10 @@ async function addLike() {
     let newCount = parseInt(upvote.split(" ")[0]) + 1;
     document.getElementById("likes").innerHTML = `${newCount} upvotes`;
   });
+}
+
+function logout() {
+  localStorage.removeItem("admin");
+  localStorage.removeItem("token");
+  window.location.replace("/projects.html");
 }

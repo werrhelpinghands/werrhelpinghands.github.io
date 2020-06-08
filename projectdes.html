@@ -95,7 +95,7 @@
           }
           else {
             if (localStorage.getItem('admin') === "true") {
-              document.getElementById('loginState').innerHTML = `<a href="./login.html"><button class="button-account">Logout</button></a>
+              document.getElementById('loginState').innerHTML = `<button onclick="logout()" class="button-account">Logout</button>
           <a href="./addprojectadmin.html"><button style="width: 100px !important;" class="button-account">Add Project</button></a>`
             } else {
               document.getElementById('loginState').innerHTML = `<a href="./login.html"><button class="button-account">Logout</button></a>`
