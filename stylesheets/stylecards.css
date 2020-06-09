@@ -1,11 +1,13 @@
 .container {
   max-width: 1100px;
   margin: 0 auto;
+  
 }
 
 .cards {
   display: -webkit-flex;
   display: flex;
+  align-items: center;
   -webkit-justify-content: center;
   justify-content: center;
   -webkit-flex-wrap: wrap;

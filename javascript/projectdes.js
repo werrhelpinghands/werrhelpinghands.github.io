@@ -42,7 +42,7 @@ async function loadProject() {
       <div class="formclass">
         <form>
           <input id="formtextbox" placeholder="Share your thoughts...." type="text"> <input id="formtextbutton"
-            type="button" onclick="addComment()" value="SUBMIT">
+            type="button" onclick="addComment()" value="ADD COMMENT">
         </form>
       </div>
     </div>
