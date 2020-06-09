@@ -10,9 +10,9 @@ async function loadProject() {
       let data = res.data;
       let html = `${data.ppt}
     <div class="contitledes">
-    <div>
-    <button id="deleteBtn" onclick="deleteProject()" style="color: white; background-color: red; border: none; padding: 5px; border-radius: 5px;"> Delete Project <button>
-    </div>
+
+    <button id="deleteBtn" onclick="deleteProject()" style="color: white; background-color: red; border: none; padding: 5px; border-radius: 5px; margin-bottom: 20px;"> Delete Project <button>
+
       <h3>${data.title}</h3>
       <p>
         ${data.description}
@@ -24,11 +24,11 @@ async function loadProject() {
     </div>
     <div class="social-lin">
  
-      <div class="linkssocial">
+      <!-- <div class="linkssocial">
         <a href="#"><img class="linksocialicons" src="./images/facebook.png" alt="social share links "></a>
         <a href="#"><img class="linksocialicons" src="./images/linkedin.png" alt="social share links "></a>
         <a href="#"><img class="linksocialicons" src="./images/twitter.png" alt="social share links "></a>
-      </div>
+      </div> -->
 
       <div class="tsurvey">
         <a href="${data.survey}"><button class="bt-ppts">TAKE SURVEY</button></a>
@@ -40,7 +40,7 @@ async function loadProject() {
     </div>
     <div id="newComment" class="commentssec">
       <div class="formclass">
-        <form action="">
+        <form>
           <input id="formtextbox" placeholder="Share your thoughts...." type="text"> <input id="formtextbutton"
             type="button" onclick="addComment()" value="SUBMIT">
         </form>

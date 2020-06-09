@@ -46,7 +46,7 @@ async function loadProjects() {
           <div>
             <img src="${project.image}" class="proimg" alt="projectpic">
             <div id="imageh4"><p>${project.title}</p></div>
-            <h6 id="changemargin">${project.description.substr(0, 100)}.... Read more!</h6>
+            <h6 id="changemargin">${project.description.substr(0, 80)}.... Read more!</h6>
           </div></a>       
         </li>`;
       });
