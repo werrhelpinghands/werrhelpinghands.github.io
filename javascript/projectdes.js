@@ -25,9 +25,9 @@ async function loadProject() {
     <div class="social-lin">
  
        <div class="linkssocial">
-        <a href="#"><img class="linksocialicons" src="./images/facebook.png" alt="social share links "></a>
-        <a href="#"><img class="linksocialicons" src="./images/linkedin.png" alt="social share links "></a>
-        <a href="#"><img class="linksocialicons" src="./images/twitter.png" alt="social share links "></a>
+        <a href="https://www.facebook.com"><img class="linksocialicons" src="./images/facebook.png" alt="social share links "></a>
+        <a href="https://www.linkedin.com"><img class="linksocialicons" src="./images/linkedin.png" alt="social share links "></a>
+        <a href="https://www.twitter.com"><img class="linksocialicons" src="./images/twitter.png" alt="social share links "></a>
       </div> 
 
       <div class="tsurvey">
