@@ -25,9 +25,9 @@ async function loadProject() {
     <div class="social-lin">
  
        <div class="linkssocial">
-        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwerrhelpinghands.github.io%2Fprojects.html"><img class="linksocialicons" src="./images/facebook.png" alt="social share links "></a>
-        <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwerrhelpinghands.github.io%2Fprojects.html&title=Helping%20Hands%20-%20Projects"><img class="linksocialicons" src="./images/linkedin.png" alt="social share links "></a>
-        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwerrhelpinghands.github.io%2Fprojects.html&text=Helping%20Hands%20-%20Projects"><img class="linksocialicons" src="./images/twitter.png" alt="social share links "></a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwerrhelpinghands.github.io%2Fprojectdes.html%3Fid%3D${_id}"><img class="linksocialicons" src="./images/facebook.png" alt="social share links "></a>
+        <a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fwerrhelpinghands.github.io%2Fprojectdes.html%3Fid%3D${_id}&title=Helping%20Hands%20-%20Project"><img class="linksocialicons" src="./images/linkedin.png" alt="social share links "></a>
+        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwerrhelpinghands.github.io%2Fprojectdes.html%3Fid%3D${_id}&text=Helping%20Hands%20-%20Project"><img class="linksocialicons" src="./images/twitter.png" alt="social share links "></a>
       </div> 
 
       <div class="tsurvey">
