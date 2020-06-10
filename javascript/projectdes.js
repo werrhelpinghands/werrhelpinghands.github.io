@@ -24,11 +24,7 @@ async function loadProject() {
     </div>
     <div class="social-lin">
  
-      <!-- <div class="linkssocial">
-        <a href="#"><img class="linksocialicons" src="./images/facebook.png" alt="social share links "></a>
-        <a href="#"><img class="linksocialicons" src="./images/linkedin.png" alt="social share links "></a>
-        <a href="#"><img class="linksocialicons" src="./images/twitter.png" alt="social share links "></a>
-      </div> -->
+    <div class="sharethis-inline-share-buttons"></div>
 
       <div class="tsurvey">
         <a href="${data.survey}"><button class="bt-ppts">TAKE SURVEY</button></a>
