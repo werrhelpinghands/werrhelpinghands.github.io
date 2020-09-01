@@ -1,389 +1,159 @@
 <!DOCTYPE html>
 <html>
 
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
 <head>
   
-  <link rel="stylesheet" href="../stylesheets/defaultStyle.css" />
-  <link rel="stylesheet" href="../stylesheets/style.css" />
-<link rel="icon" type="image/png" href="./images/fav.png" sizes="16x16">
-  <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-  <link rel="canonical" href="https://http://helping-hands-website-test.herokuapp.com//" />
-  <meta property="og:locale" content="en_US" />
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Helping Hand Aged Care - Helping Hand" />
-  <meta property="og:description"
-    content="At Helping Hand we welcome and celebrate all people, and deliver personalised and professional services to meet the needs of older people from all backgrounds. Our core values of compassion, &hellip;" />
-  <meta property="og:url" content="http://helping-hands-website-test.herokuapp.com/" />
-  <meta property="og:site_name" content="Helping Hand" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:description"
-    content="At Helping Hand we welcome and celebrate all people, and deliver personalised and professional services to meet the needs of older people from all backgrounds. Our core values of compassion, [&hellip;]" />
-  <meta name="twitter:title" content="Helping Hand Aged Care - Helping Hand" />
+   
+  <link rel="stylesheet" href="stylesheets/style.css" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/class.css">
 
 
-  <!-- Primary Meta Tags -->
-  <title>Helping Hands - Helping Hands is a Research based Platform / Blog / Medium for anyone,anytime and anywhere.
-  </title>
-  <meta name="title"
-    content="Helping Hands — Helping Hands is a Research based Platform / Blog / Medium for anyone,anytime and anywhere.">
-  <meta name="description" content="PROBLEMS ARE WITH EVERYONE AND EVERYWHERE
-HERE WE ARE FOR YOU TO GIVE SATISFYING SOLUTIONS TO YOUR PROBLEMS AS
-FOR U WE CARE">
 
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="http://helping-hands-website-test.herokuapp.com/">
-  <meta property="og:title"
-    content="Helping Hands - Helping Hands is a Research based Platform / Blog / Medium for anyone,anytime and anywhere.">
-  <meta property="og:description" content="PROBLEMS ARE WITH EVERYONE AND EVERYWHERE
-HERE WE ARE FOR YOU TO GIVE SATISFYING SOLUTIONS TO YOUR PROBLEMS AS
-FOR U WE CARE">
-  <meta property="og:image" content="http://werhelpinghands.tk/images/logo1.png">
-
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="http://helping-hands-website-test.herokuapp.com/">
-  <meta property="twitter:title"
-    content="Helping Hands - Helping Hands is a Research based Platform / Blog / Medium for anyone,anytime and anywhere.">
-  <meta property="twitter:description" content="PROBLEMS ARE WITH EVERYONE AND EVERYWHERE
-HERE WE ARE FOR YOU TO GIVE SATISFYING SOLUTIONS TO YOUR PROBLEMS AS
-FOR U WE CARE">
-  <meta property="twitter:image" content="http://werhelpinghands.tk/images/logo1.png">
-
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
   <!-- Start CSS Slideshow HEAD section -->
   <!-- End CSS Slider HEAD section -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+  <link rel="stylesheet" href="../maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
     integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script|Bangers">
 
-  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link href="../maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
+  <link rel="stylesheet" href="../stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
   <!-- Axios -->
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="../unpkg.com/axios%400.19.2/dist/axios.min.js"></script>
+  <!-- by aditya -->
+  <!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+<link rel="stylesheet" href="style.css">
+<!-- jQuery first then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 </head>
 
 <body onload="loadProjects()">
-
-
   <nav class="navbar2">
     <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu" />
     <label for="openSidebarMenu" class="sidebarIconToggle">
 
-      <img id="gear" class="rotating" src="../images/gc11.png" alt="menu" />
+      <img id="gear" class="rotating" src="images/gc11.png" alt="menu" />
     </label>
 
     <div id="sidebarMenu">
       <ul class="sidebarMenuInner">
-        <a id="linkmenu" href="./index.html" ><li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Home </i></li></a>
-          <a id="linkmenu" href="./index.html#about"><li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;About us </i></li></a>
-          <a id="linkmenu" href="./projects.html"><li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Projects </i></li></a>
-          <a id="linkmenu" href="./index_job_common.html"><li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Jobs</i></li></a>
-          <a id="linkmenu" href="./team.html"><li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Our Team </i></li></a>
-          <a id="linkmenu" href="./surveys.html"><li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Surveys </i></li></a>
-          <a id="linkmenu" href="./career.html"><li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Career </i></li></a>
-          <a id="linkmenu" href="./index.html#contact-us"><li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Contact us </i></li></a>
-          <a id="linkmenu" href="./register.html">
+        <a id="linkmenu" href="index.html" ><li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Home </i></li></a>
+          <a id="linkmenu" href="index.html#about"><li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;About us </i></li></a>
+          <a id="linkmenu" href="projects.html"><li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Projects </i></li></a>
+          <a id="linkmenu" href="index_job_common.html"><li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Jobs</i></li></a>
+          <a id="linkmenu" href="team.html"><li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Our Team </i></li></a>
+          <a id="linkmenu" href="surveys.html"><li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Surveys </i></li></a>
+          <a id="linkmenu" href="career.html"><li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Career </i></li></a>
+          <a id="linkmenu" href="index.html#contact-us"><li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Contact us </i></li></a>
+          <a id="linkmenu" href="register.html">
             <li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Account </i></li>
           </a>
 
       </ul>
     </div>
   </nav>
-  <div class="img-bacg">
-    <div class="itemactive " style="font-size:30px;">
-
-      <a href="./index.html"><img id="mainlogo" src="../images/lgwh.png" alt="main-logo" /></a>
-
-
-
+  <header class="hero-text">
+    <div class="hero" data-arrows="true" data-autoplay="true">
+      <!--.hero-slide-->
+  
+      <div class="hero-slide">
+        <img alt="Mars Image" class="img-responsive cover" src="images/page-1.jpg">
+        <div class="header-content text-white position-absolute slide-content col-lg-4">
+          <h1 class="mb-4">We Understand, We Care, We Heal <span class="d-block font-weight-bold">HELPING HANDS</span></h1>
+          <a class="btn btn-primary btn-lg w-max mt-2" href="#" tabindex="0">BOOK NOW</a>
+        </div>
+      </div>
+      <!--.hero-slide-->
+  
+      <div class="hero-slide">
+        <img alt="Mars Image" class="img-responsive cover" src="images/page-1.jpg">
+        <div class="header-content text-white position-absolute slide-content col-lg-4">
+          <h1 class="mb-4">We Understand, We Care, We Heal</h1>
+          <p class="font-weight-bold">Manastha - Best Online Counselling &amp; Therapy | Psychologist | India</p>
+          <a class="btn btn-primary btn-lg w-max mt-2" href="#" tabindex="0">BOOK NOW</a>
+        </div>
+      </div>
+      <!--.hero-slide-->
+  
+      <div class="hero-slide">
+        <img alt="Mars Image" class="img-responsive cover" src="https://raw.githubusercontent.com/solodev/text-animations-slick-slider/master/images/cosmos.jpg">
+        <div class="header-content text-white position-absolute slide-content col-lg-4">
+          <p>Our fleet of advanced spacecraft have revolutionized the lunar economy and provided safe travel for thousands of scientists, engineers, technicians, medical staff and civilians. These amazing vessels are also paving the way for reaching Mars in the next decade.</p>
+          <a class="btn btn-primary btn-lg w-max mt-2" href="#" tabindex="0">Read More</a>
+        </div>
+      </div>
     </div>
-  </div>
+    <!--.hero-->
+  </header>
+ <br>
+  <div class="container" style="padding-top: 5%;
+  padding-bottom: 5%;">
+		<img src="images/1.jpg" class="img">
+			<b><q>HelpingHands are here to help you</q></b><br>
+		<p class="para" >Our commitment to quality and person-centred ideas is only realised through our commitment to exceptional standards of training.ssHelping Hands is the only full-service ideas provider to be endorsed as a Centre of Excellence. The endorsement comes from Skills for Care, the best ideas provider and solving the problems of anyone.<br>
+			<br><a href="#"><button class="btn btn-primary">BooK AppointMent</button></a>
+			</p><br>
+		
+	</div>
+	
+
+  
   <script>
-
+jQuery(document).ready(function ($) {
+	  $('.hero').slick({
+		dots: true,
+        infinite: true,
+        speed: 500,
+        fade: !0,
+        cssEase: 'linear',
+		slidesToShow: 1,
+		slidesToScroll: 1,
+        autoplay: true,
+		autoplaySpeed: 8000,
+        draggable: false,
+		arrows: false,
+		responsive: [
+	    {
+		breakpoint: 1024,
+		settings: {
+		slidesToShow: 1,
+		slidesToScroll: 1,
+        infinite: true
+		          }
+        },
+        {
+		breakpoint: 768,
+		settings: {
+        draggable: true,
+		          }
+		},
+		{
+		breakpoint: 600,
+		settings: {
+        slidesToShow: 1,
+        draggable: true,
+		slidesToScroll: 1
+			      }
+		},
+		{
+		breakpoint: 480,
+		settings: {
+        slidesToShow: 1,
+        draggable: true,
+		slidesToScroll: 1
+		          }
+		}
+	
+			      ]
+                  });
+        });	
   </script>
-
-
-  <!-- /.item -->
-
-
-  <!-------------------------------------------->
-
-  <!---------------------div------>
-  <div class="takesurvey">
-    <div class="surveytext">
-      <b>Get Started with Us</b>
-    </div>
-    &nbsp;&nbsp;
-    <div class="surveybtn">
-      <a href="./surveys.html">
-        <button>TAKE A SURVEY</button>
-      </a>
-    </div>
-  </div>
-
-  <script type="text/javascript">
-    var link = document.querySelectorAll('#linkmenu');
-    for (var i = 0; i< link.length ; i ++){
-    link[i].addEventListener('click',function(){
-      document.getElementById('openSidebarMenu').checked=false;
-    });}
-  </script>
-  <!--sdfnsfskfkd-->
-  <div id="about" class="about-section paddingTB60 gray-bg">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-7 col-sm-6 text">
-          <div class="about-title clearfix">
-            <h1 style="color: black">About Us</h1>
-
-            <p class="about-paddingB">
-              <h6 style="font-size: 20px;font-family: '', serif;">The world is full of
-                problems and so our lives are. You know
-                what? Even billionaires are stressed about managing their wealth
-                in the most productive ways. We listen to you and come up with
-                effective solutions and pay heed to all such thoughts. Yes,
-                that's what we're here for.List out all your problems; make your
-                voice count! Be in the limelight for providing innovative ideas
-                and get the best supporting hand!!</h6>
-            </p>
-            <p>
-              <h6 style="font-size: 20px;font-family: '', serif;">
-                It's your opinion that matters the most to us. Your ideas make
-                ours successful. List your ideas with us! Fill up the form
-                provided below and see the best ideas from you become
-                unassailable in the near future!</h6>
-            </p>
-
-          </div>
-        </div>
-        <!----------------------------->
-
-
-
-
-        <div class="container" style="width: 470px;height: 390px;">
-          <div id="carouselExampleIndicators" class="carousel slide carousel-fade " data-ride="carousel">
-            <ol class="carousel-indicators">
-              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="../images/1.jpg" class="d-block w-70" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="../images/2.jpg" class="d-block w-70" alt="sliderimg">
-              </div>
-              <div class="carousel-item">
-                <img src="../images/3.jpg" class="d-block w-70" alt="sliderimg">
-              </div>
-              <div class="carousel-item">
-                <img src="../images/4.jpg" class="d-block w-70" alt="sliderimg">
-              </div>
-
-            </div>
-            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
-          </div>
-        </div>
-
-
-
-
-        <!-------------------------->
-      </div>
-    </div>
-  </div>
-
-  <!------------------------------------------------------------------------>
-
-  <script>
-    function buttonState() {
-      var button = document.getElementById("sb")
-      var text = document.getElementById("search-txt")
-      console.log(text.value);
-
-      if (!text.value == "") {
-        button.disabled = false
-      } else {
-        button.disabled = true
-      }
-    }
-  </script>
-
-  <div>
-    <form action="./results.html" method="get" class="search-bar">
-      <input id="search-txt" type="text" onkeyup="buttonState()" class="textbox" name="q" autocomplete="off"
-        placeholder="type here...">
-      <button id="sb" disabled="true" type="submit" class="search-btn">
-      </button>
-    </form>
-  </div>
-
-  <div class="containeer" id="pro">
-    <h2 class="titles">
-      <span class="pull-right"><a href="./projects.html"><button class="projb">
-            View All
-          </button></a></span>
-      Upcoming Projects
-    </h2>
-    <div class="row">
-      <ul id="projects-box" class="scroll-box">
-        <!-- Injected by JS -->
-      </ul>
-    </div>
-  </div>
-
-  <!--Form-->
-
-  <br>
-  <br>
-  <div id="contact-us" class="container-fluid contact-form" style="margin-top: -48px !important; ">
-    <div class="contact-image">
-      <i class="fas fa-rocket" style="margin-top: 75px;"></i>
-    </div>
-    <form name="contact-form" id="form" method="POST" onsubmit="submitform()"
-      action="https://helpinghands-server.herokuapp.com/contact.html">
-      <h3 style="color: orangered;font-family: 'Bangers', serif;">Drop Us a Message</h3>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="form-group">
-            <input type="text" name="name" class="form-control" placeholder="Your Name *" value="" required />
-          </div>
-          <div class="form-group">
-            <input type="email" name="email" class="form-control" placeholder="Your Email *" value="" required />
-          </div>
-          <div class="form-group">
-            <input type="text" name="phone" class="form-control" placeholder="Your Phone Number *" value="" />
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="form-group">
-            <textarea name="message" class="form-control" placeholder="Your Message *"
-              style="width: 100%; height: 150px;" required></textarea>
-          </div>
-          <div class="form-group">
-            <br>
-            <button type="submit" class="btnContact" style="background-color:silver; color: black;"
-              onclick="submitForm()">
-              Send Message
-            </button>
-          </div>
-        </div>
-      </div>
-    </form>
-  </div>
-
-  <!--START FOOTER-->
-  <footer class="full-footer" style="border-top-color:black;width:100%;  border:solid">
-    <div class="container topFooter p-md-3 p-4">
-      <div class="row">
-        <div class="col-md-3">
-          <h5 style="color: white">HELPING HANDS</h5>
-
-          <p>
-            Helping Hands is a Research based Platform / Blog / Medium for
-            anyone,anytime and anywhere.
-          </p>
-          <br />
-          <a class="p-2" href="https://www.facebook.com/helpinghands4world/">
-            <img src="../images/facebook.png" class="logo-icon-smalll" alt="facebook"></a>
-          <a class="p-2" href="https://www.instagram.com/we_r_helping_hands">
-            <img src="../images/instagram.png" class="logo-icon-smalll" alt="icon-instagram"></a>
-          <a class="p-2" href="https://www.linkedin.com/company/we-r-helping-hands">
-            <img src="../images/linkedin.png" class="logo-icon-smalll" alt="icon-linkedin"></a>
-          <a class="p-2" href="https://twitter.com/werhelpinghands">
-            <img src="../images/twitter.png" class="logo-icon-smalll" alt="icon-twitter"></i></a>
-          <a class="p-2" href="tel:+917906980871">
-            <img src="../images/whatsapp.png" class="logo-icon-smalll" alt="icon-whatsapp"></i></a>
-          <br>
-          <br>
-        </div>
-        &#32;
-
-
-        <div class="col-md-3">
-          <h5 style="color:white;">Important Links</h5>
-          <a class="p-1" href="./login.html">Accounts</a><br />
-          <a class="p-1" href="./index_job_common.html">Find Jobs</a><br />
-          <a class="p-1" href="./career.html">Careers</a><br />
-          <br>
-
-        </div>
-
-
-        <div class="col-md-3">
-          <h5 style="color: white;">Our Services</h5>
-
-          <a class="p-1" href="./projects.html">Projects</a><br />
-          <a class="p-1" href="./surveys.html">Surveys</a><br />
-          <br />
-          <h5 style="color: white">Available in:</h5>
-          <a class="p-1" href="#"><img src="../images/android.png" class="logo-icon" alt="icon-android"></a>
-          <a class="p-1" href="#"><img src="../images/apple.png" class="logo-icon" alt="icon-apple"></a>
-          <br>
-          <br>
-        </div>
-        <div class="col-md-3">
-          <h5 style="color:white;">Contact Us</h5>
-          <a href="tel:+917906980871">
-            <img src="../images/call.png" class="logo-icon-small" alt="icon-call"> +(91) 7906980871</a>
-          <br />
-          <a href="mailto:werrhelpinghands@gmail.com">
-            <img src="../images/gmail.png" class="logo-icon-small" alt="icon-gmail">
-            werrhelpinghands@gmail.com</a><br />
-          <br>
-          <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d448181.16374162206!2d76.81306442366603!3d28.647279935570428!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x37205b715389640!2sDelhi!5e0!3m2!1sen!2sin!4v1561834027057!5m2!1sen!2sin"
-              frameborder="10px" frameborder="0" style="border:0" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="visitor">
-      <!-- hitwebcounter Code START -->
-      <h6>VISITOR NO. :<a href="#">
-          <img
-            src="https://hitwebcounter.com/counter/counter.php?page=7230855&style=0006&nbdigits=5&type=ip&initCount=0"
-            title="User Stats" Alt="PHP Hits Count" style="width: 90px;height: 30px;" border="0">
-        </a></h6>
-    </div>
-
-    <div class="container-fluid bottomFooter" style="background-color: grey;">
-      <div class="row">
-        <div class="col-12 text-center pt-2">
-          <p class="foot" style="font-size: 12px; font-weight: 600px;">
-            Copyrights @ Helping Hands 2020 - All Rights Reserved
-          </p>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <!--END FOOTER-->
-  <script src="../javascript/index.js"></script>
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-    crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-    crossorigin="anonymous"></script>
-  <script src="https://kit.fontawesome.com/159a527170.js" crossorigin="anonymous"></script>
-</body>
-
-</html>
+  </body>
+  </html>
