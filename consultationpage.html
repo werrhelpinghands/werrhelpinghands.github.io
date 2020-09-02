@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+  
+   
+  <link rel="stylesheet" href="stylesheets/style.css" />
+  <link rel="stylesheet" type="text/css" href="stylesheets/class.css">
+
+
+
+
+  <!-- Start CSS Slideshow HEAD section -->
+  <!-- End CSS Slider HEAD section -->
+  <link rel="stylesheet" href="../maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script|Bangers">
+
+  <link href="../maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css" />
+  <link rel="stylesheet" href="../stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <!-- Axios -->
+  <script src="../unpkg.com/axios%400.19.2/dist/axios.min.js"></script>
+  <!-- by aditya -->
+  <!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+<link rel="stylesheet" href="style.css">
+<!-- jQuery first then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+</head>
+
+<body onload="loadProjects()">
+  <nav class="navbar2">
+    <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu" />
+    <label for="openSidebarMenu" class="sidebarIconToggle">
+
+      <img id="gear" class="rotating" src="images/gc11.png" alt="menu" />
+    </label>
+
+    <div id="sidebarMenu">
+      <ul class="sidebarMenuInner">
+        <a id="linkmenu" href="index.html" ><li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Home </i></li></a>
+          <a id="linkmenu" href="index.html#about"><li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;About us </i></li></a>
+          <a id="linkmenu" href="projects.html"><li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Projects </i></li></a>
+          <a id="linkmenu" href="index_job_common.html"><li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Jobs</i></li></a>
+          <a id="linkmenu" href="team.html"><li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Our Team </i></li></a>
+          <a id="linkmenu" href="surveys.html"><li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Surveys </i></li></a>
+          <a id="linkmenu" href="career.html"><li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Career </i></li></a>
+          <a id="linkmenu" href="index.html#contact-us"><li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Contact us </i></li></a>
+          <a id="linkmenu" href="register.html">
+            <li><i class="fas fa-wrench">&nbsp;&nbsp;&nbsp;Account </i></li>
+          </a>
+
+      </ul>
+    </div>
+  </nav>
+  <header class="hero-text">
+    <div class="hero" data-arrows="true" data-autoplay="true">
+      <!--.hero-slide-->
+  
+      <div class="hero-slide">
+        <img alt="Mars Image" class="img-responsive cover" src="images/page-1.jpg">
+        <div class="header-content text-white position-absolute slide-content col-lg-4">
+          <h1 class="mb-4">We Understand, We Care, We Heal <span class="d-block font-weight-bold">HELPING HANDS</span></h1>
+          <a class="btn btn-primary btn-lg w-max mt-2" href="#" tabindex="0">BOOK NOW</a>
+        </div>
+      </div>
+      <!--.hero-slide-->
+  
+      <div class="hero-slide">
+        <img alt="Mars Image" class="img-responsive cover" src="images/page-1.jpg">
+        <div class="header-content text-white position-absolute slide-content col-lg-4">
+          <h1 class="mb-4">We Understand, We Care, We Heal</h1>
+          <p class="font-weight-bold">Manastha - Best Online Counselling &amp; Therapy | Psychologist | India</p>
+          <a class="btn btn-primary btn-lg w-max mt-2" href="#" tabindex="0">BOOK NOW</a>
+        </div>
+      </div>
+      <!--.hero-slide-->
+  
+      <div class="hero-slide">
+        <img alt="Mars Image" class="img-responsive cover" src="images/cosmos.jpg">
+        <div class="header-content text-white position-absolute slide-content col-lg-4">
+          <p>Our fleet of advanced spacecraft have revolutionized the lunar economy and provided safe travel for thousands of scientists, engineers, technicians, medical staff and civilians. These amazing vessels are also paving the way for reaching Mars in the next decade.</p>
+          <a class="btn btn-primary btn-lg w-max mt-2" href="#" tabindex="0">Read More</a>
+        </div>
+      </div>
+    </div>
+    <!--.hero-->
+  </header>
+ <br>
+  <div class="container" style="padding-top: 5%;
+  padding-bottom: 5%;">
+		<img src="images/consultationpage_hand.jpg" class="img">
+			<b><q>HelpingHands are here to help you</q></b>
+		<p class="para">Our commitment to quality and person-centred ideas is only realised through our commitment to exceptional standards of training.ssHelping Hands is the only full-service ideas provider to be endorsed as a Centre of Excellence. The endorsement comes from Skills for Care, the best ideas provider and solving the problems of anyone.<br>
+			<a href="#"><button style="width: 40%;
+				border-radius: 15%;
+				background-color: #c493ed;
+				margin-left: 25%;">BooK AppointMent</button></a>
+			</p><br>
+		
+	</div>
+	
+
+  
+  <script>
+jQuery(document).ready(function ($) {
+	  $('.hero').slick({
+		dots: true,
+        infinite: true,
+        speed: 500,
+        fade: !0,
+        cssEase: 'linear',
+		slidesToShow: 1,
+		slidesToScroll: 1,
+        autoplay: true,
+		autoplaySpeed: 8000,
+        draggable: false,
+		arrows: false,
+		responsive: [
+	    {
+		breakpoint: 1024,
+		settings: {
+		slidesToShow: 1,
+		slidesToScroll: 1,
+        infinite: true
+		          }
+        },
+        {
+		breakpoint: 768,
+		settings: {
+        draggable: true,
+		          }
+		},
+		{
+		breakpoint: 600,
+		settings: {
+        slidesToShow: 1,
+        draggable: true,
+		slidesToScroll: 1
+			      }
+		},
+		{
+		breakpoint: 480,
+		settings: {
+        slidesToShow: 1,
+        draggable: true,
+		slidesToScroll: 1
+		          }
+		}
+	
+			      ]
+                  });
+        });	
+  </script>
+  </body>
+  </html>
