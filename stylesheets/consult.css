@@ -1,26 +1,106 @@
-.img
-{
-	float: left;
-	width: 40%;
-	height: 25%;
-	margin-top: 8%;
-}
-q
-{
-	border: dashed;
-			padding: 1%;
-			font-size: 110%;
-}
-.para
-{
-	font-size: 150%;
-			margin-left: 45%;
-			margin-top: 5%;
-			border-style: ridge;
-			border-collapse: 30%;
-			font-family:cursive;
+body {
+  font-family: "Helvetica";
 }
 
+.head {
+  padding-bottom: 10%;
+  color: yellow;
+  font-size: 350%;
+}
+
+.btn-book {
+  border-radius: 110%;
+  font-family: bold;
+  padding-left: 5%;
+  padding-right: 5%;
+  background-color: orange;
+  word-spacing: 10px;
+  height: 10%;
+  font-size: 120%;
+}
+
+.banner-para {
+  font-size: 160%;
+  font-family: bold;
+  padding-bottom: 10%;
+  color: yellow;
+}
+
+.about-para {
+  font-size: 130%;
+  font-family: bold;
+  font-family: "Helvetica";
+}
+
+.li1 {
+  font-size: 100%;
+  width: 540px;
+}
+
+.quotes-1 {
+  font-size: 130%;
+}
+
+.btn-about {
+  padding-left: 20%;
+  margin-bottom: 5%;
+  background-color: #9692f2;
+  border-radius: 15px;
+  padding-left: 5%;
+  padding-right: 5%;
+  font-family: bold;
+  height: 60px;
+  font-size: 140%;
+  font-style: cursive;
+}
+
+.img-footer-bar {
+  width: 30%;
+  height: 30%;
+  padding-left: 20%;
+}
+
+.quotes-para {
+  border-style: unset;
+  font-size: 165%;
+  padding-left: 10%;
+  padding-right: 20%;
+  font-family: bold;
+}
+.quotes-2 {
+  text-decoration: underline;
+  color: blue;
+  font-size: 100%;
+}
+
+.li2 {
+  font-size: 220%;
+  margin-left: 15%;
+}
+
+.appointment-para {
+  padding-left: 15%;
+  padding-right: 15%;
+  font-family: bold;
+  font-size: 140%;
+}
+
+.btn-appointment {
+  background-color: #ffd7c3;
+  width: 60%;
+  height: 25%;
+  margin-top: 25%;
+  font-family: bold;
+  border-radius: 15px;
+  margin-right: 15px;
+  padding-left: 15px;
+  font-size: 120%;
+}
+
+.img-footer-bar {
+  width: 150%;
+  height: 100%;
+}
 
 @import url("https://fonts.googleapis.com/css?family=Varela+Round");
 html,
@@ -151,7 +231,7 @@ input[type="checkbox"] {
   background-color: white;
 }
 #gear {
-  transition: all 0.3s ;
+  transition: all 0.3s;
   box-sizing: border-box;
   position: relative;
   width: 65px;
@@ -184,7 +264,7 @@ input[type="checkbox"] {
   display: none;
 }
 input[type="checkbox"]:checked ~ .sidebarIconToggle > #gear {
-  transition: all 0.3s ;
+  transition: all 0.3s;
   box-sizing: border-box;
   transform: rotate(-360deg);
 
@@ -192,7 +272,7 @@ input[type="checkbox"]:checked ~ .sidebarIconToggle > #gear {
 }
 
 input[type="checkbox"]:checked ~ .sidebarIconToggle > #gear {
-  transition: all 0.3s ;
+  transition: all 0.3s;
   box-sizing: border-box;
   transform: rotate(360deg);
 
@@ -508,7 +588,7 @@ img {
 .scroll-box {
   width: 100%;
   font-size: 20px;
-  font-family: '', serif;
+  font-family: "", serif;
   font-weight: bold;
   background: #f4bb49;
   display: flex;
@@ -549,14 +629,14 @@ img {
 .scroll-box h5 {
   line-height: 20px;
 }
-.proimg{
-  height:100px;
+.proimg {
+  height: 100px;
 }
-#imageh4{
+#imageh4 {
   width: 90%;
   height: 10px;
   border: none;
-  background-color: rgb(244,187,73,0.7);
+  background-color: rgb(244, 187, 73, 0.7);
   font-size: 15px;
   display: flex;
   color: white;
@@ -567,11 +647,11 @@ img {
   top: -30%;
   left: 6.2%;
 }
-#imageh4 p{
+#imageh4 p {
   margin-top: 10px;
   font-size: 15px;
 }
-#changemargin{
+#changemargin {
   margin-top: -30px;
   font-size: 15px;
 }
@@ -869,7 +949,7 @@ body {
   font-weight: 600;
   color: black;
   cursor: pointer;
-  font-family:'Bangers', serif;
+  font-family: "Bangers", serif;
   font-weight: lighter;
 }
 
@@ -1243,7 +1323,7 @@ body {
   height: 65px;
   overflow: hidden;
   width: 100%;
-z-index: 2;
+  z-index: 2;
   background-size: 100% 100%;
   text-align: center;
 }
@@ -1260,29 +1340,29 @@ z-index: 2;
   width: 30px;
   height: 25px;
 }
-.jointeam{
-width: 100%;
-background-color: whitesmoke;
-height: 40px;
-display: flex;
-justify-content: center;
-align-items: center;
-overflow: hidden;
-background: rgba(0,0,0,0);
+.jointeam {
+  width: 100%;
+  background-color: whitesmoke;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0);
 }
 
-.team-btn-join{
+.team-btn-join {
   width: 150px;
   font-weight: bold;
   text-align: center;
-  font-family: 'Bangers';
+  font-family: "Bangers";
   font-size: 22px;
-  border:2px solid black;
+  border: 2px solid black;
   outline: none;
   cursor: pointer;
   border-radius: 5px;
-  background: linear-gradient(#09C6F9,#045DE9  );
+  background: linear-gradient(#09c6f9, #045de9);
 }
-.team-btn-join:hover{
-  background:linear-gradient(#37D5D6,#36096D  );
+.team-btn-join:hover {
+  background: linear-gradient(#37d5d6, #36096d);
 }
